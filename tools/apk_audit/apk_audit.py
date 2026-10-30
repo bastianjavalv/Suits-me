@@ -44,7 +44,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-VERSION_HERRAMIENTA = "1.0.0"
+VERSION_HERRAMIENTA = "1.1.0"
 
 # ---------------------------------------------------------------------------
 # Utilidades generales
@@ -439,6 +439,27 @@ def paquetes_principales(clases: List[str], profundidad: int = 3, limite: int = 
     return c.most_common(limite)
 
 
+# Hosts que identifican recursos propios de un proyecto (bases de datos, almacenamiento): en los
+# informes publicos se oculta la parte que identifica el proyecto.
+PATRONES_HOST_PROYECTO = [
+    re.compile(r"^(?P<p>[^.]+)(?P<s>\.firebaseio\.com)$"),
+    re.compile(r"^(?P<p>[^.]+)(?P<s>\.firebaseapp\.com)$"),
+    re.compile(r"^(?P<p>[^.]+)(?P<s>\.web\.app)$"),
+    re.compile(r"^(?P<p>[^.]+)(?P<s>\.appspot\.com)$"),
+    re.compile(r"^(?P<p>[^.]+)(?P<s>\.cloudfunctions\.net)$"),
+    re.compile(r"^(?P<p>.+?)(?P<s>\.s3[.-][a-z0-9.-]*amazonaws\.com)$"),
+    re.compile(r"^(?P<p>[^.]+)(?P<s>\.blob\.core\.windows\.net)$"),
+]
+
+
+def redactar_host(host: str) -> str:
+    for patron in PATRONES_HOST_PROYECTO:
+        m = patron.match(host)
+        if m:
+            return "[proyecto]" + m.group("s")
+    return host
+
+
 RE_URL = re.compile(r"https?://([A-Za-z0-9.-]+\.[A-Za-z]{2,})(?::\d+)?")
 
 
@@ -519,7 +540,10 @@ def detectar_motor(nombres: List[str], leer) -> Dict[str, Any]:
 def _detalles_unity(nombres: List[str], leer) -> Dict[str, Any]:
     d: Dict[str, Any] = {}
     conjunto = set(nombres)
-    il2cpp = any(re.match(r"^lib/[^/]+/libil2cpp\.so$", n) for n in nombres)
+    # global-metadata.dat solo existe en compilaciones IL2CPP, aunque falten las bibliotecas nativas
+    # (por ejemplo, en el APK base de una instalacion dividida de Google Play).
+    il2cpp = any(re.match(r"^lib/[^/]+/libil2cpp\.so$", n) for n in nombres) or \
+        "assets/bin/Data/Managed/Metadata/global-metadata.dat" in conjunto
     mono = any(re.match(r"^lib/[^/]+/libmono(bdwgc-2\.0)?\.so$", n) for n in nombres) or \
         "assets/bin/Data/Managed/Assembly-CSharp.dll" in conjunto
     d["backend_scripting"] = "IL2CPP" if il2cpp else ("Mono" if mono else "no determinado")
@@ -566,6 +590,7 @@ ID_BLOQUES_FIRMA = {
     0x2B09189E: "sello de origen v1",
     0x6DFF800D: "sello de origen v2",
     0x504B4453: "metadatos de dependencias",
+    0x2146444E: "metadatos de Google Play (frosting)",
 }
 
 OID_NOMBRES = {
@@ -744,19 +769,23 @@ def _certificados_v2(valor: bytes) -> List[bytes]:
 # ---------------------------------------------------------------------------
 
 CATEGORIAS_EXT = {
+    "codigo Android (DEX)": {".dex"},
     "textura/imagen": {".png", ".jpg", ".jpeg", ".webp", ".ktx", ".ktx2", ".astc", ".pvr", ".dds", ".tga", ".exr"},
     "modelo 3D": {".fbx", ".obj", ".glb", ".gltf", ".dae", ".mesh"},
     "audio": {".ogg", ".mp3", ".wav", ".m4a", ".aac", ".bank", ".wem", ".bnk", ".resource"},
     "video": {".mp4", ".webm", ".mkv", ".usm"},
     "fuente tipografica": {".ttf", ".otf", ".ttc", ".fnt"},
-    "datos/configuracion": {".json", ".xml", ".txt", ".csv", ".yaml", ".yml", ".bytes", ".dat", ".bin", ".hash"},
+    "datos/configuracion": {".json", ".xml", ".txt", ".csv", ".yaml", ".yml", ".bytes", ".dat", ".bin", ".hash",
+                            ".arsc", ".properties"},
     "paquete Unity (AssetBundle/serializado)": {".bundle", ".unity3d", ".assets", ".ress", ".resS", ".ab"},
-    "codigo/script": {".dll", ".lua", ".js", ".so"},
+    "codigo/script": {".dll", ".lua", ".js", ".so", ".gz"},
     "shader": {".shader", ".glsl", ".spv", ".metal"},
 }
 
 
 def categoria_de(nombre: str) -> str:
+    if nombre.endswith("/global-metadata.dat"):
+        return "metadatos IL2CPP"
     base = nombre.rsplit("/", 1)[-1]
     ext = ("." + base.rsplit(".", 1)[-1]) if "." in base else ""
     for categoria, exts in CATEGORIAS_EXT.items():
@@ -876,7 +905,8 @@ def analizar_apk(ruta: Path, redaccion: bool = True) -> Dict[str, Any]:
             if e.file_size <= 2 * 1024 * 1024 and re.search(r"\.(json|xml|txt|cfg|ini|properties)$", e.filename, re.I) \
                     and e.filename != "AndroidManifest.xml" and not e.filename.startswith("res/"):
                 cadenas_cfg.append(leer(e.filename, None).decode("utf-8", errors="ignore"))
-        informe["hosts_red"] = hosts_en_cadenas(todas_cadenas + cadenas_cfg)
+        hosts = hosts_en_cadenas(todas_cadenas + cadenas_cfg)
+        informe["hosts_red"] = sorted({redactar_host(h) for h in hosts}) if redaccion else hosts
 
         # Recursos
         por_categoria: Dict[str, Dict[str, int]] = {}
@@ -961,6 +991,13 @@ def evaluar_viabilidad(inf: Dict[str, Any]) -> Dict[str, Any]:
         conclusiones.append(
             "Dependencias de servicios externos detectadas (%s): en una versión sin conexión deben "
             "eliminarse o sustituirse por sistemas locales." % ", ".join(categorias))
+    man = inf.get("manifiesto") or {}
+    nombres_meta = {m.get("nombre") for m in man.get("meta_datos", [])} if isinstance(man, dict) else set()
+    if "com.android.vending.splits.required" in nombres_meta and not inf.get("abis"):
+        conclusiones.append(
+            "Este archivo es el APK base de una instalacion dividida de Google Play (Android App Bundle): "
+            "no incluye los APK de configuracion con las bibliotecas nativas, asi que ni siquiera se "
+            "ejecutaria por si solo en Android.")
     veredicto = "port directo no viable desde el APK"
     if not motor or motor == "Desconocido":
         veredicto = "indeterminado (no se pudo identificar el motor)"

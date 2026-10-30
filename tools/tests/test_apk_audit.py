@@ -161,3 +161,25 @@ def test_cli_genera_informes(tmp_path, capsys):
     assert datos["archivo"]["sha256"] in md
     assert "## 7. Evaluación de viabilidad del port" in md
     assert "SHA-256" in capsys.readouterr().out
+
+
+def test_il2cpp_por_metadatos_sin_bibliotecas_nativas(tmp_path):
+    archivos = {
+        "AndroidManifest.xml": fx.manifiesto_ejemplo(meta={"com.android.vending.splits.required": "true"}),
+        "classes.dex": fx.construir_dex(["Lcom/unity3d/player/UnityPlayerActivity;"]),
+        "assets/bin/Data/data.unity3d": b"UnityFS\x00" + b"\x00\x00\x00\x08" + b"5.x.x\x006000.0.58f2\x00",
+        "assets/bin/Data/Managed/Metadata/global-metadata.dat": (0xFAB11BAF).to_bytes(4, "little") + (31).to_bytes(4, "little"),
+    }
+    inf = apk_audit.analizar_apk(fx.crear_apk(tmp_path / "base.apk", archivos))
+    assert inf["motor"]["detalles"]["backend_scripting"] == "IL2CPP"
+    assert inf["motor"]["detalles"]["version_unity"] == "6000.0.58f2"
+    assert inf["abis"] == []
+    assert any("APK base de una instalacion dividida" in c for c in inf["viabilidad"]["conclusiones"])
+    cats = inf["recursos"]["por_categoria"]
+    assert "metadatos IL2CPP" in cats and "codigo Android (DEX)" in cats
+
+
+def test_redaccion_de_hosts_de_proyecto():
+    assert apk_audit.redactar_host("miapp-12345.firebaseio.com") == "[proyecto].firebaseio.com"
+    assert apk_audit.redactar_host("bucket-x.s3.eu-central-1.amazonaws.com") == "[proyecto].s3.eu-central-1.amazonaws.com"
+    assert apk_audit.redactar_host("a.applovin.com") == "a.applovin.com"

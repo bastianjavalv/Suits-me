@@ -1,0 +1,45 @@
+# --- Godot ---
+game/.godot/
+game/.import/
+*.translation
+/builds/
+/dist/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# --- Informes y archivos locales que no se publican ---
+/local/
+informe_apk/
+
+# --- Material propietario: NUNCA en este repositorio (público) ---
+*.apk
+*.apks
+*.xapk
+*.aab
+*.obb
+*.dex
+*.so
+*.unity3d
+*.resS
+global-metadata.dat
+*.nsp
+*.xci
+*.nca
+
+# --- Credenciales y certificados ---
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pem
+*.key
+.env
+secrets/
+
+# --- Sistema ---
+.DS_Store
+Thumbs.db

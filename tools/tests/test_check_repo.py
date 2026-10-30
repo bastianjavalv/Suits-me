@@ -40,8 +40,9 @@ def test_detecta_extensiones_y_firmas(tmp_path):
 
 
 def test_detecta_credenciales(tmp_path):
-    (tmp_path / "config.json").write_text('{"k": "AKIAABCDEFGHIJKLMNOP"}', encoding="utf-8")
-    (tmp_path / "notas.md").write_text("-----BEGIN PRIVATE KEY-----\nabc\n", encoding="utf-8")
+    # Valores ficticios construidos por partes para no disparar escáneres de secretos.
+    (tmp_path / "config.json").write_text('{"k": "%s"}' % ("AKIA" + "ABCDEFGHIJKLMNOP"), encoding="utf-8")
+    (tmp_path / "notas.md").write_text("-----BEGIN " + "PRIVATE KEY-----\nabc\n", encoding="utf-8")
     problemas = "\n".join(_revisar(tmp_path))
     assert "clave de AWS" in problemas
     assert "clave privada PEM" in problemas

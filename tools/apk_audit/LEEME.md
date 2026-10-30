@@ -21,17 +21,22 @@ No hace falta instalar ninguna biblioteca adicional.
 3. Ejecuta:
 
    ```powershell
-   py apk_audit.py SUITSME-0.13272.apk --salida informe_apk
+   python apk_audit.py SUITSME-0.13272.apk --salida informe_apk
    ```
 
-   Si `py` no existe, usa `python` en su lugar.
+   Si `python` no existe, prueba con `py` (el lanzador que instala el instalador de python.org).
 
 4. Al terminar verás en pantalla el SHA-256, el motor detectado y el veredicto. Se crea la carpeta
    `informe_apk` con:
    - `informe_apk.md`: informe legible (ábrelo con el Bloc de notas o con VS Code).
    - `informe_apk.json`: los mismos datos en formato estructurado.
-5. Copia el contenido de `informe_apk.md` en el chat o súbelo al repositorio en
-   `docs/apk/informe_apk.md`.
+5. Para copiar el informe completo desde PowerShell:
+
+   ```powershell
+   Get-Content informe_apk\informe_apk.md -Encoding UTF8
+   ```
+
+   Pega el resultado en el chat o súbelo al repositorio en `docs/apk/informe_apk.md`.
 
 ## Pasos (macOS o Linux)
 

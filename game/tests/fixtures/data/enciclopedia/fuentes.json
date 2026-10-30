@@ -1,0 +1,3 @@
+{"esquema": 1, "fuentes": [
+	{"id": "fuente_a", "titulo": "Fuente A", "autor": "Museo de Prueba", "url": "https://museo.example/a", "tipo": "museo", "consultado": "2026-10-30", "metodo": "busqueda_web"}
+]}

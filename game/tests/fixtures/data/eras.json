@@ -1,0 +1,4 @@
+{"esquema": 1, "eras": [
+	{"id": "era_a", "titulo": "Era A", "periodo": "1920–1929", "inicio": 1920, "fin": 1929},
+	{"id": "era_b", "titulo": "Era B", "periodo": "1960–1969", "inicio": 1960, "fin": 1969}
+]}

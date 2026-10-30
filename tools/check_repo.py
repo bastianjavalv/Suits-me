@@ -3,7 +3,8 @@
 """
 check_repo.py - Impide que entren al repositorio material propietario o credenciales.
 
-Revisa los archivos versionados (git ls-files) o, si no hay git, todos los archivos de la carpeta:
+Revisa los archivos versionados y los nuevos no ignorados (git ls-files) o, si no hay git, todos
+los archivos de la carpeta:
     * extensiones prohibidas (APK, DEX, bibliotecas nativas, paquetes de Unity, almacenes de claves)
     * firmas binarias (ZIP con AndroidManifest/classes.dex, DEX, ELF, UnityFS, metadatos IL2CPP)
     * patrones de credenciales en archivos de texto
@@ -59,7 +60,8 @@ EXT_TEXTO = {".md", ".txt", ".json", ".gd", ".gdshader", ".tscn", ".tres", ".cfg
 
 def archivos_versionados(raiz: Path) -> List[Path]:
     try:
-        salida = subprocess.run(["git", "ls-files", "-z"], cwd=raiz, capture_output=True, check=True).stdout
+        salida = subprocess.run(["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
+                                cwd=raiz, capture_output=True, check=True).stdout
         return [raiz / p for p in salida.decode("utf-8").split("\0") if p]
     except (OSError, subprocess.CalledProcessError):
         return [p for p in raiz.rglob("*") if p.is_file() and ".git" not in p.parts]

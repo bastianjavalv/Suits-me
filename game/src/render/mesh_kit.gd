@@ -5,8 +5,10 @@ extends RefCounted
 ## normales/tangentes analíticas para materiales PBR anisótropos.
 ##
 ## Convenciones: Y hacia arriba; el frente del cuerpo mira a +Z; el ángulo θ se mide desde +Z
-## hacia +X. UV = (arco en metros, altura en metros) para que los tejidos no se deformen;
-## UV2 = (θ normalizado 0..1, t vertical 0..1) para costuras y bajos en el shader.
+## hacia +X en el intervalo [-π, π) (0 = centro delantero, ±π = centro de la espalda). Las
+## superficies cerradas tienen su costura en la espalda, como una prenda real. UV = (arco en
+## metros, altura en metros) para que los tejidos no se deformen; UV2.x = 0 en la espalda, 0,25 y
+## 0,75 en los costados, 0,5 en el centro delantero; UV2.y = t vertical (0 abajo, 1 arriba).
 
 
 ## Interpola (rx, rz) de un perfil [Vector3(y, rx, rz)] ordenado por y, con Catmull-Rom.
@@ -44,14 +46,18 @@ static func _cr(a: float, b: float, c: float, d: float, t: float) -> float:
 ##   center: Callable(y) -> Vector2(cx, cz)  desplazamiento del eje (opcional)
 ##   segments (int), rings (int)
 ##   gap: float  abertura frontal total en radianes (0 = cerrada)
+##   theta_start / theta_end: rango angular de un panel abierto (alternativa a gap)
 ##   inward: bool  normales hacia dentro (forros)
 static func lathe(opts: Dictionary) -> ArrayMesh:
 	var segments: int = maxi(int(opts.get("segments", 32)), 6)
 	var rings: int = maxi(int(opts.get("rings", 24)), 2)
 	var gap: float = float(opts.get("gap", 0.0))
-	var closed := gap <= 0.0001
-	var theta0 := gap * 0.5
+	var closed := gap <= 0.0001 and not opts.has("theta_start")
+	var theta0 := -PI if closed else gap * 0.5
 	var theta_span := TAU - gap
+	if opts.has("theta_start"):
+		theta0 = float(opts["theta_start"])
+		theta_span = float(opts["theta_end"]) - theta0
 	var cols := segments + 1
 	var profile: Array = opts.get("profile", [])
 	var radius_fn: Callable = opts.get("radius", Callable())
@@ -70,7 +76,8 @@ static func lathe(opts: Dictionary) -> ArrayMesh:
 	for j in cols:
 		thetas[j] = theta0 + theta_span * float(j) / float(segments)
 	for j in cols:
-		var th := thetas[j]
+		var th_raw := thetas[j]
+		var th := wrapf(th_raw, -PI, PI)
 		var y0: float = yb.call(th) if yb is Callable else float(yb)
 		var y1: float = yt.call(th) if yt is Callable else float(yt)
 		for i in rings + 1:
@@ -83,7 +90,8 @@ static func lathe(opts: Dictionary) -> ArrayMesh:
 			var co := cos(th)
 			var p := Vector3(c.x + (r.x + extra) * s, y, c.y + (r.y + extra) * co)
 			pos[i * cols + j] = p
-			uv2[i * cols + j] = Vector2(fposmod(th, TAU) / TAU, t)
+			# Sin módulo: en piezas abiertas UV2.x va de 0,5 a 1,5 sin saltos (costuras con fract()).
+			uv2[i * cols + j] = Vector2((th_raw + PI) / TAU, t)
 	return _grid_mesh(pos, uv2, cols, rings + 1, closed, inward)
 
 
@@ -111,7 +119,7 @@ static func _grid_mesh(pos: PackedVector3Array, uv2: PackedVector2Array, cols: i
 			var ir := clampi(i + 1, 0, rows - 1)
 			var du := pos[i * cols + jr] - pos[i * cols + jl]
 			var dv := pos[ir * cols + j] - pos[il * cols + j]
-			var n := dv.cross(du)
+			var n := du.cross(dv)
 			if n.length_squared() < 1e-14:
 				n = Vector3(pos[idx].x, 0.0, pos[idx].z)
 				if n.length_squared() < 1e-14:
@@ -178,6 +186,9 @@ static func triangle_count(mesh: Mesh) -> int:
 	var total := 0
 	for s in mesh.get_surface_count():
 		var arr := mesh.surface_get_arrays(s)
-		var idx: PackedInt32Array = arr[Mesh.ARRAY_INDEX]
-		total += idx.size() / 3 if not idx.is_empty() else (arr[Mesh.ARRAY_VERTEX] as PackedVector3Array).size() / 3
+		var idx: Variant = arr[Mesh.ARRAY_INDEX]
+		if idx is PackedInt32Array and not (idx as PackedInt32Array).is_empty():
+			total += (idx as PackedInt32Array).size() / 3
+		else:
+			total += (arr[Mesh.ARRAY_VERTEX] as PackedVector3Array).size() / 3
 	return total

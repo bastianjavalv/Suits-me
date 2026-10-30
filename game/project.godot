@@ -43,3 +43,10 @@ renderer/rendering_method.mobile="mobile"
 rendering_device/fallback_to_opengl3=true
 textures/vram_compression/import_etc2_astc=true
 anti_aliasing/quality/msaa_3d=1
+
+[shader_globals]
+
+giro_reciente={
+"type": "float",
+"value": 0.0
+}

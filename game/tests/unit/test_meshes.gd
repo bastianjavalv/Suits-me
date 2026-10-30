@@ -81,3 +81,45 @@ func test_vista_de_conjunto_y_oclusion_de_mangas() -> void:
 	var st := view.stats()
 	assert_true(st["piezas"] > 0 and st["triangulos"] > 0)
 	view.free()
+
+
+func test_todas_las_prendas_reales_generan_mallas_validas() -> void:
+	var c := Catalog.new()
+	var idx := JsonUtil.load_object("res://data/indice.json", [])
+	c.load_files(idx["prendas"].map(func(r): return "res://data/" + r))
+	assert_eq(c.errors, [])
+	var gb := GarmentBuilder.new({"segmentos_radiales": 48, "anillos_por_metro": 40})
+	var worst := 0
+	var worst_id := ""
+	for id in c.order:
+		var item := c.get_item(id)
+		var tris := 0
+		for part in gb.build(item):
+			assert_true(part["malla"] != null and part["malla"].get_surface_count() > 0, "%s: malla vacía" % id)
+			tris += MeshKit.triangle_count(part["malla"])
+		if item["categoria"] != "maquillaje":
+			assert_true(tris > 0, "%s no generó geometría" % id)
+		assert_true(tris <= MAX_TRIS_PRENDA, "%s: %d triángulos (máx. %d)" % [id, tris, MAX_TRIS_PRENDA])
+		if tris > worst:
+			worst = tris
+			worst_id = id
+	print("    prenda más pesada: %s (%d triángulos)" % [worst_id, worst])
+
+
+func test_el_corpino_recto_cubre_el_busto() -> void:
+	var gb := GarmentBuilder.new({"segmentos_radiales": 48, "anillos_por_metro": 40})
+	var part: Dictionary = gb.bodice({"escote": "redondo", "silueta": "recta"}, 0, 0.9)
+	var verts: PackedVector3Array = part["malla"].surface_get_arrays(0)[Mesh.ARRAY_VERTEX]
+	for v in verts:
+		if v.y > 1.15 and v.y < 1.28:
+			# Dirección polar del vértice -> parámetro angular del cuerpo en esa misma dirección
+			# (en una elipse x = a·sen θ, z = b·cos θ, el ángulo polar no es θ).
+			var phi := atan2(v.x, v.z)
+			var body := GarmentBuilder.body_radius(v.y)
+			var th := atan2(body.y * sin(phi), body.x * cos(phi))
+			var rel := Mannequin.torso_relief(th, v.y)
+			var garment_r := Vector2(v.x, v.z).length()
+			var body_r := Vector2((body.x + rel) * sin(th), (body.y + rel) * cos(th)).length()
+			if garment_r < body_r:
+				fail("el maniquí atraviesa el corpino a y=%.2f θ=%.2f" % [v.y, th])
+				return

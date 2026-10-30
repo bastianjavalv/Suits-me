@@ -52,7 +52,7 @@ func _ready() -> void:
 
 static func _is_test_run() -> bool:
 	for arg in OS.get_cmdline_args():
-		if arg.ends_with("tests/run_tests.gd") or arg.begins_with("res://tools/"):
+		if arg.begins_with("res://tests/") or arg.begins_with("res://tools/"):
 			return true
 	return false
 

@@ -155,8 +155,9 @@ func bodice(p: Dictionary, layer: int, bottom_y: float) -> Dictionary:
 		var legs := leg_clearance(y)
 		return Vector2(maxf(r.x, legs.x), maxf(r.y, legs.y))
 	var offset_fn := func(th: float, y: float, _t: float) -> float:
-		var relief := Mannequin.torso_relief(th, y)
-		var o := ease + (relief * 0.4 if straight else relief)
+		# La silueta recta se consigue con el radio mínimo de tubo; el relieve del cuerpo se cubre
+		# siempre entero para que el busto del maniquí no atraviese la tela.
+		var o := ease + Mannequin.torso_relief(th, y)
 		o += pouch * _g(y, bottom_y + 0.13, 0.06) * pow(maxf(0.0, cos(th)), 1.5)
 		if peplum > 0.0 and y < waist:
 			o += peplum * smoothstep(0.0, 0.12, waist - y)

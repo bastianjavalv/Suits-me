@@ -1,0 +1,33 @@
+{
+	"esquema": 1,
+	"eras": "eras.json",
+	"tejidos": "tejidos.json",
+	"escenarios": "escenarios.json",
+	"poses": "poses.json",
+	"desafios": "desafios.json",
+	"fuentes": "enciclopedia/fuentes.json",
+	"economia": "config/economia.json",
+	"calidad": "config/calidad.json",
+	"prendas": [
+		"prendas/medieval.json",
+		"prendas/belle_epoque.json",
+		"prendas/anos20.json",
+		"prendas/anos30.json",
+		"prendas/anos40.json",
+		"prendas/anos50.json",
+		"prendas/anos60.json",
+		"prendas/anos80.json",
+		"prendas/anos90.json"
+	],
+	"enciclopedia": [
+		"enciclopedia/medieval.json",
+		"enciclopedia/belle_epoque.json",
+		"enciclopedia/anos20.json",
+		"enciclopedia/anos30.json",
+		"enciclopedia/anos40.json",
+		"enciclopedia/anos50.json",
+		"enciclopedia/anos60.json",
+		"enciclopedia/anos80.json",
+		"enciclopedia/anos90.json"
+	]
+}

@@ -116,6 +116,7 @@ func load_data() -> void:
 	challenges = ChallengeBook.new()
 	challenges.known_eras = era_by_id
 	challenges.known_stages = stages
+	challenges.known_fabrics = fabrics
 	challenges.load_file(_data_path(index.get("desafios", "desafios.json")))
 
 	economy_config = JsonUtil.load_object(_data_path(index.get("economia", "config/economia.json")), data_errors)

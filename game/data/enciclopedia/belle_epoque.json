@@ -1,0 +1,163 @@
+{
+	"esquema": 1,
+	"era": "belle_epoque",
+	"entradas": [
+		{
+			"id": "be_corse_recto",
+			"nombre": "Corsé de busto recto",
+			"era": "belle_epoque",
+			"periodo": "c. 1900–1908",
+			"region": "Europa y América",
+			"resumen": "Corsé que dio a comienzos del siglo XX la silueta llamada después «S-bend».",
+			"hechos": [
+				{
+					"texto": "El corsé de busto recto de comienzos del siglo XX, a menudo llamado anacrónicamente «S-bend», fue ideado por un médico con fines de salud y después se puso de moda.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1900_1909"
+					]
+				},
+				{
+					"texto": "Empujaba el busto hacia delante y las caderas hacia atrás para evitar la presión sobre el abdomen.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1900_1909"
+					]
+				},
+				{
+					"texto": "Era largo y rígido por delante y más corto por detrás.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_siglo20"
+					]
+				},
+				{
+					"texto": "La rígida silueta de comienzos de la década se fue enderezando hacia una forma más natural.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1900_1909"
+					]
+				},
+				{
+					"texto": "Un artículo del FIT lo menciona también con el nombre «Gache-Sarraute».",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_blog_poiret"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "be_mangas_jamon",
+			"nombre": "Mangas de jamón (gigot)",
+			"era": "belle_epoque",
+			"periodo": "Década de 1890",
+			"region": "Europa y América",
+			"resumen": "Manga amplia en el hombro y estrecha hacia la muñeca.",
+			"hechos": [
+				{
+					"texto": "La manga gigot o «de pierna de cordero» debe su nombre a su parecido con la pata trasera de una oveja: amplia arriba y estrecha hacia la muñeca.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_gigot"
+					]
+				},
+				{
+					"texto": "Volvió a la moda en la década de 1890 y alcanzó su mayor volumen hacia mediados de esa década.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_gigot"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "be_poiret",
+			"nombre": "Paul Poiret y el corsé",
+			"era": "belle_epoque",
+			"periodo": "c. 1906–1914",
+			"region": "París",
+			"resumen": "Colores intensos y la sustitución progresiva del corsé.",
+			"hechos": [
+				{
+					"texto": "Britannica atribuye a Poiret, desde 1907, una gama exótica de diseños en colores brillantes y señala que ayudó a sustituir el corsé por el sujetador.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_siglo20"
+					]
+				},
+				{
+					"texto": "Poiret afirmaba haber liberado a la mujer del corsé; un artículo del FIT muestra que sus modelos de 1906 aún iban comprimidos con el corsé de busto recto.",
+					"estado": "discutido",
+					"fuentes": [
+						"brit_siglo20",
+						"fit_blog_poiret"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "be_delphos",
+			"nombre": "Vestido Delphos",
+			"era": "belle_epoque",
+			"periodo": "Desde c. 1907–1909",
+			"region": "Venecia",
+			"resumen": "Vestido de seda plisada en forma de columna, pensado como vestido de té.",
+			"hechos": [
+				{
+					"texto": "Se concibió como vestido de té para llevar en casa en ambientes informales; su forma sinuosa dejaba ver un cuerpo sin corsé, una silueta sorprendentemente moderna.",
+					"estado": "verificado",
+					"fuentes": [
+						"met_delphos"
+					]
+				},
+				{
+					"texto": "Las fuentes difieren en la fecha: el V&A indica que estos vestidos se produjeron en Venecia desde 1907; el Met sitúa su invención en 1909.",
+					"estado": "discutido",
+					"fuentes": [
+						"vam_delphos",
+						"met_delphos"
+					]
+				},
+				{
+					"texto": "El sistema de plisado se patentó en 1909 a nombre de Mariano Fortuny, pero sus propias anotaciones reconocen a Henriette Nigrin como inventora; el V&A revisó sus fichas tras nuevas investigaciones.",
+					"estado": "discutido",
+					"fuentes": [
+						"met_delphos",
+						"vam_delphos_nigrin"
+					]
+				}
+			],
+			"revision_humana": false,
+			"tecnicas": [
+				{
+					"texto": "Plisados irregulares y diminutos, a veces de un octavo de pulgada, que sobresalen en lugar de quedar planos y se adaptan al cuerpo.",
+					"estado": "verificado",
+					"fuentes": [
+						"met_delphos"
+					]
+				},
+				{
+					"texto": "La columna se formaba cosiendo a mano anchos estrechos de seda plisada hasta formar un tubo.",
+					"estado": "verificado",
+					"fuentes": [
+						"vam_delphos"
+					]
+				}
+			],
+			"piezas_referencia": [
+				{
+					"titulo": "Delphos, Victoria and Albert Museum",
+					"institucion": "V&A",
+					"url": "https://collections.vam.ac.uk/item/O147178/delphos-delphos-dress-henriette-nigrin/",
+					"fuentes": [
+						"vam_delphos_nigrin"
+					]
+				}
+			]
+		}
+	]
+}

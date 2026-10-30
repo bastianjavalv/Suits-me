@@ -37,7 +37,7 @@ static func evaluate(challenge: Dictionary, slots: Dictionary, catalog: Catalog,
 	var criteria: Array = []
 	criteria.append(_theme(challenge, items, era_names))
 	criteria.append(_color(challenge, items))
-	criteria.append(_completeness(challenge, slots))
+	criteria.append(_completeness(challenge, slots, catalog))
 	criteria.append(_creativity(slots, previous))
 	var total := 0
 	for c in criteria:
@@ -71,6 +71,19 @@ static func _theme(challenge: Dictionary, items: Array[Dictionary], era_names: D
 			detail.append("Fuera de época: %s." % ", ".join(anachronisms))
 	if not tags.is_empty():
 		detail.append("%d de %d prendas encajan con el estilo «%s»." % [style_ok, items.size(), ", ".join(tags)])
+	# Normas del desafío (por ejemplo, una ley suntuaria): cada prenda que las incumple resta 8 puntos.
+	var banned: Dictionary = challenge.get("requisitos", {}).get("prohibidos", {})
+	var banned_fabrics: Array = banned.get("tejidos", [])
+	var banned_colors: Array = banned.get("colores", [])
+	for it in items:
+		var reasons: Array[String] = []
+		if banned_fabrics.has(it.get("tejido", "")):
+			reasons.append("tejido no permitido")
+		if banned_colors.has(it.get("familia_color", ColorTools.family_of(Color.html(it["color"])))):
+			reasons.append("color no permitido")
+		if not reasons.is_empty():
+			points -= 8
+			detail.append("Incumple la norma del desafío: %s (%s)." % [it["nombre"], ", ".join(reasons)])
 	return _criterion("tema", "Coherencia temática", points, detail)
 
 
@@ -95,7 +108,7 @@ static func _color(challenge: Dictionary, items: Array[Dictionary]) -> Dictionar
 	return _criterion("color", "Armonía cromática", roundi(MAX_POINTS["color"] * score), detail)
 
 
-static func _completeness(challenge: Dictionary, slots: Dictionary) -> Dictionary:
+static func _completeness(challenge: Dictionary, slots: Dictionary, catalog_ref: Catalog = null) -> Dictionary:
 	var req: Dictionary = challenge.get("requisitos", {})
 	var mandatory: Array = req.get("obligatorias", ["prenda_principal", "calzado"])
 	var suggested: Array = req.get("sugeridas", [])
@@ -110,6 +123,18 @@ static func _completeness(challenge: Dictionary, slots: Dictionary) -> Dictionar
 	for c in suggested:
 		if _slot_filled(c, slots):
 			ok_s += 1
+	var min_eras := int(req.get("min_eras", 0))
+	if min_eras > 0:
+		var seen := {}
+		for id in slots.values():
+			if catalog_ref != null and catalog_ref.has_item(id):
+				seen[catalog_ref.get_item(id)["era"]] = true
+		mandatory = mandatory.duplicate()
+		mandatory.append("min_eras")
+		if seen.size() >= min_eras:
+			ok_m += 1
+		else:
+			detail.append("Faltan épocas: hay %d de %d distintas." % [seen.size(), min_eras])
 	var points := 0.0
 	points += 10.0 * (float(ok_m) / mandatory.size() if not mandatory.is_empty() else 1.0)
 	points += 5.0 * (float(ok_s) / suggested.size() if not suggested.is_empty() else 1.0)

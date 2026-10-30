@@ -14,6 +14,7 @@ var progress: Dictionary = {}    ## id -> {mejor, estrellas, entregas: [{t, pren
 var errors: Array[String] = []
 var known_eras: Dictionary = {}
 var known_stages: Dictionary = {}
+var known_fabrics: Dictionary = {}
 
 
 func load_file(path: String) -> void:
@@ -63,6 +64,17 @@ func validate(c: Dictionary) -> Array[String]:
 	for hex in c.get("paleta", []):
 		if not Defs.is_hex_color(hex):
 			p.append("color de paleta no válido: %s" % hex)
+	if typeof(req) == TYPE_DICTIONARY:
+		var banned: Variant = req.get("prohibidos", {})
+		if typeof(banned) != TYPE_DICTIONARY:
+			p.append("'prohibidos' debe ser un objeto {tejidos, colores}")
+		else:
+			for fabric in banned.get("tejidos", []):
+				if not known_fabrics.is_empty() and not known_fabrics.has(fabric):
+					p.append("tejido prohibido desconocido: %s" % fabric)
+			for family in banned.get("colores", []):
+				if not Defs.COLOR_FAMILIES.has(family):
+					p.append("familia de color prohibida desconocida: %s" % family)
 	return p
 
 

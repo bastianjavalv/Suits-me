@@ -1,0 +1,105 @@
+{
+	"esquema": 1,
+	"era": "anos20",
+	"entradas": [
+		{
+			"id": "a20_silueta",
+			"nombre": "La silueta de los años 20",
+			"era": "anos20",
+			"periodo": "1920–1929",
+			"region": "Europa y América",
+			"resumen": "Cintura baja, pelo corto y nuevas prendas deportivas.",
+			"hechos": [
+				{
+					"texto": "El sombrero cloche se adaptaba a los cortes de pelo bob y «à la garçonne» de la década.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1920_1929"
+					]
+				},
+				{
+					"texto": "Jean Patou contribuyó, junto con Chanel, a popularizar la ropa deportiva para mujer.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1920_1929"
+					]
+				},
+				{
+					"texto": "Britannica incluye el cloche, ceñido a la cabeza, entre los complementos típicos de la «flapper».",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_flapper"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a20_vestido_negro",
+			"nombre": "El pequeño vestido negro",
+			"era": "anos20",
+			"periodo": "1926",
+			"region": "París y Estados Unidos",
+			"resumen": "El vestido negro como básico moderno.",
+			"hechos": [
+				{
+					"texto": "La edición estadounidense de Vogue llamó «el Ford de la moda» a un vestido negro de Chanel de 1926.",
+					"estado": "verificado",
+					"fuentes": [
+						"met_chanel_1926"
+					]
+				},
+				{
+					"texto": "La comparación con el automóvil Ford aludía a su atractivo casi universal como prenda básica.",
+					"estado": "verificado",
+					"fuentes": [
+						"met_chanel_ensayo"
+					]
+				},
+				{
+					"texto": "En octubre de 1926 Vogue asoció la casa con el negro y pronosticó que un vestido de día de crepé de China negro sería una prenda que todos llevarían.",
+					"estado": "verificado",
+					"fuentes": [
+						"vam_chanel_iconica"
+					]
+				},
+				{
+					"texto": "Entre 1925 y 1927 los vestidos negros, muchos de Chanel, tuvieron gran presencia en las revistas de moda, sobre todo en Vogue.",
+					"estado": "verificado",
+					"fuentes": [
+						"vam_chanel_noche"
+					]
+				}
+			],
+			"revision_humana": false,
+			"piezas_referencia": [
+				{
+					"titulo": "Vestido, House of Chanel (Met)",
+					"institucion": "The Metropolitan Museum of Art",
+					"url": "https://www.metmuseum.org/art/collection/search/83616",
+					"fuentes": [
+						"met_chanel_1926"
+					]
+				}
+			]
+		},
+		{
+			"id": "a20_robe_de_style",
+			"nombre": "Robe de style",
+			"era": "anos20",
+			"periodo": "Años 20",
+			"region": "París",
+			"resumen": "Faldas largas y amplias frente a la silueta recta.",
+			"hechos": [
+				{
+					"texto": "El estilo de Jeanne Lanvin contrastaba con el aire andrógino de la época: faldas largas y amplias, a veces con tontillos, como en un vestido «Robe de Style» negro y plata.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1920_1929"
+					]
+				}
+			],
+			"revision_humana": false
+		}
+	]
+}

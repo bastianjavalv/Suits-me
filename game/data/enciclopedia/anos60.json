@@ -1,0 +1,139 @@
+{
+	"esquema": 1,
+	"era": "anos60",
+	"entradas": [
+		{
+			"id": "a60_minifalda",
+			"nombre": "La minifalda",
+			"era": "anos60",
+			"periodo": "Mediados de los años 60",
+			"region": "Londres y París",
+			"resumen": "Faldas por encima de la rodilla.",
+			"hechos": [
+				{
+					"texto": "A Mary Quant se le atribuye a menudo la «invención» de la minifalda, pero no hay pruebas concluyentes de quién subió primero el bajo.",
+					"estado": "discutido",
+					"fuentes": [
+						"vam_minifalda"
+					]
+				},
+				{
+					"texto": "Las faldas no fueron realmente cortas hasta 1966.",
+					"estado": "verificado",
+					"fuentes": [
+						"vam_minifalda"
+					]
+				},
+				{
+					"texto": "Según Britannica, las faldas muy cortas se presentaron primero en Londres, con Mary Quant, y varios años después en París, con André Courrèges.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_minifalda"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a60_era_espacial",
+			"nombre": "Moda de la era espacial",
+			"era": "anos60",
+			"periodo": "1964–1966",
+			"region": "París",
+			"resumen": "Blanco, plata y formas geométricas.",
+			"hechos": [
+				{
+					"texto": "La colección «Space Age» de Courrèges para primavera-verano de 1964 incluyó gorros y gafas de «astronauta», pantalones de PVC blanco y plata y monos.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1960_1969"
+					]
+				},
+				{
+					"texto": "Pierre Cardin y André Courrèges presentaron diseños de inspiración espacial en blanco y plata.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1960_1969"
+					]
+				},
+				{
+					"texto": "Courrèges mostró faldas cortas en su colección de abril de 1964.",
+					"estado": "verificado",
+					"fuentes": [
+						"vam_1960s"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a60_materiales",
+			"nombre": "Plástico y metal",
+			"era": "anos60",
+			"periodo": "1966",
+			"region": "París",
+			"resumen": "Vestidos hechos con materiales no textiles.",
+			"hechos": [
+				{
+					"texto": "El Met conserva un minivestido de 1966 de discos de plástico iridiscente y anillas de metal, de la colección «12 vestidos importables en materiales contemporáneos» de Paco Rabanne.",
+					"estado": "verificado",
+					"fuentes": [
+						"met_rabanne"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a60_bloques_color",
+			"nombre": "Bloques de color",
+			"era": "anos60",
+			"periodo": "1965–1966",
+			"region": "París",
+			"resumen": "El cuadro convertido en vestido.",
+			"hechos": [
+				{
+					"texto": "Los bloques de color inspirados en Mondrian de Yves Saint Laurent recorrieron el mundo de la moda en 1965.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1960_1969"
+					]
+				},
+				{
+					"texto": "Un estudio del Kyoto Costume Institute fecha el vestido Mondrian en 1965-66 y lo pone como ejemplo de ropa interpretada como superficie bidimensional.",
+					"estado": "verificado",
+					"fuentes": [
+						"kci_fukai"
+					]
+				}
+			],
+			"revision_humana": false,
+			"nota_fuentes": "El estampado del juego es una retícula genérica; no reproduce ninguna obra de Mondrian."
+		},
+		{
+			"id": "a60_casquete",
+			"nombre": "Sombrero casquete",
+			"era": "anos60",
+			"periodo": "1961",
+			"region": "Estados Unidos",
+			"resumen": "Un sombrero pequeño y sin ala.",
+			"hechos": [
+				{
+					"texto": "Halston, sombrerero de Bergdorf Goodman desde 1959, llamó la atención dos años después con el casquete que Jacqueline Kennedy llevó a la investidura presidencial.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_halston"
+					]
+				},
+				{
+					"texto": "La exposición del Met sobre Jacqueline Kennedy incluyó un «Pillbox Hat» de 1961 de Bergdorf Goodman.",
+					"estado": "verificado",
+					"fuentes": [
+						"met_jackie"
+					]
+				}
+			],
+			"revision_humana": false
+		}
+	]
+}

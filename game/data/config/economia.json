@@ -1,0 +1,10 @@
+{
+	"esquema": 1,
+	"modo": "ilimitado",
+	"saldo_inicial": {
+		"monedas": 0,
+		"gemas": 0
+	},
+	"inventario_inicial": "basico",
+	"nota": "modo: 'ilimitado' (monedas y gemas infinitas) o 'finito' (usa saldo_inicial). inventario_inicial: 'basico' (prendas marcadas con \"inicial\": true) o 'todo'."
+}

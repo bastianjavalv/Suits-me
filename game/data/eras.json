@@ -1,0 +1,264 @@
+{
+	"esquema": 1,
+	"eras": [
+		{
+			"id": "medieval",
+			"titulo": "Moda medieval",
+			"periodo": "Siglos V–XV",
+			"inicio": 400,
+			"fin": 1499,
+			"resumen": "Del bliaut de mangas anchas del siglo XII a la hopalanda y los tocados cónicos del siglo XV. La ropa marcaba el rango social y las leyes suntuarias intentaron regularla.",
+			"paleta": [
+				"#3E5E3A",
+				"#7A1F2B",
+				"#C9A961",
+				"#2E3A5C",
+				"#E9E1D0"
+			],
+			"escenario": "medieval_salon",
+			"subperiodos": [
+				{
+					"nombre": "Siglo XII",
+					"descripcion": "El bliaut, túnica exterior de mangas anchas, se convierte en la prenda de las clases altas."
+				},
+				{
+					"nombre": "Finales del siglo XII – comienzos del XIV",
+					"descripcion": "La toca de lino enmarca el rostro y cubre cuello y mentón."
+				},
+				{
+					"nombre": "c. 1380 – 1450",
+					"descripcion": "La hopalanda pasa de la indumentaria masculina a la femenina; hacia 1440 se impone el cinturón ancho en la cintura natural."
+				},
+				{
+					"nombre": "Siglo XV",
+					"descripcion": "Siluetas alargadas en las cortes de Borgoña y Francia: tocados cónicos cada vez más altos y zapatos de punta."
+				}
+			],
+			"orden": 1
+		},
+		{
+			"id": "belle_epoque",
+			"titulo": "Belle Époque",
+			"periodo": "c. 1890–1914",
+			"inicio": 1890,
+			"fin": 1914,
+			"resumen": "De las mangas de jamón de mediados de la década de 1890 al corsé de busto recto y, después, a líneas más rectas y propuestas sin corsé como el Delphos.",
+			"paleta": [
+				"#6B1E3A",
+				"#D9C6B0",
+				"#2F5D62",
+				"#C8553D",
+				"#F4F1EA"
+			],
+			"escenario": "belle_epoque_salon",
+			"subperiodos": [
+				{
+					"nombre": "Década de 1890",
+					"descripcion": "Las mangas de jamón alcanzan su mayor volumen hacia mediados de la década."
+				},
+				{
+					"nombre": "Comienzos del siglo XX",
+					"descripcion": "El corsé de busto recto empuja el busto hacia delante y las caderas hacia atrás."
+				},
+				{
+					"nombre": "c. 1906–1914",
+					"descripcion": "La silueta se endereza; aparecen vestidos de té sin corsé y diseños de colores intensos."
+				}
+			],
+			"orden": 2
+		},
+		{
+			"id": "anos20",
+			"titulo": "Años 20",
+			"periodo": "1920–1929",
+			"inicio": 1920,
+			"fin": 1929,
+			"resumen": "Silueta recta, cintura baja, pelo corto bajo el sombrero cloche, auge de la ropa deportiva y del vestido negro como básico.",
+			"paleta": [
+				"#151515",
+				"#E9DFC9",
+				"#C8A96A",
+				"#2B3A55",
+				"#8E1F2F"
+			],
+			"escenario": "deco_salon",
+			"subperiodos": [
+				{
+					"nombre": "1925–1927",
+					"descripcion": "Los vestidos negros, muchos de Chanel, tienen gran presencia en las revistas, sobre todo en Vogue."
+				}
+			],
+			"orden": 3
+		},
+		{
+			"id": "anos30",
+			"titulo": "Años 30",
+			"periodo": "1930–1939",
+			"inicio": 1930,
+			"fin": 1939,
+			"resumen": "Vestidos largos cortados al bies, el cine de Hollywood como escaparate y el surrealismo en la alta costura.",
+			"paleta": [
+				"#D9C7B8",
+				"#E5287A",
+				"#3A4A5C",
+				"#C0C0C8",
+				"#141414"
+			],
+			"escenario": "hollywood_escalera",
+			"subperiodos": [
+				{
+					"nombre": "1932",
+					"descripcion": "El vestido «Letty Lynton» de Adrian se convierte en el más copiado de la década."
+				},
+				{
+					"nombre": "1937",
+					"descripcion": "Schiaparelli y Dalí colaboran en un vestido de noche con una langosta como decoración."
+				}
+			],
+			"orden": 4
+		},
+		{
+			"id": "anos40",
+			"titulo": "Años 40",
+			"periodo": "1940–1949",
+			"inicio": 1940,
+			"fin": 1949,
+			"resumen": "La guerra trajo racionamiento, ropa de utilidad y la consigna de remendar; en 1947 Christian Dior presentó una silueta de cintura estrecha y falda amplia.",
+			"paleta": [
+				"#5B5E4A",
+				"#2C4A72",
+				"#8C2F39",
+				"#EFE9E1",
+				"#141414"
+			],
+			"escenario": "guerra_y_posguerra",
+			"subperiodos": [
+				{
+					"nombre": "1941–1945",
+					"descripcion": "Racionamiento de ropa en el Reino Unido desde el 1 de junio de 1941 y plan Utility (CC41); restricciones L-85 en Estados Unidos."
+				},
+				{
+					"nombre": "1947–1949",
+					"descripcion": "Primera colección de Dior (12 de febrero de 1947): líneas Corolle y En 8, bautizadas como «New Look»."
+				}
+			],
+			"orden": 5
+		},
+		{
+			"id": "anos50",
+			"titulo": "Años 50",
+			"periodo": "1950–1959",
+			"inicio": 1950,
+			"fin": 1959,
+			"resumen": "Las líneas H, A e Y de Dior, el vestido saco de Balenciaga, el traje de corte recto y el tacón de aguja.",
+			"paleta": [
+				"#1F3A5F",
+				"#C9B8A3",
+				"#D8CFC2",
+				"#7B2C2C",
+				"#F2B6C6"
+			],
+			"escenario": "salon_atomico",
+			"subperiodos": [
+				{
+					"nombre": "Mediados de la década",
+					"descripcion": "Línea A de Dior (primavera de 1955) y auge del tacón de aguja."
+				},
+				{
+					"nombre": "1957–1958",
+					"descripcion": "El vestido saco y la chemise eliminan la cintura marcada."
+				}
+			],
+			"orden": 6
+		},
+		{
+			"id": "anos60",
+			"titulo": "Años 60",
+			"periodo": "1960–1969",
+			"inicio": 1960,
+			"fin": 1969,
+			"resumen": "Faldas cada vez más cortas, moda de la era espacial en blanco y plata, materiales nuevos y bloques de color.",
+			"paleta": [
+				"#E8B830",
+				"#F7F7F5",
+				"#C8C8CC",
+				"#111111",
+				"#D9483B"
+			],
+			"escenario": "era_espacial",
+			"subperiodos": [
+				{
+					"nombre": "1961",
+					"descripcion": "El sombrero casquete de Halston en la investidura presidencial estadounidense."
+				},
+				{
+					"nombre": "1964–1966",
+					"descripcion": "Courrèges y Cardin presentan diseños espaciales; las faldas son realmente cortas hacia 1966."
+				},
+				{
+					"nombre": "1965–1966",
+					"descripcion": "Bloques de color inspirados en Mondrian y vestidos de plástico y metal."
+				}
+			],
+			"orden": 7
+		},
+		{
+			"id": "anos80",
+			"titulo": "Años 80",
+			"periodo": "1980–1989",
+			"inicio": 1980,
+			"fin": 1989,
+			"resumen": "Hombreras y trajes de poder, ropa elástica ceñida al cuerpo, volúmenes de alta costura y la vanguardia japonesa en París.",
+			"paleta": [
+				"#1C2A44",
+				"#E0457B",
+				"#8E1F2F",
+				"#121212",
+				"#C9A961"
+			],
+			"escenario": "memphis_neon",
+			"subperiodos": [
+				{
+					"nombre": "1981",
+					"descripcion": "Kawakubo y Yamamoto debutan en París; se estrena la serie Dynasty."
+				},
+				{
+					"nombre": "Mediados y finales",
+					"descripcion": "Vestidos de falda abullonada en colores vivos; Lacroix lanza su prêt-à-porter en 1988."
+				}
+			],
+			"orden": 8
+		},
+		{
+			"id": "anos90",
+			"titulo": "Años 90",
+			"periodo": "1990–1999",
+			"inicio": 1990,
+			"fin": 1999,
+			"resumen": "Grunge en la pasarela, minimalismo y slip dress, el glamour de las supermodelos y el primer «it bag».",
+			"paleta": [
+				"#CFC6BA",
+				"#7A2E2E",
+				"#4A6A8C",
+				"#111111",
+				"#6B3FA0"
+			],
+			"escenario": "estudio_ciclorama",
+			"subperiodos": [
+				{
+					"nombre": "1991",
+					"descripcion": "Las supermodelos desfilan juntas para Versace en Milán."
+				},
+				{
+					"nombre": "1993",
+					"descripcion": "Marc Jacobs lleva el grunge a la pasarela con Perry Ellis."
+				},
+				{
+					"nombre": "Mediados y finales",
+					"descripcion": "El slip dress resume el minimalismo; en 1997 aparece el bolso Baguette."
+				}
+			],
+			"orden": 9
+		}
+	]
+}

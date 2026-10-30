@@ -1,0 +1,217 @@
+{
+	"esquema": 1,
+	"era": "medieval",
+	"entradas": [
+		{
+			"id": "med_bliaut",
+			"nombre": "Bliaut",
+			"era": "medieval",
+			"periodo": "Siglo XII",
+			"region": "Europa occidental (clases altas)",
+			"resumen": "Túnica exterior de mangas anchas, prenda de las clases altas del siglo XII.",
+			"hechos": [
+				{
+					"texto": "Hacia 1140, cuando las prendas largas se generalizaron en las clases altas, la indumentaria de hombres y mujeres constaba de dos prendas principales, una de ellas el bliaut: una túnica exterior de mangas anchas.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1964_becket"
+					]
+				},
+				{
+					"texto": "A finales del siglo XII las mangas del bliaut femenino eran tan acampanadas que a veces había que anudar sus extremos para que no arrastraran por el suelo.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1964_becket"
+					]
+				}
+			],
+			"revision_humana": false,
+			"nota_fuentes": "La fuente es una ficha sobre vestuario cinematográfico que resume la historiografía citando a François Boucher; conviene contrastarla con estudios de indumentaria medieval.",
+			"silueta": [
+				{
+					"texto": "Cuerpo ajustado y falda larga; las mangas, estrechas en el brazo, se abren hacia la muñeca.",
+					"estado": "interpretacion",
+					"fuentes": []
+				}
+			]
+		},
+		{
+			"id": "med_toca",
+			"nombre": "Toca (griñón)",
+			"era": "medieval",
+			"periodo": "Finales del siglo XII – comienzos del XIV",
+			"region": "Europa",
+			"resumen": "Tocado que rodea el cuello, las mejillas y el mentón y enmarca el rostro.",
+			"hechos": [
+				{
+					"texto": "Se llevaba sobre la cabeza y alrededor del cuello, las mejillas y el mentón; fue común en Europa desde finales del siglo XII hasta comienzos del XIV.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_wimple"
+					]
+				},
+				{
+					"texto": "Pervivió hasta épocas recientes como tocado de mujeres de órdenes religiosas.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_wimple"
+					]
+				},
+				{
+					"texto": "Según Britannica, las mujeres occidentales lo adoptaron como velo de mentón después de que los cruzados trajeran modas de velos de Oriente Próximo.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_wimple"
+					]
+				}
+			],
+			"revision_humana": false,
+			"materiales": [
+				{
+					"texto": "Solía hacerse de lino fino blanco o de seda.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_wimple"
+					]
+				}
+			]
+		},
+		{
+			"id": "med_hopalanda",
+			"nombre": "Hopalanda",
+			"era": "medieval",
+			"periodo": "c. 1380–1450",
+			"region": "Europa occidental",
+			"resumen": "Vestido exterior largo y amplio, plisado, ceñido con cinturón.",
+			"hechos": [
+				{
+					"texto": "La hopalanda era un vestido largo y amplio, plisado, cortado a partir de grandes piezas circulares y ceñido con cinturón sobre un vestido interior ajustado, abotonado o atado por delante.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1400_1409"
+					]
+				},
+				{
+					"texto": "Comenzó como prenda masculina; después de 1387 las mujeres empezaron a llevar una versión más suave.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1416_limbourg"
+					]
+				},
+				{
+					"texto": "En la primera década del siglo XV la mayoría tenía escote alto y mangas largas, a menudo de tipo «bombarda»: estrechas en el hombro y abiertas en un amplio embudo.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1400_1409"
+					]
+				},
+				{
+					"texto": "Hacia la década de 1440 la mujer a la moda ya no adoptaba una postura arqueada y vestía un traje ajustado con un cinturón ancho en la cintura natural.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1440_1449"
+					]
+				}
+			],
+			"revision_humana": false,
+			"nota_fuentes": "La fecha de 1387 procede de una sola fuente secundaria (que cita a Tortora)."
+		},
+		{
+			"id": "med_tocado_conico",
+			"nombre": "Tocado cónico",
+			"era": "medieval",
+			"periodo": "Siglo XV",
+			"region": "Cortes de Borgoña y Francia",
+			"resumen": "Tocado alto y cónico, a menudo con velo.",
+			"hechos": [
+				{
+					"texto": "En las cortes de Borgoña y Francia las siluetas de hombres y mujeres eran alargadas y angulosas, desde la punta de los tocados cónicos femeninos hasta la de los zapatos «poulaine» masculinos.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1410_1419"
+					]
+				},
+				{
+					"texto": "Hacia 1450 el tocado femenino ya no tenía forma de cuernos, sino cónica y cada vez más alta.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1450_weyden"
+					]
+				}
+			],
+			"revision_humana": false,
+			"nota_fuentes": "El nombre «hennin» se usa habitualmente para estos tocados; las fuentes consultadas no detallan su origen."
+		},
+		{
+			"id": "med_poulaine",
+			"nombre": "Zapatos de punta (poulaines)",
+			"era": "medieval",
+			"periodo": "Siglos XIV–XV",
+			"region": "Europa occidental",
+			"resumen": "Calzado de punta muy alargada.",
+			"hechos": [
+				{
+					"texto": "En la década de 1410 todavía se llevaban zapatos de puntas extremadamente alargadas.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1410_1419"
+					]
+				}
+			],
+			"revision_humana": false,
+			"uso": [
+				{
+					"texto": "En el juego se ofrecen también para el vestuario femenino; la fuente citada los describe en la silueta masculina.",
+					"estado": "interpretacion",
+					"fuentes": []
+				}
+			]
+		},
+		{
+			"id": "med_leyes_suntuarias",
+			"nombre": "Leyes suntuarias",
+			"era": "medieval",
+			"periodo": "Siglos XIV–XV",
+			"region": "Florencia, Saboya, Inglaterra",
+			"resumen": "Normas que limitaban el lujo en el vestir según la posición social.",
+			"hechos": [
+				{
+					"texto": "Las leyes suntuarias aparecieron en número en Europa a partir del siglo XIV, cuando se consolidaron los gobiernos nacionales de Francia e Inglaterra y las ciudades-estado italianas.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_regulacion"
+					]
+				},
+				{
+					"texto": "En 1322 Florencia prohibió a sus ciudadanos llevar seda y paño escarlata fuera de casa.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_regulacion"
+					]
+				},
+				{
+					"texto": "En 1463 Eduardo IV de Inglaterra promulgó una ley suntuaria alegando que el exceso en el vestir desagradaba a Dios.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_regulacion"
+					]
+				},
+				{
+					"texto": "En el ducado de Saboya, la primera versión de los Estatutos de Saboya se aprobó en 1403.",
+					"estado": "verificado",
+					"fuentes": [
+						"met_codigos_renacimiento"
+					]
+				}
+			],
+			"revision_humana": false,
+			"uso": [
+				{
+					"texto": "El color y el tejido funcionaban como señal visible del rango: las telas caras y los tintes intensos indicaban posición.",
+					"estado": "interpretacion",
+					"fuentes": []
+				}
+			]
+		}
+	]
+}

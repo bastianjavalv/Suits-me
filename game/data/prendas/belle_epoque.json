@@ -1,0 +1,511 @@
+{
+	"esquema": 1,
+	"era": "belle_epoque",
+	"prendas": [
+		{
+			"id": "be_blusa_jamon",
+			"nombre": "Blusa de cuello alto con mangas de jamón",
+			"categoria": "parte_superior",
+			"era": "belle_epoque",
+			"color": "#F4F1EA",
+			"tejido": "algodon",
+			"estilos": [
+				"dia",
+				"paseo"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 700
+			},
+			"tipologias": [
+				"be_mangas_jamon"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Blusa blanca de cuello alto con mangas muy amplias en el hombro.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Algodón blanco.",
+				"silueta": "Hombros voluminosos y puños estrechos.",
+				"uso": "Día y paseo."
+			},
+			"modelo": {
+				"generador": "parte_superior",
+				"params": {
+					"escote": "alto",
+					"largo": "cintura",
+					"blusado": 0.02,
+					"mangas": {
+						"tipo": "jamon",
+						"volumen": 0.85
+					}
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "be_falda_campana",
+			"nombre": "Falda larga acampanada",
+			"categoria": "parte_inferior",
+			"era": "belle_epoque",
+			"color": "#2B2E3A",
+			"tejido": "lana",
+			"estilos": [
+				"dia",
+				"paseo"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 650
+			},
+			"tipologias": [
+				"be_corse_recto"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Falda ceñida en la cadera y acampanada hacia el suelo, con una ligera cola.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Lana azul marino.",
+				"silueta": "Ajustada arriba, amplia abajo.",
+				"uso": "Día."
+			},
+			"modelo": {
+				"generador": "falda",
+				"params": {
+					"forma": "campana",
+					"largo": "suelo",
+					"vuelo": 0.16,
+					"pliegues": 10,
+					"profundidad_pliegues": 0.014,
+					"cola": 0.06
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "be_vestido_dia",
+			"nombre": "Vestido de día con busto ahuecado",
+			"categoria": "vestido",
+			"era": "belle_epoque",
+			"color": "#D9C6B0",
+			"tejido": "seda",
+			"estilos": [
+				"dia",
+				"visita"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 20
+			},
+			"tipologias": [
+				"be_corse_recto"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Vestido de cuello alto cuyo cuerpo cae ahuecado sobre la cintura, como pedía la silueta del corsé de busto recto.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Seda beige.",
+				"silueta": "Busto adelantado, cintura estrecha, falda con cola.",
+				"uso": "Visitas y tardes."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "alto",
+						"blusado": 0.035,
+						"pico": 0.03
+					},
+					"falda": {
+						"forma": "campana",
+						"largo": "suelo",
+						"vuelo": 0.18,
+						"cola": 0.12,
+						"pliegues": 12,
+						"profundidad_pliegues": 0.016
+					},
+					"mangas": {
+						"tipo": "larga"
+					}
+				}
+			}
+		},
+		{
+			"id": "be_vestido_noche",
+			"nombre": "Vestido de noche con mangas abullonadas",
+			"categoria": "vestido",
+			"era": "belle_epoque",
+			"color": "#6B1E3A",
+			"tejido": "saten",
+			"estilos": [
+				"noche",
+				"baile"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 35
+			},
+			"tipologias": [
+				"be_mangas_jamon"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Vestido de baile con mangas cortas muy abullonadas.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Satén ciruela.",
+				"silueta": "Hombros voluminosos, cintura en pico, falda con cola.",
+				"uso": "Bailes."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "barco",
+						"profundidad_escote": 0.05,
+						"pico": 0.035
+					},
+					"falda": {
+						"forma": "campana",
+						"largo": "suelo",
+						"vuelo": 0.2,
+						"cola": 0.15,
+						"pliegues": 12,
+						"profundidad_pliegues": 0.018
+					},
+					"mangas": {
+						"tipo": "abullonada",
+						"volumen": 0.9
+					}
+				}
+			}
+		},
+		{
+			"id": "be_vestido_plisado",
+			"nombre": "Vestido de seda plisada",
+			"categoria": "vestido",
+			"era": "belle_epoque",
+			"color": "#2F5D62",
+			"tejido": "seda",
+			"estilos": [
+				"casa",
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 45
+			},
+			"tipologias": [
+				"be_delphos"
+			],
+			"influencias": [
+				"Mariano Fortuny",
+				"Henriette Nigrin"
+			],
+			"ficha": {
+				"descripcion": "Columna de seda de plisado fino, sin corsé, inspirada en los vestidos de té de plisado de comienzos del siglo XX.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Seda verde azulado con plisado simulado.",
+				"silueta": "Columna recta que sigue el cuerpo.",
+				"uso": "Vestido de té para casa."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "barco",
+						"silueta": "recta",
+						"holgura": 0.008
+					},
+					"falda": {
+						"forma": "recta",
+						"largo": "suelo",
+						"pliegues": 48,
+						"tipo_pliegue": "acordeon",
+						"profundidad_pliegues": 0.006
+					},
+					"mangas": {
+						"tipo": "casquillo"
+					}
+				}
+			}
+		},
+		{
+			"id": "be_vestido_talle_alto",
+			"nombre": "Vestido de talle alto sin corsé",
+			"categoria": "vestido",
+			"era": "belle_epoque",
+			"color": "#C8553D",
+			"tejido": "seda",
+			"estilos": [
+				"noche",
+				"vanguardia"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 30
+			},
+			"tipologias": [
+				"be_poiret"
+			],
+			"influencias": [
+				"Paul Poiret"
+			],
+			"ficha": {
+				"descripcion": "Vestido de color intenso, talle alto y falda estrecha hacia el tobillo.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Seda roja anaranjada con detalles negros.",
+				"silueta": "Línea vertical y recta.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "imperio",
+					"corpino": {
+						"escote": "v",
+						"profundidad_escote": 0.08
+					},
+					"falda": {
+						"forma": "lapiz",
+						"largo": "tobillo",
+						"pliegues": 6,
+						"profundidad_pliegues": 0.006
+					},
+					"mangas": {
+						"tipo": "casquillo"
+					}
+				}
+			},
+			"color_secundario": "#1B1B1B"
+		},
+		{
+			"id": "be_pamela_plumas",
+			"nombre": "Sombrero de ala ancha con plumas",
+			"categoria": "tocado",
+			"era": "belle_epoque",
+			"color": "#2B2B2B",
+			"tejido": "fieltro",
+			"estilos": [
+				"paseo",
+				"visita"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 900
+			},
+			"tipologias": [
+				"be_corse_recto"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Sombrero grande de ala ancha con plumas.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Fieltro negro y plumas claras.",
+				"silueta": "Ala ancha que equilibra la silueta.",
+				"uso": "Interpretación: complemento de paseo de la época."
+			},
+			"modelo": {
+				"generador": "tocado",
+				"params": {
+					"tipo": "pamela",
+					"ala": 0.2,
+					"adorno": "plumas"
+				}
+			},
+			"color_secundario": "#EAE3D6"
+		},
+		{
+			"id": "be_recogido",
+			"nombre": "Recogido alto con volumen",
+			"categoria": "peinado",
+			"era": "belle_epoque",
+			"color": "#6B4A2E",
+			"tejido": "algodon",
+			"estilos": [
+				"dia",
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 200
+			},
+			"tipologias": [
+				"be_corse_recto"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Recogido alto con volumen sobre la frente y moño en la coronilla.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cabello castaño.",
+				"silueta": "Volumen alrededor del rostro.",
+				"uso": "Interpretación: peinado habitual de la época."
+			},
+			"modelo": {
+				"generador": "peinado",
+				"params": {
+					"estilo": "recogido",
+					"volumen": 0.75
+				}
+			}
+		},
+		{
+			"id": "be_botines",
+			"nombre": "Botines de cordones",
+			"categoria": "calzado",
+			"era": "belle_epoque",
+			"color": "#1C1A18",
+			"tejido": "cuero",
+			"estilos": [
+				"dia",
+				"paseo"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 500
+			},
+			"tipologias": [
+				"be_corse_recto"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Botines de tacón medio que suben por encima del tobillo.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cuero negro.",
+				"silueta": "Ajustados al tobillo.",
+				"uso": "Calle."
+			},
+			"modelo": {
+				"generador": "calzado",
+				"params": {
+					"tipo": "bota",
+					"tacon": 0.04,
+					"cana": 0.12,
+					"punta": "almendra"
+				}
+			}
+		},
+		{
+			"id": "be_sombrilla",
+			"nombre": "Sombrilla de encaje",
+			"categoria": "complemento",
+			"era": "belle_epoque",
+			"color": "#F2EEE6",
+			"tejido": "encaje",
+			"estilos": [
+				"paseo"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 400
+			},
+			"tipologias": [
+				"be_corse_recto"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Sombrilla clara de encaje.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Encaje de algodón y varilla metálica.",
+				"silueta": "Se lleva apoyada en el hombro.",
+				"uso": "Paseo al sol."
+			},
+			"modelo": {
+				"generador": "complemento",
+				"params": {
+					"tipo": "sombrilla"
+				}
+			},
+			"metal": "plata"
+		}
+	]
+}

@@ -1,0 +1,438 @@
+{
+	"esquema": 1,
+	"era": "anos80",
+	"prendas": [
+		{
+			"id": "a80_chaqueta_poder",
+			"nombre": "Chaqueta de hombros anchos",
+			"categoria": "abrigo",
+			"era": "anos80",
+			"color": "#1C2A44",
+			"tejido": "lana",
+			"estilos": [
+				"oficina",
+				"poder"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 1200
+			},
+			"tipologias": [
+				"a80_poder"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Chaqueta de solapas con hombreras muy marcadas.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Lana azul marino.",
+				"silueta": "Forma de V invertida desde los hombros.",
+				"uso": "Oficina."
+			},
+			"modelo": {
+				"generador": "abrigo",
+				"params": {
+					"tipo": "chaqueta",
+					"largo": "cadera",
+					"abertura": 0.12,
+					"escote": "solapa",
+					"hombreras": 0.9,
+					"botones": 2
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a80_falda_tubo",
+			"nombre": "Falda tubo",
+			"categoria": "parte_inferior",
+			"era": "anos80",
+			"color": "#1C2A44",
+			"tejido": "lana",
+			"estilos": [
+				"oficina",
+				"poder"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 500
+			},
+			"tipologias": [
+				"a80_poder"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Falda estrecha por encima de la rodilla.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Lana azul marino.",
+				"silueta": "Ceñida.",
+				"uso": "Oficina."
+			},
+			"modelo": {
+				"generador": "falda",
+				"params": {
+					"forma": "lapiz",
+					"largo": "sobre_rodilla"
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a80_vestido_cenido",
+			"nombre": "Vestido ceñido de punto elástico",
+			"categoria": "vestido",
+			"era": "anos80",
+			"color": "#8E1F2F",
+			"tejido": "sintetico",
+			"estilos": [
+				"noche",
+				"ceñido"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 35
+			},
+			"tipologias": [
+				"a80_cenido"
+			],
+			"influencias": [
+				"Azzedine Alaïa",
+				"Donna Karan"
+			],
+			"ficha": {
+				"descripcion": "Vestido elástico que sigue la forma del cuerpo.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Punto elástico granate.",
+				"silueta": "Ajustado de arriba abajo.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "redondo"
+					},
+					"falda": {
+						"forma": "lapiz",
+						"largo": "sobre_rodilla"
+					},
+					"mangas": {
+						"tipo": "larga"
+					}
+				}
+			}
+		},
+		{
+			"id": "a80_vestido_globo",
+			"nombre": "Vestido de falda globo",
+			"categoria": "vestido",
+			"era": "anos80",
+			"color": "#E0457B",
+			"tejido": "seda",
+			"estilos": [
+				"noche",
+				"fiesta"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 45
+			},
+			"tipologias": [
+				"a80_volumen"
+			],
+			"influencias": [
+				"Christian Lacroix"
+			],
+			"ficha": {
+				"descripcion": "Cuerpo sin tirantes y falda abullonada recogida en el bajo.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Tafetán de seda fucsia.",
+				"silueta": "Volumen redondeado en la falda.",
+				"uso": "Fiesta."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "palabra_de_honor"
+					},
+					"falda": {
+						"forma": "globo",
+						"largo": "sobre_rodilla",
+						"vuelo": 0.16,
+						"pliegues": 10,
+						"profundidad_pliegues": 0.016
+					}
+				}
+			}
+		},
+		{
+			"id": "a80_abrigo_negro",
+			"nombre": "Abrigo negro amplio",
+			"categoria": "abrigo",
+			"era": "anos80",
+			"color": "#121212",
+			"tejido": "lana",
+			"estilos": [
+				"vanguardia"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 40
+			},
+			"tipologias": [
+				"a80_vanguardia_japonesa"
+			],
+			"influencias": [
+				"Rei Kawakubo",
+				"Yohji Yamamoto"
+			],
+			"ficha": {
+				"descripcion": "Abrigo negro holgado y largo.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Lana negra.",
+				"silueta": "Amplio, sin entallar.",
+				"uso": "Calle."
+			},
+			"modelo": {
+				"generador": "abrigo",
+				"params": {
+					"tipo": "abrigo",
+					"largo": "media_pierna",
+					"abertura": 0.3,
+					"escote": "redondo",
+					"holgura": 0.04,
+					"vuelo": 0.08
+				}
+			}
+		},
+		{
+			"id": "a80_falda_asimetrica",
+			"nombre": "Falda negra de bajo asimétrico",
+			"categoria": "parte_inferior",
+			"era": "anos80",
+			"color": "#121212",
+			"tejido": "lana",
+			"estilos": [
+				"vanguardia"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 600
+			},
+			"tipologias": [
+				"a80_vanguardia_japonesa"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Falda negra con el bajo más largo de un lado.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Lana negra.",
+				"silueta": "Asimétrica.",
+				"uso": "Calle."
+			},
+			"modelo": {
+				"generador": "falda",
+				"params": {
+					"forma": "a",
+					"largo": "media_pierna",
+					"bajo": "asimetrico",
+					"vuelo": 0.08,
+					"pliegues": 6,
+					"profundidad_pliegues": 0.01
+				}
+			}
+		},
+		{
+			"id": "a80_melena_voluminosa",
+			"nombre": "Melena voluminosa",
+			"categoria": "peinado",
+			"era": "anos80",
+			"color": "#7A4A2A",
+			"tejido": "algodon",
+			"estilos": [
+				"fiesta",
+				"poder"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 200
+			},
+			"tipologias": [
+				"a80_poder"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Melena rizada con mucho volumen.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cabello castaño claro.",
+				"silueta": "Gran volumen alrededor del rostro.",
+				"uso": "Interpretación: peinado de la década."
+			},
+			"modelo": {
+				"generador": "peinado",
+				"params": {
+					"estilo": "voluminoso",
+					"volumen": 0.9
+				}
+			}
+		},
+		{
+			"id": "a80_aros",
+			"nombre": "Pendientes de aro dorados",
+			"categoria": "joyeria",
+			"era": "anos80",
+			"color": "#C9A961",
+			"tejido": "algodon",
+			"estilos": [
+				"fiesta",
+				"poder"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 400
+			},
+			"tipologias": [
+				"a80_poder"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Aros grandes dorados.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Metal dorado.",
+				"silueta": "Circulares.",
+				"uso": "Interpretación: complemento de la década."
+			},
+			"modelo": {
+				"generador": "joyeria",
+				"params": {
+					"tipo": "aros"
+				}
+			},
+			"metal": "oro"
+		},
+		{
+			"id": "a80_salones_color",
+			"nombre": "Zapatos de salón fucsia",
+			"categoria": "calzado",
+			"era": "anos80",
+			"color": "#E0457B",
+			"tejido": "cuero",
+			"estilos": [
+				"fiesta"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 600
+			},
+			"tipologias": [
+				"a80_volumen"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Zapatos de salón de color intenso.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cuero fucsia.",
+				"silueta": "Punta almendrada.",
+				"uso": "Fiesta."
+			},
+			"modelo": {
+				"generador": "calzado",
+				"params": {
+					"tipo": "zapato_tacon",
+					"tacon": 0.07,
+					"punta": "almendra"
+				}
+			}
+		}
+	]
+}

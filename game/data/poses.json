@@ -1,0 +1,179 @@
+{
+	"esquema": 1,
+	"poses": [
+		{
+			"id": "erguida",
+			"nombre": "Erguida",
+			"articulaciones": {}
+		},
+		{
+			"id": "contrapposto",
+			"nombre": "Contrapposto",
+			"articulaciones": {
+				"tronco": [
+					0,
+					4,
+					2
+				],
+				"cadera_d": [
+					0,
+					0,
+					-3
+				],
+				"cadera_i": [
+					-2,
+					0,
+					2
+				],
+				"rodilla_i": [
+					8,
+					0,
+					0
+				],
+				"cabeza": [
+					0,
+					-6,
+					-3
+				],
+				"hombro_d": [
+					0,
+					0,
+					-9
+				],
+				"hombro_i": [
+					4,
+					0,
+					12
+				],
+				"codo_i": [
+					-18,
+					0,
+					0
+				],
+				"codo_d": [
+					-6,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"id": "mano_cadera",
+			"nombre": "Mano en la cadera",
+			"articulaciones": {
+				"hombro_d": [
+					0,
+					0,
+					-40
+				],
+				"codo_d": [
+					0,
+					0,
+					105
+				],
+				"muneca_d": [
+					0,
+					0,
+					10
+				],
+				"hombro_i": [
+					0,
+					0,
+					8
+				],
+				"tronco": [
+					0,
+					-6,
+					-2
+				],
+				"cabeza": [
+					0,
+					10,
+					3
+				]
+			}
+		},
+		{
+			"id": "pasarela",
+			"nombre": "Pasarela",
+			"articulaciones": {
+				"cadera_d": [
+					-14,
+					0,
+					0
+				],
+				"rodilla_d": [
+					8,
+					0,
+					0
+				],
+				"cadera_i": [
+					8,
+					0,
+					0
+				],
+				"rodilla_i": [
+					14,
+					0,
+					0
+				],
+				"hombro_i": [
+					-10,
+					0,
+					7
+				],
+				"hombro_d": [
+					12,
+					0,
+					-7
+				],
+				"tronco": [
+					0,
+					-4,
+					0
+				]
+			}
+		},
+		{
+			"id": "editorial",
+			"nombre": "Editorial",
+			"articulaciones": {
+				"hombro_i": [
+					0,
+					0,
+					145
+				],
+				"codo_i": [
+					0,
+					0,
+					115
+				],
+				"cabeza": [
+					0,
+					8,
+					4
+				],
+				"hombro_d": [
+					0,
+					0,
+					-10
+				],
+				"codo_d": [
+					-10,
+					0,
+					0
+				],
+				"tronco": [
+					0,
+					6,
+					-2
+				],
+				"rodilla_d": [
+					6,
+					0,
+					0
+				]
+			}
+		}
+	]
+}

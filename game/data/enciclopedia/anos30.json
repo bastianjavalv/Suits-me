@@ -1,0 +1,89 @@
+{
+	"esquema": 1,
+	"era": "anos30",
+	"entradas": [
+		{
+			"id": "a30_bies",
+			"nombre": "Corte al bies",
+			"era": "anos30",
+			"periodo": "Años 20 y 30",
+			"region": "París",
+			"resumen": "Tela cortada en diagonal para que caiga pegada al cuerpo.",
+			"hechos": [
+				{
+					"texto": "El corte al bies, introducido en los años 20 por la modista francesa Madeleine Vionnet, se adoptó ampliamente en los años 30.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_siglo20"
+					]
+				},
+				{
+					"texto": "Llamada «la Euclides de la moda», Vionnet sistematizó el drapeado aprovechando el bies y diseñó con precisión matemática.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1936_vionnet"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a30_hollywood",
+			"nombre": "Hollywood: el vestido «Letty Lynton»",
+			"era": "anos30",
+			"periodo": "1932",
+			"region": "Estados Unidos",
+			"resumen": "El cine como escaparate de la moda.",
+			"hechos": [
+				{
+					"texto": "El figurinista de Hollywood Adrian creó el vestido «Letty Lynton», considerado la prenda más copiada de la década.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1930_1939"
+					]
+				},
+				{
+					"texto": "Según una fuente, solo los almacenes Macy's vendieron unas 500 000 copias en 1932; la cifra no se pudo contrastar con otras fuentes.",
+					"estado": "discutido",
+					"fuentes": [
+						"fit_1930_1939"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a30_schiaparelli",
+			"nombre": "Schiaparelli y el surrealismo",
+			"era": "anos30",
+			"periodo": "1937",
+			"region": "París",
+			"resumen": "Arte y alta costura.",
+			"hechos": [
+				{
+					"texto": "En la primavera de 1937 Schiaparelli pidió a Salvador Dalí que diseñara una langosta como decoración para un vestido de noche de organdí blanco.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1937_langosta"
+					]
+				},
+				{
+					"texto": "La fotografía de Wallis Simpson con ese vestido en Vogue lo hizo famoso.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1937_langosta"
+					]
+				},
+				{
+					"texto": "Su color distintivo fue un rosa «shocking» de invención propia, que la diferenciaba de las paletas sobrias de rivales como Chanel.",
+					"estado": "verificado",
+					"fuentes": [
+						"pma_schiaparelli"
+					]
+				}
+			],
+			"revision_humana": false,
+			"nota_fuentes": "El juego no reproduce el motivo de la langosta (obra protegida de Dalí); solo se inspira en el color."
+		}
+	]
+}

@@ -1,0 +1,44 @@
+{
+	"esquema": 1,
+	"desafios": [
+		{
+			"id": "d_noche_a",
+			"era": "era_a",
+			"titulo": "Noche de prueba",
+			"tipo": "recreacion_historica",
+			"descripcion": "Recrea un look de noche de la era A.",
+			"etiquetas_tema": [
+				"noche"
+			],
+			"eras_validas": [
+				"era_a"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"tocado",
+					"joyeria"
+				]
+			},
+			"paleta": [
+				"#141414",
+				"#C8A040"
+			],
+			"escenario": "estudio"
+		},
+		{
+			"id": "d_libre",
+			"era": "era_b",
+			"titulo": "Libre",
+			"tipo": "libre",
+			"descripcion": "Cualquier época.",
+			"etiquetas_tema": [],
+			"eras_validas": [],
+			"requisitos": {},
+			"escenario": "estudio"
+		}
+	]
+}

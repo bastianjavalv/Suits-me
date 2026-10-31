@@ -1,0 +1,441 @@
+{
+	"esquema": 1,
+	"era": "medieval",
+	"prendas": [
+		{
+			"id": "med_bliaut_azul",
+			"nombre": "Bliaut de seda con mangas acampanadas",
+			"categoria": "vestido",
+			"era": "medieval",
+			"color": "#2E4A7A",
+			"tejido": "seda",
+			"estilos": [
+				"corte",
+				"ceremonia"
+			],
+			"temporadas": [
+				"primavera",
+				"otono"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 1800
+			},
+			"tipologias": [
+				"med_bliaut"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Interpretación de un bliaut del siglo XII: cuerpo ceñido, falda larga plisada y mangas que se abren hasta caer por debajo de la mano.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Seda en tafetán azul con ribetes dorados.",
+				"silueta": "Ajustada en el cuerpo; falda hasta el suelo; mangas muy acampanadas.",
+				"uso": "Ceremonias de corte."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "redondo",
+						"profundidad_escote": 0.04,
+						"holgura": 0.004
+					},
+					"falda": {
+						"forma": "campana",
+						"largo": "suelo",
+						"vuelo": 0.14,
+						"pliegues": 14,
+						"profundidad_pliegues": 0.018
+					},
+					"mangas": {
+						"tipo": "colgante",
+						"volumen": 0.85
+					}
+				}
+			},
+			"color_secundario": "#C9A961"
+		},
+		{
+			"id": "med_hopalanda_verde",
+			"nombre": "Hopalanda de terciopelo",
+			"categoria": "vestido",
+			"era": "medieval",
+			"color": "#3E5E3A",
+			"tejido": "terciopelo",
+			"estilos": [
+				"corte",
+				"ceremonia"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 40
+			},
+			"tipologias": [
+				"med_hopalanda"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Vestido exterior amplio de talle alto, con pliegues profundos, cola y mangas en embudo al estilo «bombarda».",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Terciopelo verde.",
+				"silueta": "Talle alto, gran volumen plisado y cola trasera.",
+				"uso": "Corte y ocasiones solemnes."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "imperio",
+					"corpino": {
+						"escote": "v",
+						"profundidad_escote": 0.12
+					},
+					"falda": {
+						"forma": "campana",
+						"largo": "suelo",
+						"vuelo": 0.22,
+						"pliegues": 12,
+						"profundidad_pliegues": 0.03,
+						"cola": 0.25
+					},
+					"mangas": {
+						"tipo": "colgante",
+						"volumen": 0.7
+					}
+				}
+			}
+		},
+		{
+			"id": "med_saya_lana",
+			"nombre": "Vestido interior ajustado de lana",
+			"categoria": "vestido",
+			"era": "medieval",
+			"color": "#7A1F2B",
+			"tejido": "lana",
+			"estilos": [
+				"cotidiano",
+				"corte"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 600
+			},
+			"tipologias": [
+				"med_hopalanda"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Vestido ceñido de mangas largas como los que se llevaban bajo la hopalanda.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Lana granate.",
+				"silueta": "Ajustado al cuerpo, falda larga ligeramente acampanada.",
+				"uso": "Prenda interior o vestido de diario."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "redondo",
+						"profundidad_escote": 0.04
+					},
+					"falda": {
+						"forma": "a",
+						"largo": "suelo",
+						"vuelo": 0.1,
+						"pliegues": 10,
+						"profundidad_pliegues": 0.012
+					},
+					"mangas": {
+						"tipo": "larga"
+					}
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "med_manto_escarlata",
+			"nombre": "Manto de paño escarlata",
+			"categoria": "abrigo",
+			"era": "medieval",
+			"color": "#9E1B1B",
+			"tejido": "lana",
+			"estilos": [
+				"corte",
+				"ceremonia"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 30
+			},
+			"tipologias": [
+				"med_leyes_suntuarias"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Manto amplio de paño rojo intenso, el tipo de tejido que la ley florentina de 1322 prohibía llevar en la calle.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Lana teñida de escarlata.",
+				"silueta": "Cae desde los hombros hasta los tobillos.",
+				"uso": "Abrigo de ceremonia."
+			},
+			"modelo": {
+				"generador": "capa",
+				"params": {
+					"largo": "tobillo",
+					"vuelo": 0.16
+				}
+			}
+		},
+		{
+			"id": "med_toca_lino",
+			"nombre": "Toca y velo de lino",
+			"categoria": "tocado",
+			"era": "medieval",
+			"color": "#F2EEE4",
+			"tejido": "lino",
+			"estilos": [
+				"cotidiano",
+				"corte"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 300
+			},
+			"tipologias": [
+				"med_toca"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Toca que envuelve cuello y mentón con un velo sobre la cabeza.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Lino blanco.",
+				"silueta": "Enmarca el rostro.",
+				"uso": "Uso diario de mujeres adultas."
+			},
+			"modelo": {
+				"generador": "tocado",
+				"params": {
+					"tipo": "toca"
+				}
+			}
+		},
+		{
+			"id": "med_tocado_conico",
+			"nombre": "Tocado cónico de brocado con velo",
+			"categoria": "tocado",
+			"era": "medieval",
+			"color": "#7A1F2B",
+			"tejido": "brocado",
+			"estilos": [
+				"corte",
+				"ceremonia"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 25
+			},
+			"tipologias": [
+				"med_tocado_conico"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Tocado alto y cónico con un velo de gasa que cae por la espalda.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Brocado granate con motivo dorado; velo de tul.",
+				"silueta": "Alarga la silueta hacia arriba.",
+				"uso": "Corte del siglo XV."
+			},
+			"modelo": {
+				"generador": "tocado",
+				"params": {
+					"tipo": "hennin",
+					"alto": 0.48
+				}
+			},
+			"color_secundario": "#C9A961"
+		},
+		{
+			"id": "med_poulaines",
+			"nombre": "Poulaines de cuero",
+			"categoria": "calzado",
+			"era": "medieval",
+			"color": "#3A2A1E",
+			"tejido": "cuero",
+			"estilos": [
+				"corte",
+				"cotidiano"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 450
+			},
+			"tipologias": [
+				"med_poulaine"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Zapatos planos de punta muy alargada.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cuero marrón.",
+				"silueta": "Punta estrecha y larga.",
+				"uso": "Calzado de corte."
+			},
+			"modelo": {
+				"generador": "calzado",
+				"params": {
+					"tipo": "poulaine",
+					"tacon": 0.0
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "med_cinturon_ancho",
+			"nombre": "Cinturón ancho con hebilla",
+			"categoria": "cinturon",
+			"era": "medieval",
+			"color": "#2B1D14",
+			"tejido": "cuero",
+			"estilos": [
+				"corte"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 350
+			},
+			"tipologias": [
+				"med_hopalanda"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Cinturón ancho en la cintura natural, con un extremo largo que cae por delante.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cuero oscuro y hebilla de latón.",
+				"silueta": "Marca la cintura.",
+				"uso": "Se lleva sobre el vestido."
+			},
+			"modelo": {
+				"generador": "cinturon",
+				"params": {
+					"altura": 1.04,
+					"ancho": 0.05,
+					"holgura": 0.035,
+					"tipo": "cenidor"
+				}
+			},
+			"metal": "laton"
+		},
+		{
+			"id": "med_trenzas",
+			"nombre": "Trenzas largas",
+			"categoria": "peinado",
+			"era": "medieval",
+			"color": "#5A3B22",
+			"tejido": "algodon",
+			"estilos": [
+				"cotidiano"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 150
+			},
+			"tipologias": [
+				"med_toca"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Peinado de dos trenzas largas.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cabello castaño.",
+				"silueta": "Raya al medio y trenzas sobre el pecho.",
+				"uso": "Interpretación: la toca y el velo solían cubrir el cabello de las mujeres adultas."
+			},
+			"modelo": {
+				"generador": "peinado",
+				"params": {
+					"estilo": "trenzas",
+					"volumen": 0.4
+				}
+			}
+		}
+	]
+}

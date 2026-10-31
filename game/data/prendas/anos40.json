@@ -1,0 +1,430 @@
+{
+	"esquema": 1,
+	"era": "anos40",
+	"prendas": [
+		{
+			"id": "a40_chaqueta_utility",
+			"nombre": "Chaqueta de utilidad",
+			"categoria": "abrigo",
+			"era": "anos40",
+			"color": "#5B5E4A",
+			"tejido": "gabardina",
+			"estilos": [
+				"dia",
+				"utilitario"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 800
+			},
+			"tipologias": [
+				"a40_utility"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Chaqueta sencilla de una fila de botones y hombros rectos.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Gabardina de lana verde oliva.",
+				"silueta": "Hombros cuadrados y cintura ligeramente marcada.",
+				"uso": "Trabajo y diario."
+			},
+			"modelo": {
+				"generador": "abrigo",
+				"params": {
+					"tipo": "chaqueta",
+					"largo": "cadera",
+					"abertura": 0.0,
+					"escote": "solapa",
+					"hombreras": 0.3,
+					"botones": 3
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a40_falda_utility",
+			"nombre": "Falda hasta la rodilla",
+			"categoria": "parte_inferior",
+			"era": "anos40",
+			"color": "#5B5E4A",
+			"tejido": "lana",
+			"estilos": [
+				"dia",
+				"utilitario"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 400
+			},
+			"tipologias": [
+				"a40_utility"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Falda recta con poco vuelo, que ahorra tela.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Lana verde oliva.",
+				"silueta": "Recta hasta la rodilla.",
+				"uso": "Diario."
+			},
+			"modelo": {
+				"generador": "falda",
+				"params": {
+					"forma": "a",
+					"largo": "rodilla",
+					"vuelo": 0.05,
+					"pliegues": 4,
+					"profundidad_pliegues": 0.006
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a40_vestido_cruzado",
+			"nombre": "Vestido cruzado de denim",
+			"categoria": "vestido",
+			"era": "anos40",
+			"color": "#2C4A72",
+			"tejido": "denim",
+			"estilos": [
+				"dia",
+				"utilitario"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 500
+			},
+			"tipologias": [
+				"a40_mccardell"
+			],
+			"influencias": [
+				"Claire McCardell"
+			],
+			"ficha": {
+				"descripcion": "Vestido práctico de denim que se cruza por delante.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Denim índigo.",
+				"silueta": "Cintura marcada y falda con algo de vuelo.",
+				"uso": "Casa y diario."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "v",
+						"profundidad_escote": 0.12
+					},
+					"falda": {
+						"forma": "a",
+						"largo": "media_pierna",
+						"vuelo": 0.1,
+						"pliegues": 6,
+						"profundidad_pliegues": 0.008
+					},
+					"mangas": {
+						"tipo": "corta"
+					}
+				}
+			}
+		},
+		{
+			"id": "a40_chaqueta_peplum",
+			"nombre": "Chaqueta de shantung con peplum",
+			"categoria": "abrigo",
+			"era": "anos40",
+			"color": "#EFE9E1",
+			"tejido": "seda",
+			"estilos": [
+				"dia",
+				"elegante"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 45
+			},
+			"tipologias": [
+				"a40_new_look"
+			],
+			"influencias": [
+				"Christian Dior"
+			],
+			"ficha": {
+				"descripcion": "Chaqueta clara muy entallada con un peplum redondeado sobre las caderas.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Seda marfil.",
+				"silueta": "Cintura muy estrecha y caderas acolchadas.",
+				"uso": "Tarde."
+			},
+			"modelo": {
+				"generador": "abrigo",
+				"params": {
+					"tipo": "chaqueta",
+					"largo": "cadera",
+					"abertura": 0.0,
+					"escote": "solapa",
+					"profundidad_escote": 0.14,
+					"peplum": 0.06,
+					"botones": 5
+				}
+			}
+		},
+		{
+			"id": "a40_falda_corola",
+			"nombre": "Falda negra plisada de gran vuelo",
+			"categoria": "parte_inferior",
+			"era": "anos40",
+			"color": "#141414",
+			"tejido": "lana",
+			"estilos": [
+				"dia",
+				"elegante"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 40
+			},
+			"tipologias": [
+				"a40_new_look"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Falda plisada muy amplia que contrasta con la chaqueta entallada.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Lana negra.",
+				"silueta": "Gran volumen desde la cintura.",
+				"uso": "Tarde."
+			},
+			"modelo": {
+				"generador": "falda",
+				"params": {
+					"forma": "circular",
+					"largo": "media_pierna",
+					"vuelo": 0.34,
+					"pliegues": 22,
+					"tipo_pliegue": "tabla",
+					"profundidad_pliegues": 0.02
+				}
+			}
+		},
+		{
+			"id": "a40_turbante",
+			"nombre": "Turbante de punto",
+			"categoria": "tocado",
+			"era": "anos40",
+			"color": "#8C2F39",
+			"tejido": "punto",
+			"estilos": [
+				"utilitario",
+				"dia"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 250
+			},
+			"tipologias": [
+				"a40_turbante"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Turbante de punto con nudo en la frente.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Punto granate.",
+				"silueta": "Recoge todo el cabello.",
+				"uso": "Trabajo y calle."
+			},
+			"modelo": {
+				"generador": "tocado",
+				"params": {
+					"tipo": "turbante"
+				}
+			}
+		},
+		{
+			"id": "a40_panuelo",
+			"nombre": "Pañuelo de lunares",
+			"categoria": "tocado",
+			"era": "anos40",
+			"color": "#B22222",
+			"tejido": "algodon",
+			"estilos": [
+				"utilitario",
+				"dia"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 150
+			},
+			"tipologias": [
+				"a40_turbante"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Pañuelo anudado que cubre el pelo.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Algodón rojo con lunares blancos.",
+				"silueta": "Ceñido a la cabeza.",
+				"uso": "Trabajo."
+			},
+			"modelo": {
+				"generador": "tocado",
+				"params": {
+					"tipo": "panuelo"
+				}
+			},
+			"color_secundario": "#F5F5F0",
+			"estampado": "lunares"
+		},
+		{
+			"id": "a40_rulos",
+			"nombre": "Peinado con rulos enrollados",
+			"categoria": "peinado",
+			"era": "anos40",
+			"color": "#4A2E1E",
+			"tejido": "algodon",
+			"estilos": [
+				"dia",
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 200
+			},
+			"tipologias": [
+				"a40_racionamiento"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Pelo enrollado en dos rulos sobre la frente y melena a los hombros.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cabello castaño.",
+				"silueta": "Volumen en la parte superior.",
+				"uso": "Interpretación: peinado que se resolvía en casa sin gastar."
+			},
+			"modelo": {
+				"generador": "peinado",
+				"params": {
+					"estilo": "victory_rolls",
+					"volumen": 0.6
+				}
+			}
+		},
+		{
+			"id": "a40_zapatos_cuna",
+			"nombre": "Zapatos de cuña",
+			"categoria": "calzado",
+			"era": "anos40",
+			"color": "#6B4A2E",
+			"tejido": "cuero",
+			"estilos": [
+				"dia",
+				"utilitario"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 450
+			},
+			"tipologias": [
+				"a40_racionamiento"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Zapatos con cuña maciza.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cuero marrón.",
+				"silueta": "Base estable.",
+				"uso": "Interpretación de un calzado práctico de la década."
+			},
+			"modelo": {
+				"generador": "calzado",
+				"params": {
+					"tipo": "cuna",
+					"tacon": 0.06,
+					"punta": "redonda"
+				}
+			}
+		}
+	]
+}

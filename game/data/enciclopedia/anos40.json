@@ -1,0 +1,225 @@
+{
+	"esquema": 1,
+	"era": "anos40",
+	"entradas": [
+		{
+			"id": "a40_racionamiento",
+			"nombre": "Racionamiento y «Make Do and Mend»",
+			"era": "anos40",
+			"periodo": "1941–1949",
+			"region": "Reino Unido",
+			"resumen": "Comprar menos, remendar y reutilizar.",
+			"hechos": [
+				{
+					"texto": "El racionamiento de ropa en el Reino Unido comenzó el 1 de junio de 1941 y limitó la compra de prendas nuevas hasta 1949, cuatro años después del fin de la guerra.",
+					"estado": "verificado",
+					"fuentes": [
+						"iwm_racionamiento"
+					]
+				},
+				{
+					"texto": "La campaña «Make Do and Mend» animaba a reparar, reutilizar y transformar la ropa existente durante la Segunda Guerra Mundial.",
+					"estado": "verificado",
+					"fuentes": [
+						"iwm_remendar"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a40_utility",
+			"nombre": "Ropa de utilidad (CC41)",
+			"era": "anos40",
+			"periodo": "1941–1952",
+			"region": "Reino Unido",
+			"resumen": "Prendas sencillas fabricadas bajo normas del Gobierno.",
+			"hechos": [
+				{
+					"texto": "El plan Utility comenzó en 1941 y desde el otoño de ese año los artículos debían marcarse con «CC41».",
+					"estado": "verificado",
+					"fuentes": [
+						"vam_traje_utility"
+					]
+				},
+				{
+					"texto": "Para favorecer series largas se limitaron los modelos: por ejemplo, solo 15 estilos de vestidos para bebés y niñas.",
+					"estado": "verificado",
+					"fuentes": [
+						"iwm_racionamiento"
+					]
+				},
+				{
+					"texto": "En la ropa masculina, las chaquetas cruzadas se sustituyeron por las de una fila de botones y se eliminaron las vueltas del pantalón.",
+					"estado": "verificado",
+					"fuentes": [
+						"iwm_racionamiento"
+					]
+				},
+				{
+					"texto": "Las fuentes difieren sobre la llegada a las tiendas: el plan se introdujo en 1941 y algunas fuentes sitúan la venta en 1942.",
+					"estado": "discutido",
+					"fuentes": [
+						"iwm_racionamiento",
+						"vam_traje_utility"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a40_l85",
+			"nombre": "Orden L-85",
+			"era": "anos40",
+			"periodo": "1942",
+			"region": "Estados Unidos",
+			"resumen": "Límites al uso de tela en la moda estadounidense de guerra.",
+			"hechos": [
+				{
+					"texto": "Un vestido de noche de Gilbert Adrian de 1942 seguía las estrictas pautas de la Orden General de Limitación L-85 durante la Segunda Guerra Mundial.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1940_1949"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a40_mccardell",
+			"nombre": "Claire McCardell y el «Pop-over»",
+			"era": "anos40",
+			"periodo": "1942",
+			"region": "Estados Unidos",
+			"resumen": "Ropa deportiva práctica y asequible.",
+			"hechos": [
+				{
+					"texto": "El Met conserva un «Pop-over» de algodón de 1942 fabricado por Townley Frocks, donado por la propia McCardell en 1945.",
+					"estado": "verificado",
+					"fuentes": [
+						"met_popover"
+					]
+				},
+				{
+					"texto": "Según Sally Kirkland, citada por el Met, se vendió «por miles», y su bajo precio reflejaba su clasificación como prenda utilitaria.",
+					"estado": "verificado",
+					"fuentes": [
+						"met_popover"
+					]
+				},
+				{
+					"texto": "El FIT lo describe como un sencillo vestido cruzado de denim para mujeres prácticas en los años de guerra y considera a McCardell una de las fundadoras de la ropa deportiva estadounidense.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1940_1949"
+					]
+				},
+				{
+					"texto": "Una página del FIT lo fecha en 1940; el Met y otras páginas del FIT, en 1942.",
+					"estado": "discutido",
+					"fuentes": [
+						"fit_1940_1949",
+						"met_popover"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a40_new_look",
+			"nombre": "New Look y traje «Bar» (1947)",
+			"era": "anos40",
+			"periodo": "1947",
+			"region": "París",
+			"resumen": "Cintura estrecha y falda amplia tras la guerra.",
+			"hechos": [
+				{
+					"texto": "La primera colección de Christian Dior se presentó el 12 de febrero de 1947 en los salones del 30 de la avenida Montaigne; Dior llamó a sus líneas «Corolle» y «En 8».",
+					"estado": "verificado",
+					"fuentes": [
+						"dior_new_look"
+					]
+				},
+				{
+					"texto": "El traje «Bar» fue uno de los modelos más populares de la primera colección, que Dior llamó «La Ligne Corolle».",
+					"estado": "verificado",
+					"fuentes": [
+						"vam_bar"
+					]
+				},
+				{
+					"texto": "Según la casa Dior, la chaqueta era de shantung de seda marfil con peplum redondeado y la falda negra plisada de lana necesitaba casi doce metros de tela, sin contar las enaguas de tul.",
+					"estado": "verificado",
+					"fuentes": [
+						"dior_new_look"
+					]
+				},
+				{
+					"texto": "Carmel Snow, editora de Harper's Bazaar, bautizó el estilo como «New Look».",
+					"estado": "verificado",
+					"fuentes": [
+						"dior_new_look"
+					]
+				},
+				{
+					"texto": "Sus faldas amplias fueron polémicas: algunos modelos usaban hasta quince yardas de tela y hubo quien lo consideró un despilfarro.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1940_1949"
+					]
+				},
+				{
+					"texto": "El ejemplar del V&A está fechado en 1947, pero podría ser una reedición de los años 50.",
+					"estado": "verificado",
+					"fuentes": [
+						"vam_bar"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a40_turbante",
+			"nombre": "Turbantes y pañuelos",
+			"era": "anos40",
+			"periodo": "Años 40",
+			"region": "Reino Unido y Estados Unidos",
+			"resumen": "Tocados prácticos de tiempos de guerra.",
+			"hechos": [
+				{
+					"texto": "Los patrones de punto de los años 40 conservados por el V&A incluyen turbantes de punto.",
+					"estado": "verificado",
+					"fuentes": [
+						"vam_punto_1940"
+					]
+				}
+			],
+			"revision_humana": false,
+			"uso": [
+				{
+					"texto": "Cubrían el pelo en el trabajo y resolvían el peinado con pocos recursos.",
+					"estado": "interpretacion",
+					"fuentes": []
+				}
+			]
+		},
+		{
+			"id": "a40_nailon",
+			"nombre": "Medias de nailon",
+			"era": "anos40",
+			"periodo": "c. 1940",
+			"region": "Estados Unidos",
+			"resumen": "Un material nuevo para las medias.",
+			"hechos": [
+				{
+					"texto": "Las medias de nailon salieron a la venta hacia 1940 y, tras la Segunda Guerra Mundial, pronto desplazaron a los demás tipos.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_siglo20"
+					]
+				}
+			],
+			"revision_humana": false
+		}
+	]
+}

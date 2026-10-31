@@ -1,0 +1,115 @@
+{
+	"esquema": 1,
+	"era": "anos90",
+	"entradas": [
+		{
+			"id": "a90_grunge",
+			"nombre": "Grunge en la pasarela",
+			"era": "anos90",
+			"periodo": "1993",
+			"region": "Nueva York",
+			"resumen": "Capas y desaliño deliberado.",
+			"hechos": [
+				{
+					"texto": "Marc Jacobs llamó la atención con su colección grunge de primavera de 1993 para Perry Ellis, que llevó a la pasarela el aspecto en capas y deliberadamente desaliñado de la escena musical del noroeste del Pacífico.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_jacobs"
+					]
+				},
+				{
+					"texto": "Las fuentes explican de forma distinta su salida de Perry Ellis: unas dicen que fue despedido por la colección; otras, que muchos lo atribuyeron a su ruptura con la imagen clásica de la marca.",
+					"estado": "discutido",
+					"fuentes": [
+						"brit_jacobs",
+						"fit_1990_1999"
+					]
+				},
+				{
+					"texto": "Según el FIT, el aire informal del grunge no casaba con el glamour de las supermodelos, mientras que la delgadez de Kate Moss realzaba el aspecto desaliñado.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1990_1999"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a90_minimalismo",
+			"nombre": "Minimalismo y slip dress",
+			"era": "anos90",
+			"periodo": "Mediados de los 90",
+			"region": "Internacional",
+			"resumen": "Líneas limpias y prendas lenceras.",
+			"hechos": [
+				{
+					"texto": "El slip dress resumió el estilo minimalista a mediados de los 90; un look de día muy popular era llevarlo sobre una camiseta blanca.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1990_1999"
+					]
+				},
+				{
+					"texto": "Una exposición del FIT señala que el slip dress se alejaba de los diseños estructurados de los 80, que resaltaban un físico tonificado.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_cuerpo"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a90_supermodelos",
+			"nombre": "Supermodelos",
+			"era": "anos90",
+			"periodo": "Finales de los 80 y años 90",
+			"region": "Milán y París",
+			"resumen": "Modelos más conocidas que la ropa.",
+			"hechos": [
+				{
+					"texto": "Los desfiles de Gianni Versace contaron con Cindy Crawford, Linda Evangelista, Christy Turlington y Naomi Campbell, a quienes la prensa llamó «supermodelos» por sus altos ingresos.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_versace"
+					]
+				},
+				{
+					"texto": "Las cuatro desfilaron juntas en el desfile de Versace de 1991 en Milán y llegaron a ser más conocidas que la ropa.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1990_1999"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a90_baguette",
+			"nombre": "El bolso Baguette",
+			"era": "anos90",
+			"periodo": "1997",
+			"region": "Roma",
+			"resumen": "El primer «it bag».",
+			"hechos": [
+				{
+					"texto": "El Baguette se considera el primer «it bag» de diseñador y fue un éxito inmediato.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1990_1999"
+					]
+				},
+				{
+					"texto": "Britannica atribuye su lanzamiento en 1997 a Silvia Venturini Fendi, en colaboración con Karl Lagerfeld: un bolso estrecho y rectangular con cierre de doble F, fabricado en muchos colores y texturas.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_fendi"
+					]
+				}
+			],
+			"revision_humana": false,
+			"nota_fuentes": "El bolso del juego es una interpretación sin logotipos ni cierres de marca."
+		}
+	]
+}

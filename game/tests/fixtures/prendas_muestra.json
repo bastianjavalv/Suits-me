@@ -1,0 +1,1068 @@
+{
+	"esquema": 1,
+	"era": "muestras",
+	"prendas": [
+		{
+			"id": "m_vestido_20s",
+			"nombre": "Vestido cintura baja",
+			"categoria": "vestido",
+			"era": "muestras",
+			"color": "#E9DFC9",
+			"tejido": "georgette",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "georgette",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "baja",
+					"corpino": {
+						"escote": "v",
+						"profundidad_escote": 0.1,
+						"silueta": "recta",
+						"holgura": 0.01
+					},
+					"falda": {
+						"forma": "recta",
+						"largo": "bajo_rodilla",
+						"pliegues": 14,
+						"profundidad_pliegues": 0.006,
+						"bajo": "picos"
+					}
+				}
+			},
+			"color_secundario": "#C8A96A"
+		},
+		{
+			"id": "m_vestido_50s",
+			"nombre": "Vestido de cóctel",
+			"categoria": "vestido",
+			"era": "muestras",
+			"color": "#1F3A5F",
+			"tejido": "saten",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "saten",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "corazon"
+					},
+					"falda": {
+						"forma": "circular",
+						"largo": "media_pierna",
+						"vuelo": 0.3,
+						"pliegues": 16,
+						"profundidad_pliegues": 0.018
+					},
+					"mangas": {
+						"tipo": "ninguna"
+					}
+				}
+			},
+			"color_secundario": "#1F3A5F",
+			"estampado": "lunares"
+		},
+		{
+			"id": "m_vestido_medieval",
+			"nombre": "Hopalanda",
+			"categoria": "vestido",
+			"era": "muestras",
+			"color": "#3E5E3A",
+			"tejido": "terciopelo",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "terciopelo",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "imperio",
+					"corpino": {
+						"escote": "v",
+						"profundidad_escote": 0.12
+					},
+					"falda": {
+						"forma": "campana",
+						"largo": "suelo",
+						"vuelo": 0.22,
+						"pliegues": 12,
+						"profundidad_pliegues": 0.03,
+						"cola": 0.25
+					},
+					"mangas": {
+						"tipo": "colgante",
+						"volumen": 0.7
+					}
+				}
+			}
+		},
+		{
+			"id": "m_vestido_30s",
+			"nombre": "Vestido al bies",
+			"categoria": "vestido",
+			"era": "muestras",
+			"color": "#D9C7B8",
+			"tejido": "saten",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "saten",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "espalda_baja"
+					},
+					"falda": {
+						"forma": "bies",
+						"largo": "suelo",
+						"vuelo": 0.1,
+						"pliegues": 9,
+						"profundidad_pliegues": 0.012
+					}
+				}
+			}
+		},
+		{
+			"id": "m_blusa",
+			"nombre": "Blusa camisera",
+			"categoria": "parte_superior",
+			"era": "muestras",
+			"color": "#F4F1EA",
+			"tejido": "algodon",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "algodon",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "parte_superior",
+				"params": {
+					"escote": "redondo",
+					"largo": "cintura",
+					"blusado": 0.02,
+					"mangas": {
+						"tipo": "jamon",
+						"volumen": 0.8
+					},
+					"cuello": "lazo"
+				}
+			},
+			"color_secundario": "#2B2B2B"
+		},
+		{
+			"id": "m_falda_lapiz",
+			"nombre": "Falda lápiz",
+			"categoria": "parte_inferior",
+			"era": "muestras",
+			"color": "#3B3B3B",
+			"tejido": "lana",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "lana",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "falda",
+				"params": {
+					"forma": "lapiz",
+					"largo": "rodilla"
+				}
+			}
+		},
+		{
+			"id": "m_pantalon",
+			"nombre": "Pantalón ancho",
+			"categoria": "parte_inferior",
+			"era": "muestras",
+			"color": "#8A7F70",
+			"tejido": "gabardina",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "gabardina",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "pantalon",
+				"params": {
+					"corte": "ancho",
+					"largo": "suelo",
+					"cintura": "alta"
+				}
+			}
+		},
+		{
+			"id": "m_vaqueros",
+			"nombre": "Vaqueros",
+			"categoria": "parte_inferior",
+			"era": "muestras",
+			"color": "#2C4A72",
+			"tejido": "denim",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "denim",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "pantalon",
+				"params": {
+					"corte": "recto",
+					"largo": "tobillo"
+				}
+			}
+		},
+		{
+			"id": "m_chaqueta",
+			"nombre": "Chaqueta con peplum",
+			"categoria": "abrigo",
+			"era": "muestras",
+			"color": "#EFE9E1",
+			"tejido": "seda",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "seda",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "abrigo",
+				"params": {
+					"tipo": "chaqueta",
+					"largo": "cadera",
+					"abertura": 0.0,
+					"escote": "solapa",
+					"peplum": 0.05,
+					"botones": 4,
+					"hombreras": 0.3
+				}
+			},
+			"color_secundario": "#111111"
+		},
+		{
+			"id": "m_capa",
+			"nombre": "Capa",
+			"categoria": "abrigo",
+			"era": "muestras",
+			"color": "#5A1E2A",
+			"tejido": "lana",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "lana",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "capa",
+				"params": {
+					"largo": "rodilla",
+					"vuelo": 0.1
+				}
+			}
+		},
+		{
+			"id": "m_salon",
+			"nombre": "Zapatos de salón",
+			"categoria": "calzado",
+			"era": "muestras",
+			"color": "#141414",
+			"tejido": "cuero",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "cuero",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "calzado",
+				"params": {
+					"tipo": "zapato_tacon",
+					"tacon": 0.08,
+					"punta": "afilada"
+				}
+			}
+		},
+		{
+			"id": "m_botas",
+			"nombre": "Botas altas",
+			"categoria": "calzado",
+			"era": "muestras",
+			"color": "#F5F5F2",
+			"tejido": "vinilo",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "vinilo",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "calzado",
+				"params": {
+					"tipo": "bota",
+					"tacon": 0.03,
+					"cana": 0.3,
+					"punta": "redonda"
+				}
+			}
+		},
+		{
+			"id": "m_poulaine",
+			"nombre": "Poulaines",
+			"categoria": "calzado",
+			"era": "muestras",
+			"color": "#3A2A1E",
+			"tejido": "cuero",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "cuero",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "calzado",
+				"params": {
+					"tipo": "poulaine",
+					"tacon": 0.0
+				}
+			}
+		},
+		{
+			"id": "m_cloche",
+			"nombre": "Cloche",
+			"categoria": "tocado",
+			"era": "muestras",
+			"color": "#2B3A55",
+			"tejido": "fieltro",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "fieltro",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "tocado",
+				"params": {
+					"tipo": "cloche"
+				}
+			},
+			"color_secundario": "#C8A96A"
+		},
+		{
+			"id": "m_pamela",
+			"nombre": "Pamela con flores",
+			"categoria": "tocado",
+			"era": "muestras",
+			"color": "#F0E6D2",
+			"tejido": "paja",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "paja",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "tocado",
+				"params": {
+					"tipo": "pamela",
+					"ala": 0.16,
+					"adorno": "flores"
+				}
+			},
+			"color_secundario": "#C66F7A"
+		},
+		{
+			"id": "m_hennin",
+			"nombre": "Hennin",
+			"categoria": "tocado",
+			"era": "muestras",
+			"color": "#7A1F2B",
+			"tejido": "brocado",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "brocado",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "tocado",
+				"params": {
+					"tipo": "hennin",
+					"alto": 0.5
+				}
+			},
+			"color_secundario": "#C9A961"
+		},
+		{
+			"id": "m_bob",
+			"nombre": "Melena bob",
+			"categoria": "peinado",
+			"era": "muestras",
+			"color": "#2A1B14",
+			"tejido": "algodon",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "algodon",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "peinado",
+				"params": {
+					"estilo": "bob",
+					"volumen": 0.4,
+					"flequillo": true
+				}
+			}
+		},
+		{
+			"id": "m_recogido",
+			"nombre": "Recogido Gibson",
+			"categoria": "peinado",
+			"era": "muestras",
+			"color": "#6B4A2E",
+			"tejido": "algodon",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "algodon",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "peinado",
+				"params": {
+					"estilo": "recogido",
+					"volumen": 0.7
+				}
+			}
+		},
+		{
+			"id": "m_melena",
+			"nombre": "Melena larga lisa",
+			"categoria": "peinado",
+			"era": "muestras",
+			"color": "#3A2618",
+			"tejido": "algodon",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "algodon",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "peinado",
+				"params": {
+					"estilo": "liso_largo",
+					"volumen": 0.3
+				}
+			}
+		},
+		{
+			"id": "m_maquillaje",
+			"nombre": "Maquillaje años 20",
+			"categoria": "maquillaje",
+			"era": "muestras",
+			"color": "#8E1F2F",
+			"tejido": "algodon",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "algodon",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "maquillaje",
+				"params": {
+					"labios": "#8E1F2F",
+					"sombra": "#3A3340",
+					"intensidad_sombra": 0.7,
+					"delineado": 0.8,
+					"cejas": 0.6,
+					"colorete": "#C96B6B"
+				}
+			}
+		},
+		{
+			"id": "m_perlas",
+			"nombre": "Sautoir de perlas",
+			"categoria": "joyeria",
+			"era": "muestras",
+			"color": "#F2EEE6",
+			"tejido": "algodon",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "algodon",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "joyeria",
+				"params": {
+					"tipo": "sautoir",
+					"caida": 0.36
+				}
+			}
+		},
+		{
+			"id": "m_guantes",
+			"nombre": "Guantes de ópera",
+			"categoria": "guantes",
+			"era": "muestras",
+			"color": "#F7F4EE",
+			"tejido": "saten",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "saten",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "guantes",
+				"params": {
+					"largo": "opera"
+				}
+			}
+		},
+		{
+			"id": "m_bolso",
+			"nombre": "Bolso de mano",
+			"categoria": "bolso",
+			"era": "muestras",
+			"color": "#7B2C2C",
+			"tejido": "cuero",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "cuero",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "bolso",
+				"params": {
+					"tipo": "bolso_mano"
+				}
+			}
+		},
+		{
+			"id": "m_cinturon",
+			"nombre": "Cinturón",
+			"categoria": "cinturon",
+			"era": "muestras",
+			"color": "#1C1C1C",
+			"tejido": "cuero",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "cuero",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "cinturon",
+				"params": {
+					"altura": 1.04,
+					"ancho": 0.035
+				}
+			},
+			"metal": "oro"
+		},
+		{
+			"id": "m_gafas",
+			"nombre": "Gafas ojo de gato",
+			"categoria": "gafas",
+			"era": "muestras",
+			"color": "#1A1A1A",
+			"tejido": "plastico",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "plastico",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "gafas",
+				"params": {
+					"tipo": "ojo_de_gato"
+				}
+			},
+			"color_secundario": "#404040"
+		},
+		{
+			"id": "m_abanico",
+			"nombre": "Abanico",
+			"categoria": "complemento",
+			"era": "muestras",
+			"color": "#E8D9C0",
+			"tejido": "encaje",
+			"estilos": [
+				"prueba"
+			],
+			"temporadas": [
+				"primavera"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 0
+			},
+			"tipologias": [
+				"muestra"
+			],
+			"ficha": {
+				"descripcion": "Prenda de muestra para pruebas visuales.",
+				"tipo_pieza": "original_del_juego",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "encaje",
+				"silueta": "-",
+				"uso": "Pruebas"
+			},
+			"modelo": {
+				"generador": "complemento",
+				"params": {
+					"tipo": "abanico"
+				}
+			}
+		}
+	]
+}

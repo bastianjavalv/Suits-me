@@ -1,0 +1,196 @@
+{
+	"esquema": 1,
+	"escenarios": [
+		{
+			"id": "medieval_salon",
+			"nombre": "Salón gótico",
+			"era": "medieval",
+			"motivo": "arcos",
+			"descripcion": "Sala de piedra con arcos apuntados, tapiz y luz cálida de velas.",
+			"colores": {
+				"suelo": "#5E574F",
+				"pared": "#8A8073",
+				"acento": "#3E5E3A",
+				"detalle": "#C9A961"
+			},
+			"luz": {
+				"color": "#FFD2A0",
+				"intensidad": 1.05,
+				"ambiente": "#3A332C",
+				"relleno": "#6C7FA6"
+			}
+		},
+		{
+			"id": "belle_epoque_salon",
+			"nombre": "Salón modernista",
+			"era": "belle_epoque",
+			"motivo": "modernista",
+			"descripcion": "Papel pintado de curvas vegetales, zócalo de madera y espejo dorado.",
+			"colores": {
+				"suelo": "#5A3E2E",
+				"pared": "#B9A587",
+				"acento": "#6B1E3A",
+				"detalle": "#C9A961"
+			},
+			"luz": {
+				"color": "#FFE2B8",
+				"intensidad": 1.0,
+				"ambiente": "#4A3D33",
+				"relleno": "#9FB0C8"
+			}
+		},
+		{
+			"id": "deco_salon",
+			"nombre": "Salón art déco",
+			"era": "anos20",
+			"motivo": "deco",
+			"descripcion": "Laca negra, abanicos escalonados dorados y suelo en espiga.",
+			"colores": {
+				"suelo": "#1A1A1C",
+				"pared": "#141416",
+				"acento": "#C8A96A",
+				"detalle": "#E9DFC9"
+			},
+			"luz": {
+				"color": "#FFF1D6",
+				"intensidad": 1.1,
+				"ambiente": "#2A2622",
+				"relleno": "#8FA2C0"
+			}
+		},
+		{
+			"id": "hollywood_escalera",
+			"nombre": "Escalera de Hollywood",
+			"era": "anos30",
+			"motivo": "escalera",
+			"descripcion": "Escalinata blanca curva, suelo espejado y foco de estudio.",
+			"colores": {
+				"suelo": "#D8D4CE",
+				"pared": "#EDEAE4",
+				"acento": "#C0C0C8",
+				"detalle": "#141414"
+			},
+			"luz": {
+				"color": "#FFFFFF",
+				"intensidad": 1.15,
+				"ambiente": "#5A5A60",
+				"relleno": "#C8D4F0",
+				"foco": true
+			}
+		},
+		{
+			"id": "guerra_y_posguerra",
+			"nombre": "Taller y salón gris",
+			"era": "anos40",
+			"motivo": "paneles",
+			"descripcion": "Paneles de madera sencillos frente a un salón de alta costura en gris y blanco.",
+			"colores": {
+				"suelo": "#6A5E50",
+				"pared": "#B8B6B0",
+				"acento": "#5B5E4A",
+				"detalle": "#EFE9E1"
+			},
+			"luz": {
+				"color": "#FFF0DC",
+				"intensidad": 1.0,
+				"ambiente": "#45423C",
+				"relleno": "#A8B4C4"
+			}
+		},
+		{
+			"id": "salon_atomico",
+			"nombre": "Salón atómico",
+			"era": "anos50",
+			"motivo": "atomico",
+			"descripcion": "Colores pastel, suelo ajedrezado y ornamentos en forma de estrella.",
+			"colores": {
+				"suelo": "#E9E4DA",
+				"pared": "#BFE0D6",
+				"acento": "#F2B6C6",
+				"detalle": "#1F3A5F"
+			},
+			"luz": {
+				"color": "#FFF6E8",
+				"intensidad": 1.05,
+				"ambiente": "#7A7470",
+				"relleno": "#D6E6F2"
+			}
+		},
+		{
+			"id": "era_espacial",
+			"nombre": "Cápsula espacial",
+			"era": "anos60",
+			"motivo": "capsula",
+			"descripcion": "Blanco brillante, ventanas circulares y fondo de círculos concéntricos.",
+			"colores": {
+				"suelo": "#F2F2F0",
+				"pared": "#FAFAF8",
+				"acento": "#111111",
+				"detalle": "#E8B830"
+			},
+			"luz": {
+				"color": "#F4F8FF",
+				"intensidad": 1.0,
+				"ambiente": "#8A8C90",
+				"relleno": "#FFFFFF"
+			}
+		},
+		{
+			"id": "memphis_neon",
+			"nombre": "Estudio de neón",
+			"era": "anos80",
+			"motivo": "memphis",
+			"descripcion": "Formas geométricas de colores, tubos de neón y suelo negro brillante.",
+			"colores": {
+				"suelo": "#0E0E12",
+				"pared": "#1C1C24",
+				"acento": "#E0457B",
+				"detalle": "#2FD0E0"
+			},
+			"luz": {
+				"color": "#FFE8F2",
+				"intensidad": 1.0,
+				"ambiente": "#2A1E30",
+				"relleno": "#40D8F0"
+			}
+		},
+		{
+			"id": "estudio_ciclorama",
+			"nombre": "Estudio fotográfico",
+			"era": "anos90",
+			"motivo": "ciclorama",
+			"descripcion": "Ciclorama blanco sin esquinas y luz suave de estudio.",
+			"colores": {
+				"suelo": "#EDEBE8",
+				"pared": "#F4F2EF",
+				"acento": "#111111",
+				"detalle": "#CFC6BA"
+			},
+			"luz": {
+				"color": "#FFFFFF",
+				"intensidad": 1.1,
+				"ambiente": "#8C8A86",
+				"relleno": "#F2F4F8"
+			}
+		},
+		{
+			"id": "estudio_neutro",
+			"nombre": "Atelier",
+			"era": "anos90",
+			"motivo": "atelier",
+			"descripcion": "El atelier del juego: suelo de madera, fondo neutro y luz cálida.",
+			"colores": {
+				"suelo": "#6B5544",
+				"pared": "#3A3533",
+				"acento": "#C9A961",
+				"detalle": "#EFE7DA"
+			},
+			"luz": {
+				"color": "#FFEBD2",
+				"intensidad": 1.05,
+				"ambiente": "#3E3834",
+				"relleno": "#9AA8C0"
+			}
+		}
+	]
+}

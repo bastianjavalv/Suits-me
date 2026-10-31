@@ -1,0 +1,38 @@
+{
+	"esquema": 1,
+	"nota": "Objetivos de diseño, no garantías: el rendimiento real debe medirse en el hardware (ver docs/06-nintendo-switch.md).",
+	"perfiles": {
+		"sobremesa": {
+			"descripcion": "Consola en la base, televisor hasta 1920×1080.",
+			"resolucion": [1920, 1080],
+			"escala_3d": 1.0,
+			"escala_min": 0.8,
+			"escala_max": 1.0,
+			"msaa": 2,
+			"fxaa": false,
+			"sombra_tamano": 2048,
+			"sombra_filtro": 2,
+			"lod_umbral": 1.0,
+			"fps_objetivo": 60,
+			"segmentos_radiales": 48,
+			"anillos_por_metro": 40,
+			"textura_tejido": 1024
+		},
+		"portatil": {
+			"descripcion": "Pantalla de la consola, 1280×720.",
+			"resolucion": [1280, 720],
+			"escala_3d": 1.0,
+			"escala_min": 0.7,
+			"escala_max": 1.0,
+			"msaa": 0,
+			"fxaa": true,
+			"sombra_tamano": 1024,
+			"sombra_filtro": 1,
+			"lod_umbral": 2.0,
+			"fps_objetivo": 60,
+			"segmentos_radiales": 32,
+			"anillos_por_metro": 28,
+			"textura_tejido": 512
+		}
+	}
+}

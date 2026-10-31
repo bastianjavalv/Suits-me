@@ -1,0 +1,99 @@
+{
+	"esquema": 1,
+	"era": "anos80",
+	"entradas": [
+		{
+			"id": "a80_poder",
+			"nombre": "Trajes de poder",
+			"era": "anos80",
+			"periodo": "Años 80",
+			"region": "Estados Unidos y Europa",
+			"resumen": "Hombreras y códigos de la sastrería masculina.",
+			"hechos": [
+				{
+					"texto": "Las hombreras ayudaban a las mujeres a proyectar autoridad en oficinas dominadas por hombres.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1980_1989"
+					]
+				},
+				{
+					"texto": "El traje de poder tomó elementos de la sastrería masculina para transmitir autoridad.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_power_mode"
+					]
+				},
+				{
+					"texto": "El estreno de la serie Dynasty en 1981 contribuyó a popularizar el «power dressing» y las hombreras.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1980_1989"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a80_cenido",
+			"nombre": "Ropa ceñida y elástica",
+			"era": "anos80",
+			"periodo": "Años 80",
+			"region": "París y Nueva York",
+			"resumen": "Tejidos elásticos que siguen el cuerpo.",
+			"hechos": [
+				{
+					"texto": "Azzedine Alaïa y Donna Karan recurrieron a tejidos elásticos como la lycra para crear ropa ceñida al cuerpo.",
+					"estado": "verificado",
+					"fuentes": [
+						"fit_1980_1989"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a80_vanguardia_japonesa",
+			"nombre": "Vanguardia japonesa en París",
+			"era": "anos80",
+			"periodo": "1981",
+			"region": "París",
+			"resumen": "Negro, volumen y asimetría.",
+			"hechos": [
+				{
+					"texto": "Rei Kawakubo y Yohji Yamamoto presentaron colecciones separadas en París en 1981 y sorprendieron a la crítica; sus prendas eran mayoritariamente negras, holgadas y asimétricas.",
+					"estado": "verificado",
+					"fuentes": [
+						"brit_kawakubo"
+					]
+				}
+			],
+			"revision_humana": false
+		},
+		{
+			"id": "a80_volumen",
+			"nombre": "Volúmenes de alta costura",
+			"era": "anos80",
+			"periodo": "Mediados y finales de los 80",
+			"region": "París",
+			"resumen": "Faldas abullonadas y colores vivos.",
+			"hechos": [
+				{
+					"texto": "El Met señala que los vestidos de falda abullonada en colores vivos de Christian Lacroix causaban furor en aquel momento.",
+					"estado": "verificado",
+					"fuentes": [
+						"met_cdg"
+					]
+				},
+				{
+					"texto": "El KCI destaca en sus diseños rasgos de los años 80 como las faldas grandes y las mangas globo, y fecha en 1988 el lanzamiento de su prêt-à-porter.",
+					"estado": "verificado",
+					"fuentes": [
+						"kci_1980s"
+					]
+				}
+			],
+			"revision_humana": false
+		}
+	]
+}

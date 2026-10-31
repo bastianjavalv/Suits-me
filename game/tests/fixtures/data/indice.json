@@ -1,0 +1,12 @@
+{
+	"esquema": 1,
+	"eras": "eras.json",
+	"tejidos": "tejidos.json",
+	"escenarios": "escenarios.json",
+	"poses": "poses.json",
+	"desafios": "desafios.json",
+	"fuentes": "enciclopedia/fuentes.json",
+	"economia": "config/economia.json",
+	"prendas": ["prendas/prueba.json"],
+	"enciclopedia": ["enciclopedia/prueba.json"]
+}

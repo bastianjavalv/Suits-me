@@ -1,0 +1,191 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "claude/**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  GODOT_VERSION: "4.7.2"
+
+jobs:
+  datos:
+    name: Datos, herramientas y seguridad
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar pytest
+        run: python -m pip install pytest==9.2.0
+      - name: Sin material propietario ni credenciales
+        run: python tools/check_repo.py .
+      - name: Juego sin conexión (sin APIs de red)
+        run: python tools/check_offline.py
+      - name: Validar datos del juego
+        run: python tools/validate_data.py
+      - name: Documentación de épocas al día
+        run: python tools/gen_docs_eras.py --comprobar
+      - name: Pruebas de las herramientas
+        run: python -m pytest tools/tests -q
+
+  juego:
+    name: Pruebas del juego (Godot)
+    runs-on: ubuntu-24.04
+    needs: datos
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar Godot (verificado con SHA-512)
+        run: |
+          set -euo pipefail
+          base="https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable"
+          curl -sSLO "$base/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          curl -sSLO "$base/SHA512-SUMS.txt"
+          grep "Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip" SHA512-SUMS.txt | sha512sum -c -
+          unzip -q "Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          sudo mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" /usr/local/bin/godot
+          godot --version
+      - name: Renderizado por software (Vulkan y OpenGL) y pantalla virtual
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq mesa-vulkan-drivers libgl1-mesa-dri libglx-mesa0 xvfb
+      - name: Importar el proyecto
+        run: godot --headless --path game --import
+      - name: Compilar todos los scripts
+        run: godot --headless --path game -s res://tools/check_scripts.gd
+      - name: Pruebas unitarias
+        run: godot --headless --path game -s res://tests/run_tests.gd
+      - name: Recorrido de integración (sobremesa) con capturas
+        run: xvfb-run -a -s "-screen 0 1920x1080x24" godot --path game --quit-after 20000 -s res://tests/integration/recorrido.gd -- --capturas=$PWD/artefactos/capturas
+      - name: Recorrido de integración (portátil)
+        run: xvfb-run -a -s "-screen 0 1920x1080x24" godot --path game --quit-after 20000 -s res://tests/integration/recorrido.gd -- --modo=portatil --capturas=$PWD/artefactos/capturas_portatil
+      - name: Recorrido de integración con GLES3 y texto básico (como el NRO de Switch)
+        run: xvfb-run -a -s "-screen 0 1920x1080x24" godot --path game --rendering-driver opengl3 --rendering-method gl_compatibility --text-driver Fallback --quit-after 20000 -s res://tests/integration/recorrido.gd -- --modo=portatil --capturas=$PWD/artefactos/capturas_gles3
+      - name: Medición de rendimiento de referencia
+        run: |
+          for modo in sobremesa portatil; do
+            xvfb-run -a -s "-screen 0 1920x1080x24" godot --path game --quit-after 100000 -s res://tools/capturas_rendimiento.gd -- --salida=$PWD/artefactos/rendimiento --modo=$modo --cuadros=120
+          done
+          python3 tools/resumen_rendimiento.py artefactos/rendimiento >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: capturas-y-rendimiento
+          path: artefactos/
+
+  compilacion:
+    name: Compilación de escritorio (Linux y Windows)
+    runs-on: ubuntu-24.04
+    needs: juego
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar Godot (verificado con SHA-512)
+        run: |
+          set -euo pipefail
+          base="https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable"
+          curl -sSLO "$base/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          curl -sSLO "$base/SHA512-SUMS.txt"
+          grep "Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip" SHA512-SUMS.txt | sha512sum -c -
+          unzip -q "Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          sudo mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" /usr/local/bin/godot
+      - name: Plantillas de exportación en caché
+        id: cache-plantillas
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/share/godot/export_templates
+          key: godot-plantillas-${{ env.GODOT_VERSION }}
+      - name: Descargar plantillas de exportación (verificadas con SHA-512)
+        if: steps.cache-plantillas.outputs.cache-hit != 'true'
+        run: |
+          set -euo pipefail
+          base="https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable"
+          curl -sSLO "$base/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
+          grep "Godot_v${GODOT_VERSION}-stable_export_templates.tpz" SHA512-SUMS.txt | sha512sum -c -
+          destino="$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable"
+          mkdir -p "$destino"
+          unzip -o -q -j "Godot_v${GODOT_VERSION}-stable_export_templates.tpz" templates/linux_release.x86_64 templates/windows_release_x86_64.exe templates/version.txt -d "$destino"
+      - name: Importar y exportar
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq && sudo apt-get install -y -qq mesa-vulkan-drivers xvfb
+          godot --headless --path game --import
+          mkdir -p builds/linux builds/windows
+          godot --headless --path game --export-release "Linux" ../builds/linux/AtelierDeLasEras.x86_64
+          godot --headless --path game --export-release "Windows" ../builds/windows/AtelierDeLasEras.exe
+          ls -la builds/*
+      - name: Prueba de humo del ejecutable de Linux
+        run: xvfb-run -a -s "-screen 0 1280x720x24" ./builds/linux/AtelierDeLasEras.x86_64 --quit-after 300
+      - uses: actions/upload-artifact@v4
+        with:
+          name: atelier-de-las-eras-escritorio
+          path: builds/
+
+  switch:
+    name: NRO para Switch (homebrew con CFW)
+    runs-on: ubuntu-24.04
+    needs: juego
+    # devkitA64 + libnx 4.12.0 + switch-mesa 20.1.0, fijada por digest (herramientas públicas, no el SDK de Nintendo).
+    container:
+      image: devkitpro/devkita64@sha256:1fc388c3a0d34bd2045a6dadcb1020e069d5f876a187fd705de14b4440c00282
+    env:
+      DEVKITPRO: /opt/devkitpro
+    steps:
+      - uses: actions/checkout@v4
+      - name: Motor de Switch en caché
+        id: cache-motor
+        uses: actions/cache/restore@v4
+        with:
+          path: switch/trabajo/motor
+          key: motor-switch-${{ hashFiles('switch/motor/**', 'switch/compilar_motor.sh') }}-devkita64-1fc388c3
+      - name: Compilar el motor (Godot 4.7.2 + port homebrew)
+        if: steps.cache-motor.outputs.cache-hit != 'true'
+        run: |
+          set -eu
+          apt-get update -qq && apt-get install -y -qq --no-install-recommends scons
+          switch/compilar_motor.sh switch/trabajo
+          mkdir -p switch/trabajo/motor
+          cp switch/trabajo/godot/bin/godot.switch.template_release.arm64 switch/trabajo/motor/
+      # Se guarda en cuanto compila, aunque falle un paso posterior.
+      - name: Guardar el motor en caché
+        if: steps.cache-motor.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: switch/trabajo/motor
+          key: ${{ steps.cache-motor.outputs.cache-primary-key }}
+      - name: Instalar Godot (verificado con SHA-512)
+        run: |
+          set -eu
+          base="https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable"
+          curl -sSLO "$base/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          curl -sSLO "$base/SHA512-SUMS.txt"
+          grep "Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip" SHA512-SUMS.txt | sha512sum -c -
+          unzip -q "Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" /usr/local/bin/godot
+      - name: Exportar el paquete del juego y el icono
+        run: |
+          set -eu
+          godot --headless --path game --import
+          mkdir -p builds/switch
+          godot --headless --path game --export-pack "Linux" ../builds/switch/game.pck
+          godot --headless --path game -s res://tools/icono_nro.gd -- --salida="$PWD/builds/switch/icono.jpg"
+      - name: Empaquetar AtelierDeLasEras.nro
+        run: |
+          set -eu
+          switch/empaquetar_nro.sh --motor switch/trabajo/motor/godot.switch.template_release.arm64 \
+            --pck builds/switch/game.pck --icono builds/switch/icono.jpg \
+            --salida builds/switch/AtelierDeLasEras/AtelierDeLasEras.nro
+          cp switch/LEEME-SWITCH.txt builds/switch/AtelierDeLasEras/
+      - name: Verificar el NRO
+        run: |
+          set -eu
+          nro=builds/switch/AtelierDeLasEras/AtelierDeLasEras.nro
+          if python3 tools/verificar_nro.py "$nro" --pck builds/switch/game.pck --titulo "Atelier de las Eras" --carpeta AtelierDeLasEras > verificacion.txt; then ok=1; else ok=0; fi
+          cat verificacion.txt
+          { echo "### NRO para Switch (homebrew)"; echo '```'; cat verificacion.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          [ "$ok" = 1 ]
+      - uses: actions/upload-artifact@v4
+        with:
+          name: atelier-de-las-eras-switch-nro
+          path: builds/switch/AtelierDeLasEras/

@@ -1,0 +1,502 @@
+{
+	"esquema": 1,
+	"era": "anos20",
+	"prendas": [
+		{
+			"id": "a20_vestido_negro",
+			"nombre": "Vestido negro de crepé",
+			"categoria": "vestido",
+			"era": "anos20",
+			"color": "#151515",
+			"tejido": "crepe",
+			"estilos": [
+				"dia",
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 1200
+			},
+			"tipologias": [
+				"a20_vestido_negro"
+			],
+			"influencias": [
+				"Gabrielle Chanel"
+			],
+			"ficha": {
+				"descripcion": "Vestido negro sencillo de cintura baja y mangas largas.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Crepé negro.",
+				"silueta": "Recta, sin cintura marcada.",
+				"uso": "Día y tarde."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "baja",
+					"corpino": {
+						"escote": "redondo",
+						"silueta": "recta",
+						"holgura": 0.008
+					},
+					"falda": {
+						"forma": "recta",
+						"largo": "bajo_rodilla",
+						"pliegues": 8,
+						"profundidad_pliegues": 0.006
+					},
+					"mangas": {
+						"tipo": "larga"
+					}
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a20_vestido_cuentas",
+			"nombre": "Vestido de noche bordado con cuentas",
+			"categoria": "vestido",
+			"era": "anos20",
+			"color": "#2A2A33",
+			"tejido": "lentejuelas",
+			"estilos": [
+				"noche",
+				"baile"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 40
+			},
+			"tipologias": [
+				"a20_silueta"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Vestido recto sin mangas cubierto de cuentas brillantes, con bajo en picos.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Gasa bordada con cuentas.",
+				"silueta": "Recta, cintura baja.",
+				"uso": "Baile y noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "baja",
+					"corpino": {
+						"escote": "v",
+						"profundidad_escote": 0.1,
+						"silueta": "recta"
+					},
+					"falda": {
+						"forma": "recta",
+						"largo": "bajo_rodilla",
+						"bajo": "picos",
+						"pliegues": 12,
+						"profundidad_pliegues": 0.006
+					}
+				}
+			}
+		},
+		{
+			"id": "a20_vestido_robe_style",
+			"nombre": "Vestido de falda amplia negro y plata",
+			"categoria": "vestido",
+			"era": "anos20",
+			"color": "#1E1E22",
+			"tejido": "seda",
+			"estilos": [
+				"noche",
+				"romantico"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 35
+			},
+			"tipologias": [
+				"a20_robe_de_style"
+			],
+			"influencias": [
+				"Jeanne Lanvin"
+			],
+			"ficha": {
+				"descripcion": "Cuerpo recto y falda ancha a media pierna, alternativa romántica a la silueta tubo.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Tafetán de seda negro con brillo plateado.",
+				"silueta": "Falda amplia desde la cadera.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "baja",
+					"corpino": {
+						"escote": "barco",
+						"profundidad_escote": 0.04
+					},
+					"falda": {
+						"forma": "campana",
+						"largo": "media_pierna",
+						"vuelo": 0.24,
+						"pliegues": 8,
+						"profundidad_pliegues": 0.01
+					}
+				}
+			},
+			"color_secundario": "#C0C0C8"
+		},
+		{
+			"id": "a20_jersey_deportivo",
+			"nombre": "Jersey de punto con cinturón bajo",
+			"categoria": "parte_superior",
+			"era": "anos20",
+			"color": "#F4F1EA",
+			"tejido": "jersey",
+			"estilos": [
+				"deportivo",
+				"dia"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 500
+			},
+			"tipologias": [
+				"a20_silueta"
+			],
+			"influencias": [
+				"Jean Patou",
+				"Gabrielle Chanel"
+			],
+			"ficha": {
+				"descripcion": "Jersey holgado de punto hasta la cadera.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Punto jersey crudo.",
+				"silueta": "Recta y cómoda.",
+				"uso": "Deporte y día."
+			},
+			"modelo": {
+				"generador": "parte_superior",
+				"params": {
+					"escote": "v",
+					"profundidad_escote": 0.08,
+					"largo": "cadera",
+					"holgura": 0.012,
+					"mangas": {
+						"tipo": "larga"
+					}
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a20_falda_plisada",
+			"nombre": "Falda plisada blanca",
+			"categoria": "parte_inferior",
+			"era": "anos20",
+			"color": "#F7F5F0",
+			"tejido": "algodon",
+			"estilos": [
+				"deportivo",
+				"dia"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 450
+			},
+			"tipologias": [
+				"a20_silueta"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Falda de tablas que permite moverse con libertad.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Algodón blanco.",
+				"silueta": "Cintura baja y pliegues de tabla.",
+				"uso": "Deporte."
+			},
+			"modelo": {
+				"generador": "falda",
+				"params": {
+					"forma": "a",
+					"cintura": "baja",
+					"largo": "bajo_rodilla",
+					"vuelo": 0.06,
+					"pliegues": 16,
+					"tipo_pliegue": "tabla",
+					"profundidad_pliegues": 0.012
+				}
+			}
+		},
+		{
+			"id": "a20_cloche",
+			"nombre": "Cloche de fieltro con cinta",
+			"categoria": "tocado",
+			"era": "anos20",
+			"color": "#2B3A55",
+			"tejido": "fieltro",
+			"estilos": [
+				"dia",
+				"paseo"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 400
+			},
+			"tipologias": [
+				"a20_silueta"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Sombrero en forma de campana que cubre la frente.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Fieltro azul con cinta dorada.",
+				"silueta": "Ceñido a la cabeza.",
+				"uso": "Calle."
+			},
+			"modelo": {
+				"generador": "tocado",
+				"params": {
+					"tipo": "cloche"
+				}
+			},
+			"color_secundario": "#C8A96A"
+		},
+		{
+			"id": "a20_bob",
+			"nombre": "Melena bob con flequillo",
+			"categoria": "peinado",
+			"era": "anos20",
+			"color": "#1E1510",
+			"tejido": "algodon",
+			"estilos": [
+				"dia",
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 200
+			},
+			"tipologias": [
+				"a20_silueta"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Pelo corto a la altura de la mandíbula con flequillo.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cabello castaño oscuro.",
+				"silueta": "Corto y recto.",
+				"uso": "Diario."
+			},
+			"modelo": {
+				"generador": "peinado",
+				"params": {
+					"estilo": "bob",
+					"volumen": 0.35,
+					"flequillo": true
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a20_sautoir",
+			"nombre": "Collar largo de perlas",
+			"categoria": "joyeria",
+			"era": "anos20",
+			"color": "#F2EEE6",
+			"tejido": "algodon",
+			"estilos": [
+				"noche",
+				"baile"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 800
+			},
+			"tipologias": [
+				"a20_silueta"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Hilo largo de perlas que cae hasta la cintura.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Perlas.",
+				"silueta": "Línea vertical.",
+				"uso": "Interpretación: complemento de noche frecuente en la época."
+			},
+			"modelo": {
+				"generador": "joyeria",
+				"params": {
+					"tipo": "sautoir",
+					"caida": 0.36
+				}
+			}
+		},
+		{
+			"id": "a20_zapatos_correa",
+			"nombre": "Zapatos de tacón con correa",
+			"categoria": "calzado",
+			"era": "anos20",
+			"color": "#2A1E18",
+			"tejido": "cuero",
+			"estilos": [
+				"noche",
+				"baile"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 550
+			},
+			"tipologias": [
+				"a20_silueta"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Zapatos de tacón medio con correa al tobillo, cómodos para bailar.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cuero marrón.",
+				"silueta": "Punta redonda.",
+				"uso": "Baile."
+			},
+			"modelo": {
+				"generador": "calzado",
+				"params": {
+					"tipo": "zapato_tacon",
+					"tacon": 0.055,
+					"punta": "redonda",
+					"pulsera_tobillo": true
+				}
+			}
+		},
+		{
+			"id": "a20_maquillaje",
+			"nombre": "Maquillaje de labios oscuros",
+			"categoria": "maquillaje",
+			"era": "anos20",
+			"color": "#7E1F2B",
+			"tejido": "algodon",
+			"estilos": [
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 150
+			},
+			"tipologias": [
+				"a20_silueta"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Labios oscuros, ojos sombreados y cejas finas.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Maquillaje pintado.",
+				"silueta": "Contraste marcado.",
+				"uso": "Interpretación del maquillaje de noche de la década."
+			},
+			"modelo": {
+				"generador": "maquillaje",
+				"params": {
+					"labios": "#7E1F2B",
+					"sombra": "#3A3340",
+					"intensidad_sombra": 0.6,
+					"delineado": 0.7,
+					"cejas": 0.6,
+					"colorete": "#C96B6B",
+					"intensidad_colorete": 0.35
+				}
+			}
+		}
+	]
+}

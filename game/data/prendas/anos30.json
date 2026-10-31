@@ -1,0 +1,441 @@
+{
+	"esquema": 1,
+	"era": "anos30",
+	"prendas": [
+		{
+			"id": "a30_vestido_bies",
+			"nombre": "Vestido de noche de satén al bies",
+			"categoria": "vestido",
+			"era": "anos30",
+			"color": "#D9C7B8",
+			"tejido": "saten",
+			"estilos": [
+				"noche",
+				"glamour"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 40
+			},
+			"tipologias": [
+				"a30_bies"
+			],
+			"influencias": [
+				"Madeleine Vionnet"
+			],
+			"ficha": {
+				"descripcion": "Vestido largo que se pega al cuerpo y se abre en el bajo, con la espalda descubierta.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Satén color champán.",
+				"silueta": "Ceñida hasta la cadera y con vuelo en el bajo.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "espalda_baja"
+					},
+					"falda": {
+						"forma": "bies",
+						"largo": "suelo",
+						"vuelo": 0.1,
+						"pliegues": 9,
+						"profundidad_pliegues": 0.012
+					}
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a30_vestido_volantes",
+			"nombre": "Vestido blanco con grandes mangas abullonadas",
+			"categoria": "vestido",
+			"era": "anos30",
+			"color": "#F6F4EF",
+			"tejido": "algodon",
+			"estilos": [
+				"noche",
+				"glamour"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 45
+			},
+			"tipologias": [
+				"a30_hollywood"
+			],
+			"influencias": [
+				"Adrian (Gilbert Adrian)"
+			],
+			"ficha": {
+				"descripcion": "Vestido blanco largo con mangas abullonadas que ensanchan los hombros.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Algodón blanco ligero.",
+				"silueta": "Hombros anchos, cintura fina, falda larga.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "barco",
+						"profundidad_escote": 0.04
+					},
+					"falda": {
+						"forma": "bies",
+						"largo": "suelo",
+						"vuelo": 0.14,
+						"pliegues": 10,
+						"profundidad_pliegues": 0.014
+					},
+					"mangas": {
+						"tipo": "abullonada",
+						"volumen": 1.0
+					}
+				}
+			}
+		},
+		{
+			"id": "a30_vestido_rosa",
+			"nombre": "Vestido de noche rosa intenso",
+			"categoria": "vestido",
+			"era": "anos30",
+			"color": "#E5287A",
+			"tejido": "crepe",
+			"estilos": [
+				"noche",
+				"vanguardia"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 35
+			},
+			"tipologias": [
+				"a30_schiaparelli"
+			],
+			"influencias": [
+				"Elsa Schiaparelli"
+			],
+			"ficha": {
+				"descripcion": "Vestido largo en un rosa intenso de inspiración surrealista.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Crepé rosa intenso.",
+				"silueta": "Ceñido y con vuelo en el bajo.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "v",
+						"profundidad_escote": 0.1
+					},
+					"falda": {
+						"forma": "sirena",
+						"largo": "suelo",
+						"vuelo": 0.12
+					},
+					"mangas": {
+						"tipo": "casquillo"
+					}
+				}
+			}
+		},
+		{
+			"id": "a30_chaqueta_hombros",
+			"nombre": "Chaqueta de hombros marcados",
+			"categoria": "abrigo",
+			"era": "anos30",
+			"color": "#4A4A50",
+			"tejido": "lana",
+			"estilos": [
+				"dia",
+				"sastre"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 1100
+			},
+			"tipologias": [
+				"a30_bies"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Chaqueta entallada con hombros reforzados.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Lana gris.",
+				"silueta": "Hombros anchos y cintura marcada.",
+				"uso": "Interpretación del traje sastre de finales de la década."
+			},
+			"modelo": {
+				"generador": "abrigo",
+				"params": {
+					"tipo": "chaqueta",
+					"largo": "cadera",
+					"abertura": 0.0,
+					"escote": "solapa",
+					"hombreras": 0.35,
+					"botones": 3
+				}
+			}
+		},
+		{
+			"id": "a30_falda_bies",
+			"nombre": "Falda larga al bies",
+			"categoria": "parte_inferior",
+			"era": "anos30",
+			"color": "#3A4A5C",
+			"tejido": "crepe",
+			"estilos": [
+				"dia"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 600
+			},
+			"tipologias": [
+				"a30_bies"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Falda que se pega a la cadera y se abre en el bajo.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Crepé azul pizarra.",
+				"silueta": "Línea alargada.",
+				"uso": "Día."
+			},
+			"modelo": {
+				"generador": "falda",
+				"params": {
+					"forma": "bies",
+					"largo": "media_pierna",
+					"vuelo": 0.08,
+					"pliegues": 8,
+					"profundidad_pliegues": 0.01
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a30_ondas",
+			"nombre": "Ondas cortas al agua",
+			"categoria": "peinado",
+			"era": "anos30",
+			"color": "#C9A36A",
+			"tejido": "algodon",
+			"estilos": [
+				"glamour",
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 200
+			},
+			"tipologias": [
+				"a30_hollywood"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Pelo corto con ondas marcadas pegadas a la cabeza.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cabello rubio.",
+				"silueta": "Ondas al agua.",
+				"uso": "Interpretación del peinado de las estrellas de cine de la década."
+			},
+			"modelo": {
+				"generador": "peinado",
+				"params": {
+					"estilo": "ondas",
+					"volumen": 0.3
+				}
+			}
+		},
+		{
+			"id": "a30_guantes_largos",
+			"nombre": "Guantes largos de satén",
+			"categoria": "guantes",
+			"era": "anos30",
+			"color": "#F4F0E8",
+			"tejido": "saten",
+			"estilos": [
+				"noche",
+				"glamour"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 450
+			},
+			"tipologias": [
+				"a30_hollywood"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Guantes por encima del codo.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Satén marfil.",
+				"silueta": "Alargan el brazo.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "guantes",
+				"params": {
+					"largo": "opera"
+				}
+			}
+		},
+		{
+			"id": "a30_sandalias_plata",
+			"nombre": "Sandalias de noche plateadas",
+			"categoria": "calzado",
+			"era": "anos30",
+			"color": "#C0C0C8",
+			"tejido": "lame",
+			"estilos": [
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 600
+			},
+			"tipologias": [
+				"a30_bies"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Sandalias metalizadas de tacón medio.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Lamé plateado.",
+				"silueta": "Ligeras y abiertas.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "calzado",
+				"params": {
+					"tipo": "sandalia",
+					"tacon": 0.06,
+					"punta": "almendra"
+				}
+			}
+		},
+		{
+			"id": "a30_boina",
+			"nombre": "Boina ladeada",
+			"categoria": "tocado",
+			"era": "anos30",
+			"color": "#2B2B2B",
+			"tejido": "fieltro",
+			"estilos": [
+				"dia"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 300
+			},
+			"tipologias": [
+				"a30_bies"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Boina inclinada hacia un lado.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Fieltro negro.",
+				"silueta": "Plana y ladeada.",
+				"uso": "Interpretación: complemento de día."
+			},
+			"modelo": {
+				"generador": "tocado",
+				"params": {
+					"tipo": "boina"
+				}
+			}
+		}
+	]
+}

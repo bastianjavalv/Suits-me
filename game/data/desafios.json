@@ -1,0 +1,753 @@
+{
+	"esquema": 1,
+	"desafios": [
+		{
+			"id": "med_corte_borgona",
+			"era": "medieval",
+			"titulo": "Corte de Borgoña",
+			"tipo": "recreacion_historica",
+			"descripcion": "Recrea la silueta alargada de las cortes de Borgoña y Francia en el siglo XV: tocado alto, vestido amplio y zapatos de punta.",
+			"etiquetas_tema": [
+				"corte"
+			],
+			"eras_validas": [
+				"medieval"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"tocado",
+					"calzado"
+				],
+				"sugeridas": [
+					"cinturon"
+				]
+			},
+			"escenario": "medieval_salon",
+			"paleta": [
+				"#3E5E3A",
+				"#7A1F2B",
+				"#C9A961"
+			]
+		},
+		{
+			"id": "med_ley_1322",
+			"era": "medieval",
+			"titulo": "La ley de 1322",
+			"tipo": "creativo",
+			"descripcion": "Viste a una ciudadana elegante para salir a la calle sin seda ni paño escarlata, como exigía la ley suntuaria florentina de 1322.",
+			"etiquetas_tema": [
+				"cotidiano",
+				"corte"
+			],
+			"eras_validas": [
+				"medieval"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal"
+				],
+				"sugeridas": [
+					"tocado",
+					"calzado"
+				],
+				"prohibidos": {
+					"tejidos": [
+						"seda",
+						"saten",
+						"brocado"
+					],
+					"colores": [
+						"rojo"
+					]
+				}
+			},
+			"escenario": "medieval_salon"
+		},
+		{
+			"id": "med_rostro",
+			"era": "medieval",
+			"titulo": "Rostro enmarcado",
+			"tipo": "recreacion_historica",
+			"descripcion": "Un conjunto de los siglos XII y XIII: toca de lino y vestido de mangas amplias.",
+			"etiquetas_tema": [
+				"corte",
+				"cotidiano"
+			],
+			"eras_validas": [
+				"medieval"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"tocado"
+				],
+				"sugeridas": [
+					"calzado"
+				]
+			},
+			"escenario": "medieval_salon"
+		},
+		{
+			"id": "be_paseo_1895",
+			"era": "belle_epoque",
+			"titulo": "Paseo de 1895",
+			"tipo": "recreacion_historica",
+			"descripcion": "Blusa con mangas de jamón, falda larga y sombrero para pasear a mediados de la década de 1890.",
+			"etiquetas_tema": [
+				"dia",
+				"paseo"
+			],
+			"eras_validas": [
+				"belle_epoque"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"tocado"
+				],
+				"sugeridas": [
+					"calzado",
+					"complemento"
+				]
+			},
+			"escenario": "belle_epoque_salon"
+		},
+		{
+			"id": "be_baile",
+			"era": "belle_epoque",
+			"titulo": "Noche de baile",
+			"tipo": "recreacion_historica",
+			"descripcion": "Un vestido de noche con hombros voluminosos y cola.",
+			"etiquetas_tema": [
+				"noche",
+				"baile"
+			],
+			"eras_validas": [
+				"belle_epoque"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"joyeria",
+					"guantes",
+					"peinado"
+				]
+			},
+			"escenario": "belle_epoque_salon"
+		},
+		{
+			"id": "be_te",
+			"era": "belle_epoque",
+			"titulo": "Té sin corsé",
+			"tipo": "creativo",
+			"descripcion": "Imagina una tarde en casa hacia 1910 con un vestido de té fluido.",
+			"etiquetas_tema": [
+				"casa",
+				"noche"
+			],
+			"eras_validas": [
+				"belle_epoque"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal"
+				],
+				"sugeridas": [
+					"peinado"
+				]
+			},
+			"escenario": "belle_epoque_salon"
+		},
+		{
+			"id": "a20_charleston",
+			"era": "anos20",
+			"titulo": "Noche de charlestón",
+			"tipo": "recreacion_historica",
+			"descripcion": "Un vestido de cintura baja para bailar toda la noche.",
+			"etiquetas_tema": [
+				"noche",
+				"baile"
+			],
+			"eras_validas": [
+				"anos20"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"joyeria",
+					"peinado",
+					"maquillaje"
+				]
+			},
+			"escenario": "deco_salon",
+			"paleta": [
+				"#151515",
+				"#C8A96A",
+				"#E9DFC9"
+			]
+		},
+		{
+			"id": "a20_ford",
+			"era": "anos20",
+			"titulo": "El Ford de la moda",
+			"tipo": "creativo",
+			"descripcion": "Arma un look de día alrededor de un vestido negro sencillo.",
+			"etiquetas_tema": [
+				"dia"
+			],
+			"eras_validas": [
+				"anos20"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"tocado",
+					"joyeria"
+				]
+			},
+			"escenario": "deco_salon",
+			"paleta": [
+				"#151515",
+				"#F2EEE6"
+			]
+		},
+		{
+			"id": "a20_tenis",
+			"era": "anos20",
+			"titulo": "Pista de tenis",
+			"tipo": "recreacion_historica",
+			"descripcion": "Un conjunto deportivo con jersey y falda plisada.",
+			"etiquetas_tema": [
+				"deportivo"
+			],
+			"eras_validas": [
+				"anos20"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal"
+				],
+				"sugeridas": [
+					"tocado",
+					"calzado"
+				]
+			},
+			"escenario": "deco_salon"
+		},
+		{
+			"id": "a30_estreno",
+			"era": "anos30",
+			"titulo": "Estreno en Hollywood",
+			"tipo": "recreacion_historica",
+			"descripcion": "Un vestido largo de noche para la alfombra de un estreno.",
+			"etiquetas_tema": [
+				"noche",
+				"glamour"
+			],
+			"eras_validas": [
+				"anos30"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"guantes",
+					"joyeria",
+					"peinado"
+				]
+			},
+			"escenario": "hollywood_escalera"
+		},
+		{
+			"id": "a30_un_tono",
+			"era": "anos30",
+			"titulo": "Bies en un solo tono",
+			"tipo": "creativo",
+			"descripcion": "Un vestido al bies con complementos del mismo color.",
+			"etiquetas_tema": [
+				"noche"
+			],
+			"eras_validas": [
+				"anos30"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": []
+			},
+			"escenario": "hollywood_escalera",
+			"paleta": [
+				"#D9C7B8"
+			]
+		},
+		{
+			"id": "a30_surreal",
+			"era": "anos30",
+			"titulo": "Toque surrealista",
+			"tipo": "creativo",
+			"descripcion": "Un look de noche con el rosa intenso como protagonista.",
+			"etiquetas_tema": [
+				"noche",
+				"vanguardia"
+			],
+			"eras_validas": [
+				"anos30"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": []
+			},
+			"escenario": "hollywood_escalera",
+			"paleta": [
+				"#E5287A",
+				"#141414"
+			]
+		},
+		{
+			"id": "a40_cartilla",
+			"era": "anos40",
+			"titulo": "Con la cartilla de racionamiento",
+			"tipo": "recreacion_historica",
+			"descripcion": "Un conjunto de utilidad de 1942, práctico y sin tejidos de lujo.",
+			"etiquetas_tema": [
+				"utilitario"
+			],
+			"eras_validas": [
+				"anos40"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"tocado"
+				],
+				"prohibidos": {
+					"tejidos": [
+						"saten",
+						"lentejuelas",
+						"brocado",
+						"lame"
+					]
+				}
+			},
+			"escenario": "guerra_y_posguerra"
+		},
+		{
+			"id": "a40_1947",
+			"era": "anos40",
+			"titulo": "12 de febrero de 1947",
+			"tipo": "recreacion_historica",
+			"descripcion": "Chaqueta muy entallada y falda de gran vuelo.",
+			"etiquetas_tema": [
+				"elegante"
+			],
+			"eras_validas": [
+				"anos40"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"tocado",
+					"guantes"
+				]
+			},
+			"escenario": "guerra_y_posguerra",
+			"paleta": [
+				"#EFE9E1",
+				"#141414"
+			]
+		},
+		{
+			"id": "a40_remendar",
+			"era": "anos40",
+			"titulo": "Remendar y reutilizar",
+			"tipo": "creativo",
+			"descripcion": "Un look completo solo con prendas de diario de los años 40.",
+			"etiquetas_tema": [
+				"dia",
+				"utilitario"
+			],
+			"eras_validas": [
+				"anos40"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"tocado",
+					"peinado"
+				]
+			},
+			"escenario": "guerra_y_posguerra"
+		},
+		{
+			"id": "a50_coctel",
+			"era": "anos50",
+			"titulo": "Hora del cóctel",
+			"tipo": "recreacion_historica",
+			"descripcion": "Cintura marcada y falda amplia para un cóctel.",
+			"etiquetas_tema": [
+				"coctel",
+				"noche"
+			],
+			"eras_validas": [
+				"anos50"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"guantes",
+					"bolso",
+					"joyeria"
+				]
+			},
+			"escenario": "salon_atomico"
+		},
+		{
+			"id": "a50_abecedario",
+			"era": "anos50",
+			"titulo": "El abecedario de Dior",
+			"tipo": "creativo",
+			"descripcion": "Un look de día con silueta en A o sin cintura.",
+			"etiquetas_tema": [
+				"dia",
+				"elegante",
+				"vanguardia"
+			],
+			"eras_validas": [
+				"anos50"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"bolso"
+				]
+			},
+			"escenario": "salon_atomico"
+		},
+		{
+			"id": "a50_traje_recto",
+			"era": "anos50",
+			"titulo": "Traje de corte recto",
+			"tipo": "recreacion_historica",
+			"descripcion": "Chaqueta recta y falda estrecha.",
+			"etiquetas_tema": [
+				"elegante"
+			],
+			"eras_validas": [
+				"anos50"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"bolso",
+					"guantes"
+				]
+			},
+			"escenario": "salon_atomico"
+		},
+		{
+			"id": "a60_luna",
+			"era": "anos60",
+			"titulo": "Chica de la luna",
+			"tipo": "recreacion_historica",
+			"descripcion": "Blanco y plata con botas planas.",
+			"etiquetas_tema": [
+				"futurista"
+			],
+			"eras_validas": [
+				"anos60"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"gafas"
+				]
+			},
+			"escenario": "era_espacial",
+			"paleta": [
+				"#F7F7F5",
+				"#C8C8CC"
+			]
+		},
+		{
+			"id": "a60_carnaby",
+			"era": "anos60",
+			"titulo": "Carnaby Street",
+			"tipo": "creativo",
+			"descripcion": "Un look juvenil y corto para salir por Londres.",
+			"etiquetas_tema": [
+				"mod",
+				"juvenil"
+			],
+			"eras_validas": [
+				"anos60"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"maquillaje",
+					"peinado"
+				]
+			},
+			"escenario": "era_espacial"
+		},
+		{
+			"id": "a60_1961",
+			"era": "anos60",
+			"titulo": "Una ceremonia en 1961",
+			"tipo": "recreacion_historica",
+			"descripcion": "Un conjunto de día elegante con sombrero casquete.",
+			"etiquetas_tema": [
+				"elegante"
+			],
+			"eras_validas": [
+				"anos60"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"tocado"
+				],
+				"sugeridas": [
+					"guantes"
+				]
+			},
+			"escenario": "era_espacial"
+		},
+		{
+			"id": "a80_junta",
+			"era": "anos80",
+			"titulo": "Primera reunión de la junta",
+			"tipo": "recreacion_historica",
+			"descripcion": "Hombros anchos para proyectar autoridad.",
+			"etiquetas_tema": [
+				"oficina",
+				"poder"
+			],
+			"eras_validas": [
+				"anos80"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"joyeria",
+					"peinado"
+				]
+			},
+			"escenario": "memphis_neon"
+		},
+		{
+			"id": "a80_fiesta",
+			"era": "anos80",
+			"titulo": "Fiesta de los 80",
+			"tipo": "creativo",
+			"descripcion": "Color, volumen y brillo.",
+			"etiquetas_tema": [
+				"fiesta"
+			],
+			"eras_validas": [
+				"anos80"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"joyeria",
+					"peinado"
+				]
+			},
+			"escenario": "memphis_neon"
+		},
+		{
+			"id": "a80_paris_1981",
+			"era": "anos80",
+			"titulo": "París, 1981",
+			"tipo": "recreacion_historica",
+			"descripcion": "Negro, volumen y asimetría.",
+			"etiquetas_tema": [
+				"vanguardia"
+			],
+			"eras_validas": [
+				"anos80"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal"
+				],
+				"sugeridas": []
+			},
+			"escenario": "memphis_neon",
+			"paleta": [
+				"#121212"
+			]
+		},
+		{
+			"id": "a90_seattle",
+			"era": "anos90",
+			"titulo": "Seattle en la pasarela",
+			"tipo": "recreacion_historica",
+			"descripcion": "Capas, cuadros y botas.",
+			"etiquetas_tema": [
+				"grunge"
+			],
+			"eras_validas": [
+				"anos90"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": []
+			},
+			"escenario": "estudio_ciclorama"
+		},
+		{
+			"id": "a90_minimal",
+			"era": "anos90",
+			"titulo": "Menos es más",
+			"tipo": "creativo",
+			"descripcion": "Pocos elementos, colores neutros y líneas limpias.",
+			"etiquetas_tema": [
+				"minimalista"
+			],
+			"eras_validas": [
+				"anos90"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal"
+				],
+				"sugeridas": []
+			},
+			"escenario": "estudio_ciclorama",
+			"paleta": [
+				"#CFC6BA",
+				"#F7F7F5",
+				"#111111"
+			]
+		},
+		{
+			"id": "a90_supermodelos",
+			"era": "anos90",
+			"titulo": "Desfile de supermodelos",
+			"tipo": "recreacion_historica",
+			"descripcion": "Glamour de noche para la pasarela.",
+			"etiquetas_tema": [
+				"noche",
+				"glamour"
+			],
+			"eras_validas": [
+				"anos90"
+			],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [
+					"bolso",
+					"joyeria"
+				]
+			},
+			"escenario": "estudio_ciclorama"
+		},
+		{
+			"id": "libre_cruce",
+			"era": "anos90",
+			"titulo": "Cruce de épocas",
+			"tipo": "libre",
+			"descripcion": "Combina prendas de al menos tres épocas distintas en un look coherente.",
+			"etiquetas_tema": [],
+			"eras_validas": [],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": [],
+				"min_eras": 3
+			},
+			"escenario": "estudio_neutro"
+		},
+		{
+			"id": "libre_monocromo",
+			"era": "anos90",
+			"titulo": "Monocromo",
+			"tipo": "libre",
+			"descripcion": "Un look de un solo color, de la época que quieras.",
+			"etiquetas_tema": [],
+			"eras_validas": [],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": []
+			},
+			"escenario": "estudio_neutro"
+		},
+		{
+			"id": "libre_firma",
+			"era": "anos90",
+			"titulo": "Tu firma",
+			"tipo": "libre",
+			"descripcion": "El look que te represente, sin reglas de época.",
+			"etiquetas_tema": [],
+			"eras_validas": [],
+			"requisitos": {
+				"obligatorias": [
+					"prenda_principal",
+					"calzado"
+				],
+				"sugeridas": []
+			},
+			"escenario": "estudio_neutro"
+		}
+	]
+}

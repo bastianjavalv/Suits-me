@@ -1,0 +1,7 @@
+{"esquema": 1, "entradas": [
+	{"id": "tipo_vestido_a", "nombre": "Vestido de prueba", "era": "era_a", "periodo": "1920–1929", "region": "Europa", "resumen": "Ficha de prueba.", "revision_humana": false,
+	 "hechos": [{"texto": "Un hecho documentado.", "estado": "verificado", "fuentes": ["fuente_a"]}],
+	 "silueta": [{"texto": "Una interpretación.", "estado": "interpretacion", "fuentes": []}]},
+	{"id": "tipo_general", "nombre": "Complemento de prueba", "era": "era_b", "periodo": "1960–1969", "region": "Europa", "resumen": "Otra ficha.", "revision_humana": true,
+	 "hechos": [{"texto": "Otro hecho.", "estado": "verificado", "fuentes": ["fuente_a"]}]}
+]}

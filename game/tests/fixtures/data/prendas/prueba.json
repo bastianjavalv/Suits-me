@@ -1,0 +1,386 @@
+{
+	"esquema": 1,
+	"era": "varias",
+	"prendas": [
+		{
+			"id": "a_vestido_marfil",
+			"nombre": "Vestido marfil",
+			"categoria": "vestido",
+			"era": "era_a",
+			"color": "#F2EBDD",
+			"tejido": "seda",
+			"estilos": [
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 100
+			},
+			"tipologias": [
+				"tipo_vestido_a"
+			],
+			"influencias": [
+				"Casa de prueba"
+			],
+			"ficha": {
+				"descripcion": "Descripción de Vestido marfil.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "Seda simulada.",
+				"silueta": "Recta.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a_vestido_negro",
+			"nombre": "Vestido negro",
+			"categoria": "vestido",
+			"era": "era_a",
+			"color": "#141414",
+			"tejido": "seda",
+			"estilos": [
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 5
+			},
+			"tipologias": [
+				"tipo_vestido_a"
+			],
+			"influencias": [
+				"Casa de prueba"
+			],
+			"ficha": {
+				"descripcion": "Descripción de Vestido negro.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "Seda simulada.",
+				"silueta": "Recta.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {}
+			}
+		},
+		{
+			"id": "a_blusa_rosa",
+			"nombre": "Blusa rosa",
+			"categoria": "parte_superior",
+			"era": "era_a",
+			"color": "#E8A0B0",
+			"tejido": "seda",
+			"estilos": [
+				"dia"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 100
+			},
+			"tipologias": [
+				"tipo_vestido_a"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Descripción de Blusa rosa.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "Seda simulada.",
+				"silueta": "Recta.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {}
+			}
+		},
+		{
+			"id": "a_falda_gris",
+			"nombre": "Falda gris",
+			"categoria": "parte_inferior",
+			"era": "era_a",
+			"color": "#808080",
+			"tejido": "lana",
+			"estilos": [
+				"dia"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 100
+			},
+			"tipologias": [
+				"tipo_vestido_a"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Descripción de Falda gris.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "Seda simulada.",
+				"silueta": "Recta.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {}
+			}
+		},
+		{
+			"id": "a_zapatos_dorados",
+			"nombre": "Zapatos dorados",
+			"categoria": "calzado",
+			"era": "era_a",
+			"color": "#C8A040",
+			"tejido": "cuero",
+			"estilos": [
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 100
+			},
+			"tipologias": [
+				"tipo_vestido_a"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Descripción de Zapatos dorados.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "Seda simulada.",
+				"silueta": "Recta.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a_sombrero_cloche",
+			"nombre": "Sombrero cloche",
+			"categoria": "tocado",
+			"era": "era_a",
+			"color": "#2B3A55",
+			"tejido": "lana",
+			"estilos": [
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 100
+			},
+			"tipologias": [
+				"tipo_vestido_a"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Descripción de Sombrero cloche.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "Seda simulada.",
+				"silueta": "Recta.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {}
+			}
+		},
+		{
+			"id": "a_collar_perlas",
+			"nombre": "Collar de perlas",
+			"categoria": "joyeria",
+			"era": "era_a",
+			"color": "#EEE8DC",
+			"tejido": "seda",
+			"estilos": [
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 300
+			},
+			"tipologias": [
+				"tipo_vestido_a"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Descripción de Collar de perlas.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "Seda simulada.",
+				"silueta": "Recta.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {}
+			}
+		},
+		{
+			"id": "b_botas_blancas",
+			"nombre": "Botas blancas",
+			"categoria": "calzado",
+			"era": "era_b",
+			"color": "#FAFAFA",
+			"tejido": "cuero",
+			"estilos": [
+				"dia",
+				"futurista"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 100
+			},
+			"tipologias": [
+				"tipo_general"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Descripción de Botas blancas.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "Seda simulada.",
+				"silueta": "Recta.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {}
+			}
+		},
+		{
+			"id": "b_vestido_naranja",
+			"nombre": "Vestido naranja",
+			"categoria": "vestido",
+			"era": "era_b",
+			"color": "#F07020",
+			"tejido": "seda",
+			"estilos": [
+				"dia",
+				"futurista"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 100
+			},
+			"tipologias": [
+				"tipo_general"
+			],
+			"influencias": [
+				"Casa de prueba"
+			],
+			"ficha": {
+				"descripcion": "Descripción de Vestido naranja.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "Seda simulada.",
+				"silueta": "Recta.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {}
+			}
+		},
+		{
+			"id": "b_gafas",
+			"nombre": "Gafas redondas",
+			"categoria": "gafas",
+			"era": "era_b",
+			"color": "#202020",
+			"tejido": "cuero",
+			"estilos": [
+				"futurista"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 100
+			},
+			"tipologias": [
+				"tipo_general"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Descripción de Gafas redondas.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion"
+				},
+				"materiales_modelo": "Seda simulada.",
+				"silueta": "Recta.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {}
+			}
+		}
+	]
+}

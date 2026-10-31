@@ -1,0 +1,488 @@
+{
+	"esquema": 1,
+	"era": "anos90",
+	"prendas": [
+		{
+			"id": "a90_slip",
+			"nombre": "Slip dress de satén",
+			"categoria": "vestido",
+			"era": "anos90",
+			"color": "#CFC6BA",
+			"tejido": "saten",
+			"estilos": [
+				"minimalista",
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 30
+			},
+			"tipologias": [
+				"a90_minimalismo"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Vestido lencero de tirantes finos cortado al bies.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Satén color arena.",
+				"silueta": "Recta y fluida.",
+				"uso": "Día y noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "tirantes"
+					},
+					"falda": {
+						"forma": "bies",
+						"largo": "media_pierna",
+						"vuelo": 0.06,
+						"pliegues": 7,
+						"profundidad_pliegues": 0.008
+					}
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a90_camiseta",
+			"nombre": "Camiseta blanca",
+			"categoria": "parte_superior",
+			"era": "anos90",
+			"color": "#F7F7F5",
+			"tejido": "algodon",
+			"estilos": [
+				"minimalista",
+				"cotidiano"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 200
+			},
+			"tipologias": [
+				"a90_minimalismo"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Camiseta básica de manga corta.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Algodón blanco.",
+				"silueta": "Recta.",
+				"uso": "Diario."
+			},
+			"modelo": {
+				"generador": "parte_superior",
+				"params": {
+					"escote": "redondo",
+					"largo": "cadera",
+					"holgura": 0.01,
+					"mangas": {
+						"tipo": "corta"
+					}
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a90_camisa_cuadros",
+			"nombre": "Camisa de franela a cuadros",
+			"categoria": "parte_superior",
+			"era": "anos90",
+			"color": "#7A2E2E",
+			"tejido": "algodon",
+			"estilos": [
+				"grunge",
+				"cotidiano"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 400
+			},
+			"tipologias": [
+				"a90_grunge"
+			],
+			"influencias": [
+				"Marc Jacobs"
+			],
+			"ficha": {
+				"descripcion": "Camisa holgada de cuadros.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Franela de algodón a cuadros rojos y negros.",
+				"silueta": "Suelta.",
+				"uso": "Diario."
+			},
+			"modelo": {
+				"generador": "parte_superior",
+				"params": {
+					"escote": "v",
+					"profundidad_escote": 0.1,
+					"largo": "cadera",
+					"holgura": 0.022,
+					"mangas": {
+						"tipo": "larga"
+					}
+				}
+			},
+			"color_secundario": "#1C1C1C",
+			"estampado": "tartan"
+		},
+		{
+			"id": "a90_vaqueros",
+			"nombre": "Vaqueros holgados",
+			"categoria": "parte_inferior",
+			"era": "anos90",
+			"color": "#4A6A8C",
+			"tejido": "denim",
+			"estilos": [
+				"grunge",
+				"cotidiano"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 450
+			},
+			"tipologias": [
+				"a90_grunge"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Vaqueros anchos de tiro medio.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Denim lavado.",
+				"silueta": "Holgados.",
+				"uso": "Diario."
+			},
+			"modelo": {
+				"generador": "pantalon",
+				"params": {
+					"corte": "holgado",
+					"largo": "tobillo"
+				}
+			}
+		},
+		{
+			"id": "a90_vestido_flores",
+			"nombre": "Vestido largo de flores pequeñas",
+			"categoria": "vestido",
+			"era": "anos90",
+			"color": "#2B2B3A",
+			"tejido": "algodon",
+			"estilos": [
+				"grunge",
+				"romantico"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 600
+			},
+			"tipologias": [
+				"a90_grunge"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Vestido oscuro de flores menudas.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Algodón estampado.",
+				"silueta": "Suelto, por debajo de la rodilla.",
+				"uso": "Interpretación: vestido que se combinaba con botas."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "redondo"
+					},
+					"falda": {
+						"forma": "a",
+						"largo": "media_pierna",
+						"vuelo": 0.1,
+						"pliegues": 8,
+						"profundidad_pliegues": 0.01
+					},
+					"mangas": {
+						"tipo": "corta"
+					}
+				}
+			},
+			"color_secundario": "#C9A2A8",
+			"estampado": "floral"
+		},
+		{
+			"id": "a90_botas_cordones",
+			"nombre": "Botas de cordones",
+			"categoria": "calzado",
+			"era": "anos90",
+			"color": "#141414",
+			"tejido": "cuero",
+			"estilos": [
+				"grunge"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 600
+			},
+			"tipologias": [
+				"a90_grunge"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Botas de suela gruesa hasta el tobillo.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cuero negro.",
+				"silueta": "Robustas.",
+				"uso": "Diario."
+			},
+			"modelo": {
+				"generador": "calzado",
+				"params": {
+					"tipo": "bota",
+					"tacon": 0.03,
+					"suela": 0.02,
+					"cana": 0.12,
+					"punta": "redonda"
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a90_vestido_noche",
+			"nombre": "Vestido de noche ceñido",
+			"categoria": "vestido",
+			"era": "anos90",
+			"color": "#111111",
+			"tejido": "sintetico",
+			"estilos": [
+				"noche",
+				"glamour"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 40
+			},
+			"tipologias": [
+				"a90_supermodelos"
+			],
+			"influencias": [
+				"Gianni Versace"
+			],
+			"ficha": {
+				"descripcion": "Vestido largo y ceñido de escote en V.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Punto elástico negro.",
+				"silueta": "Ajustado hasta el suelo.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "v",
+						"profundidad_escote": 0.14
+					},
+					"falda": {
+						"forma": "lapiz",
+						"largo": "suelo"
+					}
+				}
+			}
+		},
+		{
+			"id": "a90_bolso_pequeno",
+			"nombre": "Bolso pequeño bajo el brazo",
+			"categoria": "bolso",
+			"era": "anos90",
+			"color": "#6B3FA0",
+			"tejido": "lentejuelas",
+			"estilos": [
+				"noche",
+				"minimalista"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 25
+			},
+			"tipologias": [
+				"a90_baguette"
+			],
+			"influencias": [
+				"Silvia Venturini Fendi"
+			],
+			"ficha": {
+				"descripcion": "Bolso pequeño y alargado que se lleva bajo el brazo.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Bordado de lentejuelas morado.",
+				"silueta": "Rectangular y estrecho.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "bolso",
+				"params": {
+					"tipo": "baguette"
+				}
+			}
+		},
+		{
+			"id": "a90_liso",
+			"nombre": "Melena larga y lisa",
+			"categoria": "peinado",
+			"era": "anos90",
+			"color": "#3A2618",
+			"tejido": "algodon",
+			"estilos": [
+				"minimalista"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 150
+			},
+			"tipologias": [
+				"a90_minimalismo"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Pelo largo, liso y con raya al medio.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cabello castaño.",
+				"silueta": "Recto.",
+				"uso": "Interpretación: peinado de la década."
+			},
+			"modelo": {
+				"generador": "peinado",
+				"params": {
+					"estilo": "liso_largo",
+					"volumen": 0.3
+				}
+			}
+		},
+		{
+			"id": "a90_gafas_ovaladas",
+			"nombre": "Gafas ovaladas pequeñas",
+			"categoria": "gafas",
+			"era": "anos90",
+			"color": "#2B2B2B",
+			"tejido": "plastico",
+			"estilos": [
+				"minimalista",
+				"grunge"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 250
+			},
+			"tipologias": [
+				"a90_minimalismo"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Gafas pequeñas de lentes ovaladas.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Montura oscura y cristal tintado.",
+				"silueta": "Estrechas.",
+				"uso": "Interpretación: complemento de la década."
+			},
+			"modelo": {
+				"generador": "gafas",
+				"params": {
+					"tipo": "ovaladas"
+				}
+			},
+			"color_secundario": "#6A4A2A"
+		}
+	]
+}

@@ -1,0 +1,537 @@
+{
+	"esquema": 1,
+	"nota": "Fuentes verificadas mediante búsqueda web el 2026-10-30; el acceso directo a los sitios estaba restringido por la red del entorno. Revisión humana pendiente.",
+	"fuentes": [
+		{
+			"id": "fit_1400_1409",
+			"titulo": "1400-1409",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1400-1409/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_1410_1419",
+			"titulo": "1410-1419",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1410-1419/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_1416_limbourg",
+			"titulo": "1416 - Limbourg Brothers, April",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1416-limbourg-april/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_1440_1449",
+			"titulo": "1440-1449",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1440-1449/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_1450_weyden",
+			"titulo": "1450 - Rogier van der Weyden, Isabella of Portugal",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1450-van-der-weyden-isabella/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_1964_becket",
+			"titulo": "1964 - Margaret Furse, Becket (vestuario cinematográfico)",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1964-glenville-becket/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "brit_wimple",
+			"titulo": "Wimple",
+			"autor": "Encyclopaedia Britannica",
+			"url": "https://www.britannica.com/topic/wimple",
+			"tipo": "enciclopedia",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "brit_regulacion",
+			"titulo": "Dress - Regulation, Laws, Customs",
+			"autor": "Encyclopaedia Britannica",
+			"url": "https://www.britannica.com/topic/dress-clothing/Government-regulation-of-dress",
+			"tipo": "enciclopedia",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "met_codigos_renacimiento",
+			"titulo": "Renaissance Fashion and Dress Codes",
+			"autor": "The Metropolitan Museum of Art",
+			"url": "https://www.metmuseum.org/perspectives/renaissance-fashion-and-dress-codes",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_1900_1909",
+			"titulo": "1900-1909",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1900-1909/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_gigot",
+			"titulo": "Gigot sleeve",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/gigot-sleeve/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "brit_siglo20",
+			"titulo": "Dress - The early 20th century",
+			"autor": "Encyclopaedia Britannica",
+			"url": "https://www.britannica.com/topic/dress-clothing/The-early-20th-century",
+			"tipo": "enciclopedia",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_blog_poiret",
+			"titulo": "The Myth of Poiret as Debunked by 1906",
+			"autor": "FIT Official Blogs (Material Mode)",
+			"url": "https://blog.fitnyc.edu/materialmode/2015/07/09/the-myth-of-poiret-as-debunked-by-1906/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "met_delphos",
+			"titulo": "Conserving the \"Delphos\" Gown",
+			"autor": "The Metropolitan Museum of Art",
+			"url": "https://www.metmuseum.org/essays/costume-institute-conservation-delphos-fortuny-gown-pleats",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "vam_delphos",
+			"titulo": "Delphos (vestido)",
+			"autor": "Victoria and Albert Museum",
+			"url": "https://collections.vam.ac.uk/item/O88649/delphos-delphos-dress-fortuny-mariano/",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "vam_delphos_nigrin",
+			"titulo": "Delphos (ficha atribuida a Henriette Nigrin)",
+			"autor": "Victoria and Albert Museum",
+			"url": "https://collections.vam.ac.uk/item/O147178/delphos-delphos-dress-henriette-nigrin/",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_1920_1929",
+			"titulo": "1920-1929",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1920-1929/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "brit_flapper",
+			"titulo": "Flapper",
+			"autor": "Encyclopaedia Britannica",
+			"url": "https://www.britannica.com/topic/flapper",
+			"tipo": "enciclopedia",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "met_chanel_1926",
+			"titulo": "House of Chanel - Dress",
+			"autor": "The Metropolitan Museum of Art",
+			"url": "https://www.metmuseum.org/art/collection/search/83616",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "met_chanel_ensayo",
+			"titulo": "Gabrielle \"Coco\" Chanel (1883-1971) and the House of Chanel",
+			"autor": "The Metropolitan Museum of Art",
+			"url": "https://www.metmuseum.org/essays/gabrielle-coco-chanel-1883-1971-and-the-house-of-chanel",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "vam_chanel_iconica",
+			"titulo": "What makes CHANEL so iconic?",
+			"autor": "Victoria and Albert Museum",
+			"url": "https://www.vam.ac.uk/articles/what-makes-chanel-so-iconic",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "vam_chanel_noche",
+			"titulo": "Evening Dress (Coco Chanel)",
+			"autor": "Victoria and Albert Museum",
+			"url": "https://collections.vam.ac.uk/item/O72654/evening-dress-coco-chanel/",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_1930_1939",
+			"titulo": "1930-1939",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1930-1939/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_1936_vionnet",
+			"titulo": "1936 - Madeleine Vionnet, Carnival dress",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1936-vionnet-carnival-dress/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_1937_langosta",
+			"titulo": "1937 - Elsa Schiaparelli, Lobster dress",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1937-schiaparelli-lobster/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "pma_schiaparelli",
+			"titulo": "Shocking! The Art and Fashion of Elsa Schiaparelli (recursos educativos)",
+			"autor": "Philadelphia Museum of Art",
+			"url": "https://legacyweb.philamuseum.org/doc_downloads/education/ex_resources/schiaparelli.pdf",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "iwm_racionamiento",
+			"titulo": "How Clothes Rationing Affected Fashion In World War 2",
+			"autor": "Imperial War Museums",
+			"url": "https://www.iwm.org.uk/history/second-world-war/home-front/rationing/how-clothes-rationing-affected-fashion",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "iwm_remendar",
+			"titulo": "Make Do And Mend Newsreel - World War 2 1943",
+			"autor": "Imperial War Museums",
+			"url": "https://www.iwm.org.uk/history/make-do-and-mend-0",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "vam_traje_utility",
+			"titulo": "Suit (Utility)",
+			"autor": "Victoria and Albert Museum",
+			"url": "https://collections.vam.ac.uk/item/O84102/suit-utility/",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_1940_1949",
+			"titulo": "1940-1949",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1940-1949/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "vam_bar",
+			"titulo": "Bar (traje de falda)",
+			"autor": "Victoria and Albert Museum",
+			"url": "https://collections.vam.ac.uk/item/O75379/bar-skirt-suit-christian-dior/",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "dior_new_look",
+			"titulo": "The New Look",
+			"autor": "Christian Dior (archivo de la marca)",
+			"url": "https://www.dior.com/en_us/one/the-new-look",
+			"tipo": "marca",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "met_popover",
+			"titulo": "Claire McCardell - \"Pop-over\"",
+			"autor": "The Metropolitan Museum of Art",
+			"url": "https://www.metmuseum.org/art/collection/search/84029",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "vam_punto_1940",
+			"titulo": "1940s knitting patterns",
+			"autor": "Victoria and Albert Museum",
+			"url": "https://www.vam.ac.uk/articles/1940s-knitting-patterns",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_1950_1959",
+			"titulo": "1950-1959",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1950-1959/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "brit_dior",
+			"titulo": "Christian Dior",
+			"autor": "Encyclopaedia Britannica",
+			"url": "https://www.britannica.com/biography/Christian-Dior-French-designer",
+			"tipo": "enciclopedia",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "met_dior_ensayo",
+			"titulo": "Christian Dior (1905-1957)",
+			"autor": "The Metropolitan Museum of Art",
+			"url": "https://www.metmuseum.org/essays/christian-dior-1905-1957",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "vam_balenciaga",
+			"titulo": "Introducing Cristóbal Balenciaga",
+			"autor": "Victoria and Albert Museum",
+			"url": "https://www.vam.ac.uk/articles/introducing-cristobal-balenciaga",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "met_balenciaga",
+			"titulo": "Cristóbal Balenciaga (1895-1972)",
+			"autor": "The Metropolitan Museum of Art",
+			"url": "https://www.metmuseum.org/toah/hd/bale/hd_bale.htm",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_vivier",
+			"titulo": "Couture Shoes: Roger Vivier and René Mancini (Paris Refashioned, 1957-1968)",
+			"autor": "The Museum at FIT",
+			"url": "https://exhibitions.fitnyc.edu/paris-refashioned/couture-shoes-roger-vivier-and-rene-mancini/",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "brit_blog_tacones",
+			"titulo": "High Heels: Take Two",
+			"autor": "Encyclopaedia Britannica (blog)",
+			"url": "https://blogs.britannica.com/2011/09/high-heels/",
+			"tipo": "enciclopedia",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "vam_minifalda",
+			"titulo": "The miniskirt myth",
+			"autor": "Victoria and Albert Museum",
+			"url": "https://www.vam.ac.uk/articles/the-miniskirt-myth",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "vam_1960s",
+			"titulo": "An introduction to 1960s fashion",
+			"autor": "Victoria and Albert Museum",
+			"url": "https://www.vam.ac.uk/articles/an-introduction-to-1960s-fashion",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "brit_minifalda",
+			"titulo": "Miniskirt",
+			"autor": "Encyclopaedia Britannica",
+			"url": "https://www.britannica.com/topic/miniskirt",
+			"tipo": "enciclopedia",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_1960_1969",
+			"titulo": "1960-1969",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1960-1969/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "met_rabanne",
+			"titulo": "Paco Rabanne - Dress",
+			"autor": "The Metropolitan Museum of Art",
+			"url": "https://www.metmuseum.org/art/collection/search/762106",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "kci_fukai",
+			"titulo": "Visions of the Body: Body Images and Fashion in the 20th Century (Akiko Fukai)",
+			"autor": "Kyoto Costume Institute",
+			"url": "https://www.kci.or.jp/research/dresstudy/pdf/e_Fukai_Visions_of_the_Body.pdf",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "brit_halston",
+			"titulo": "Halston",
+			"autor": "Encyclopaedia Britannica",
+			"url": "https://www.britannica.com/biography/Halston",
+			"tipo": "enciclopedia",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "met_jackie",
+			"titulo": "Jacqueline Kennedy: The White House Years",
+			"autor": "The Metropolitan Museum of Art",
+			"url": "https://www.metmuseum.org/exhibitions/listings/2001/jacqueline-kennedy/photo-gallery",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_1980_1989",
+			"titulo": "1980-1989",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1980-1989/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_power_mode",
+			"titulo": "Power Mode: The Force of Fashion",
+			"autor": "The Museum at FIT",
+			"url": "https://www.fitnyc.edu/museum/exhibitions/power-mode.php",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "brit_kawakubo",
+			"titulo": "Rei Kawakubo",
+			"autor": "Encyclopaedia Britannica",
+			"url": "https://www.britannica.com/biography/Rei-Kawakubo",
+			"tipo": "enciclopedia",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "met_cdg",
+			"titulo": "Comme des Garçons - Dress",
+			"autor": "The Metropolitan Museum of Art",
+			"url": "https://www.metmuseum.org/art/collection/search/87974",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "kci_1980s",
+			"titulo": "Collections 1980s (KCI Digital Archives)",
+			"autor": "Kyoto Costume Institute",
+			"url": "https://www.kci.or.jp/en/archives/digital_archives/1980s/KCI_261",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_1990_1999",
+			"titulo": "1990-1999",
+			"autor": "Fashion History Timeline, Fashion Institute of Technology (SUNY)",
+			"url": "https://fashionhistory.fitnyc.edu/1990-1999/",
+			"tipo": "institucional",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "brit_jacobs",
+			"titulo": "Marc Jacobs",
+			"autor": "Encyclopaedia Britannica",
+			"url": "https://www.britannica.com/biography/Marc-Jacobs",
+			"tipo": "enciclopedia",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "fit_cuerpo",
+			"titulo": "The Body: Fashion and Physique",
+			"autor": "The Museum at FIT",
+			"url": "https://exhibitions.fitnyc.edu/the-body/",
+			"tipo": "museo",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "brit_versace",
+			"titulo": "Gianni Versace",
+			"autor": "Encyclopaedia Britannica",
+			"url": "https://www.britannica.com/biography/Gianni-Versace",
+			"tipo": "enciclopedia",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		},
+		{
+			"id": "brit_fendi",
+			"titulo": "Fendi",
+			"autor": "Encyclopaedia Britannica",
+			"url": "https://www.britannica.com/topic/Fendi",
+			"tipo": "enciclopedia",
+			"consultado": "2026-10-30",
+			"metodo": "busqueda_web"
+		}
+	]
+}

@@ -1,0 +1,483 @@
+{
+	"esquema": 1,
+	"era": "anos50",
+	"prendas": [
+		{
+			"id": "a50_vestido_coctel",
+			"nombre": "Vestido de cóctel de falda amplia",
+			"categoria": "vestido",
+			"era": "anos50",
+			"color": "#1F3A5F",
+			"tejido": "saten",
+			"estilos": [
+				"noche",
+				"coctel"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 35
+			},
+			"tipologias": [
+				"a50_lineas_dior"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Cuerpo sin tirantes con escote corazón y falda de gran vuelo.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Satén azul noche.",
+				"silueta": "Cintura marcada y falda amplia.",
+				"uso": "Cóctel."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "corazon"
+					},
+					"falda": {
+						"forma": "circular",
+						"largo": "media_pierna",
+						"vuelo": 0.3,
+						"pliegues": 16,
+						"profundidad_pliegues": 0.018
+					}
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a50_vestido_linea_a",
+			"nombre": "Vestido de línea A",
+			"categoria": "vestido",
+			"era": "anos50",
+			"color": "#C9B8A3",
+			"tejido": "lana",
+			"estilos": [
+				"dia",
+				"elegante"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 30
+			},
+			"tipologias": [
+				"a50_lineas_dior"
+			],
+			"influencias": [
+				"Christian Dior"
+			],
+			"ficha": {
+				"descripcion": "Vestido sin cintura marcada que se ensancha hacia el bajo como una letra A.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Lana beige.",
+				"silueta": "Estrecho arriba, amplio abajo.",
+				"uso": "Día."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "barco",
+						"silueta": "recta"
+					},
+					"falda": {
+						"forma": "trapecio",
+						"largo": "media_pierna",
+						"vuelo": 0.16
+					},
+					"mangas": {
+						"tipo": "tres_cuartos"
+					}
+				}
+			}
+		},
+		{
+			"id": "a50_vestido_saco",
+			"nombre": "Vestido saco",
+			"categoria": "vestido",
+			"era": "anos50",
+			"color": "#6E6A64",
+			"tejido": "lana",
+			"estilos": [
+				"dia",
+				"vanguardia"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 30
+			},
+			"tipologias": [
+				"a50_vestido_saco"
+			],
+			"influencias": [
+				"Cristóbal Balenciaga"
+			],
+			"ficha": {
+				"descripcion": "Vestido holgado que elimina la cintura.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Lana gris topo.",
+				"silueta": "Sin cintura, cae recto desde los hombros.",
+				"uso": "Día."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "redondo",
+						"silueta": "recta",
+						"holgura": 0.03
+					},
+					"falda": {
+						"forma": "trapecio",
+						"largo": "rodilla",
+						"vuelo": 0.05
+					},
+					"mangas": {
+						"tipo": "tres_cuartos"
+					}
+				}
+			}
+		},
+		{
+			"id": "a50_chaqueta_tweed",
+			"nombre": "Chaqueta recta de tweed",
+			"categoria": "abrigo",
+			"era": "anos50",
+			"color": "#D8CFC2",
+			"tejido": "tweed",
+			"estilos": [
+				"dia",
+				"elegante"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 40
+			},
+			"tipologias": [
+				"a50_traje_recto"
+			],
+			"influencias": [
+				"Gabrielle Chanel"
+			],
+			"ficha": {
+				"descripcion": "Chaqueta recta sin cuello que cae desde la cadera.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Tweed crudo con botones dorados.",
+				"silueta": "Recta y suelta.",
+				"uso": "Día."
+			},
+			"modelo": {
+				"generador": "abrigo",
+				"params": {
+					"tipo": "chaqueta",
+					"largo": "cadera",
+					"abertura": 0.14,
+					"escote": "redondo",
+					"botones": 4
+				}
+			},
+			"color_secundario": "#1C1C1C",
+			"metal": "oro"
+		},
+		{
+			"id": "a50_falda_lapiz",
+			"nombre": "Falda lápiz de tweed",
+			"categoria": "parte_inferior",
+			"era": "anos50",
+			"color": "#D8CFC2",
+			"tejido": "tweed",
+			"estilos": [
+				"dia",
+				"elegante"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 600
+			},
+			"tipologias": [
+				"a50_traje_recto"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Falda estrecha hasta la rodilla.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Tweed crudo.",
+				"silueta": "Ceñida.",
+				"uso": "Día."
+			},
+			"modelo": {
+				"generador": "falda",
+				"params": {
+					"forma": "lapiz",
+					"largo": "rodilla"
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a50_salones_aguja",
+			"nombre": "Zapatos de tacón de aguja",
+			"categoria": "calzado",
+			"era": "anos50",
+			"color": "#141414",
+			"tejido": "cuero",
+			"estilos": [
+				"noche",
+				"elegante"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 700
+			},
+			"tipologias": [
+				"a50_tacon_aguja"
+			],
+			"influencias": [
+				"Roger Vivier"
+			],
+			"ficha": {
+				"descripcion": "Zapatos de salón con tacón alto y fino.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cuero negro.",
+				"silueta": "Punta afilada.",
+				"uso": "Noche y ciudad."
+			},
+			"modelo": {
+				"generador": "calzado",
+				"params": {
+					"tipo": "zapato_tacon",
+					"tacon": 0.09,
+					"punta": "afilada"
+				}
+			}
+		},
+		{
+			"id": "a50_coleta",
+			"nombre": "Coleta alta",
+			"categoria": "peinado",
+			"era": "anos50",
+			"color": "#3A2618",
+			"tejido": "algodon",
+			"estilos": [
+				"juvenil",
+				"dia"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 150
+			},
+			"tipologias": [
+				"a50_lineas_dior"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Pelo recogido en una coleta alta.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cabello castaño.",
+				"silueta": "Despeja el rostro.",
+				"uso": "Interpretación: peinado juvenil de la década."
+			},
+			"modelo": {
+				"generador": "peinado",
+				"params": {
+					"estilo": "coleta",
+					"volumen": 0.4
+				}
+			}
+		},
+		{
+			"id": "a50_gafas_gato",
+			"nombre": "Gafas de ojo de gato",
+			"categoria": "gafas",
+			"era": "anos50",
+			"color": "#1A1A1A",
+			"tejido": "plastico",
+			"estilos": [
+				"dia"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 250
+			},
+			"tipologias": [
+				"a50_lineas_dior"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Gafas con las esquinas superiores levantadas.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Montura negra.",
+				"silueta": "Forma alada.",
+				"uso": "Interpretación: complemento de la década."
+			},
+			"modelo": {
+				"generador": "gafas",
+				"params": {
+					"tipo": "ojo_de_gato"
+				}
+			},
+			"color_secundario": "#3A3A3A"
+		},
+		{
+			"id": "a50_guantes_cortos",
+			"nombre": "Guantes cortos",
+			"categoria": "guantes",
+			"era": "anos50",
+			"color": "#F7F5F0",
+			"tejido": "algodon",
+			"estilos": [
+				"dia",
+				"elegante"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 200
+			},
+			"tipologias": [
+				"a50_lineas_dior"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Guantes blancos hasta la muñeca.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Algodón blanco.",
+				"silueta": "Ajustados.",
+				"uso": "Interpretación: complemento de día."
+			},
+			"modelo": {
+				"generador": "guantes",
+				"params": {
+					"largo": "muneca"
+				}
+			}
+		},
+		{
+			"id": "a50_bolso_rigido",
+			"nombre": "Bolso de mano rígido",
+			"categoria": "bolso",
+			"era": "anos50",
+			"color": "#7B2C2C",
+			"tejido": "cuero",
+			"estilos": [
+				"dia",
+				"elegante"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 650
+			},
+			"tipologias": [
+				"a50_lineas_dior"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Bolso estructurado con asa corta.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cuero burdeos.",
+				"silueta": "Rígido.",
+				"uso": "Interpretación: complemento de día."
+			},
+			"modelo": {
+				"generador": "bolso",
+				"params": {
+					"tipo": "bolso_mano"
+				}
+			}
+		}
+	]
+}

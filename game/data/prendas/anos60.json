@@ -1,0 +1,490 @@
+{
+	"esquema": 1,
+	"era": "anos60",
+	"prendas": [
+		{
+			"id": "a60_vestido_mini",
+			"nombre": "Vestido mini trapecio",
+			"categoria": "vestido",
+			"era": "anos60",
+			"color": "#E8B830",
+			"tejido": "lana",
+			"estilos": [
+				"juvenil",
+				"mod"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 700
+			},
+			"tipologias": [
+				"a60_minifalda"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Vestido corto sin mangas que se ensancha ligeramente hacia el bajo.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Lana amarilla.",
+				"silueta": "Trapecio corto.",
+				"uso": "Día."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "barco",
+						"silueta": "recta"
+					},
+					"falda": {
+						"forma": "trapecio",
+						"largo": "mini",
+						"vuelo": 0.1
+					}
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a60_vestido_espacial",
+			"nombre": "Vestido blanco geométrico",
+			"categoria": "vestido",
+			"era": "anos60",
+			"color": "#F7F7F5",
+			"tejido": "gabardina",
+			"estilos": [
+				"futurista",
+				"mod"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 30
+			},
+			"tipologias": [
+				"a60_era_espacial"
+			],
+			"influencias": [
+				"André Courrèges",
+				"Pierre Cardin"
+			],
+			"ficha": {
+				"descripcion": "Vestido blanco de líneas limpias y estructura firme.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Gabardina blanca.",
+				"silueta": "Geométrico y corto.",
+				"uso": "Día."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "redondo",
+						"silueta": "recta"
+					},
+					"falda": {
+						"forma": "a",
+						"largo": "mini",
+						"vuelo": 0.06
+					},
+					"mangas": {
+						"tipo": "ninguna"
+					}
+				}
+			}
+		},
+		{
+			"id": "a60_pantalon_plata",
+			"nombre": "Pantalón plateado de vinilo",
+			"categoria": "parte_inferior",
+			"era": "anos60",
+			"color": "#C8C8CC",
+			"tejido": "vinilo",
+			"estilos": [
+				"futurista"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 25
+			},
+			"tipologias": [
+				"a60_era_espacial"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Pantalón recto de vinilo brillante.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Vinilo plateado.",
+				"silueta": "Recto.",
+				"uso": "Noche y fiesta."
+			},
+			"modelo": {
+				"generador": "pantalon",
+				"params": {
+					"corte": "recto",
+					"largo": "tobillo"
+				}
+			}
+		},
+		{
+			"id": "a60_vestido_discos",
+			"nombre": "Minivestido de discos metálicos",
+			"categoria": "vestido",
+			"era": "anos60",
+			"color": "#C9CCD1",
+			"tejido": "discos_metal",
+			"estilos": [
+				"futurista",
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 50
+			},
+			"tipologias": [
+				"a60_materiales"
+			],
+			"influencias": [
+				"Paco Rabanne"
+			],
+			"ficha": {
+				"descripcion": "Vestido corto de discos metálicos unidos con anillas.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Discos de metal simulados.",
+				"silueta": "Recto y corto.",
+				"uso": "Noche."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "redondo",
+						"silueta": "recta"
+					},
+					"falda": {
+						"forma": "recta",
+						"largo": "mini"
+					}
+				}
+			}
+		},
+		{
+			"id": "a60_vestido_reticula",
+			"nombre": "Vestido de punto con retícula",
+			"categoria": "vestido",
+			"era": "anos60",
+			"color": "#F4F2EC",
+			"tejido": "jersey",
+			"estilos": [
+				"mod",
+				"vanguardia"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "gemas",
+				"valor": 35
+			},
+			"tipologias": [
+				"a60_bloques_color"
+			],
+			"influencias": [
+				"Yves Saint Laurent"
+			],
+			"ficha": {
+				"descripcion": "Vestido recto con líneas negras que lo dividen como un cuadro.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Punto jersey blanco con retícula negra.",
+				"silueta": "Recto.",
+				"uso": "Día."
+			},
+			"modelo": {
+				"generador": "vestido",
+				"params": {
+					"cintura": "natural",
+					"corpino": {
+						"escote": "redondo",
+						"silueta": "recta"
+					},
+					"falda": {
+						"forma": "recta",
+						"largo": "rodilla"
+					}
+				}
+			},
+			"color_secundario": "#111111",
+			"estampado": "reticula"
+		},
+		{
+			"id": "a60_botas_blancas",
+			"nombre": "Botas blancas de media caña",
+			"categoria": "calzado",
+			"era": "anos60",
+			"color": "#F5F5F2",
+			"tejido": "vinilo",
+			"estilos": [
+				"futurista",
+				"mod"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 650
+			},
+			"tipologias": [
+				"a60_era_espacial"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Botas planas blancas hasta media pierna.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Vinilo blanco.",
+				"silueta": "Punta redonda.",
+				"uso": "Día."
+			},
+			"modelo": {
+				"generador": "calzado",
+				"params": {
+					"tipo": "bota",
+					"tacon": 0.02,
+					"cana": 0.22,
+					"punta": "redonda"
+				}
+			},
+			"inicial": true
+		},
+		{
+			"id": "a60_casquete",
+			"nombre": "Sombrero casquete",
+			"categoria": "tocado",
+			"era": "anos60",
+			"color": "#D8C9B0",
+			"tejido": "fieltro",
+			"estilos": [
+				"elegante",
+				"dia"
+			],
+			"temporadas": [
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 450
+			},
+			"tipologias": [
+				"a60_casquete"
+			],
+			"influencias": [
+				"Halston"
+			],
+			"ficha": {
+				"descripcion": "Sombrero pequeño sin ala colocado hacia la nuca.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Fieltro beige.",
+				"silueta": "Cilíndrico.",
+				"uso": "Ceremonias de día."
+			},
+			"modelo": {
+				"generador": "tocado",
+				"params": {
+					"tipo": "casquete"
+				}
+			}
+		},
+		{
+			"id": "a60_cardado",
+			"nombre": "Peinado cardado",
+			"categoria": "peinado",
+			"era": "anos60",
+			"color": "#3A2618",
+			"tejido": "algodon",
+			"estilos": [
+				"mod",
+				"noche"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 200
+			},
+			"tipologias": [
+				"a60_minifalda"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Pelo con mucho volumen en la coronilla.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Cabello castaño.",
+				"silueta": "Alto y redondeado.",
+				"uso": "Interpretación: peinado de la década."
+			},
+			"modelo": {
+				"generador": "peinado",
+				"params": {
+					"estilo": "cardado",
+					"volumen": 0.8
+				}
+			}
+		},
+		{
+			"id": "a60_maquillaje",
+			"nombre": "Maquillaje de ojos marcados",
+			"categoria": "maquillaje",
+			"era": "anos60",
+			"color": "#D9A0A0",
+			"tejido": "algodon",
+			"estilos": [
+				"mod"
+			],
+			"temporadas": [
+				"primavera",
+				"verano",
+				"otono",
+				"invierno"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 150
+			},
+			"tipologias": [
+				"a60_minifalda"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Ojos muy delineados con rabillo y labios pálidos.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Maquillaje pintado.",
+				"silueta": "Protagonismo de la mirada.",
+				"uso": "Interpretación del maquillaje de la década."
+			},
+			"modelo": {
+				"generador": "maquillaje",
+				"params": {
+					"labios": "#D9A0A0",
+					"intensidad_labios": 0.5,
+					"sombra": "#6C7A89",
+					"intensidad_sombra": 0.6,
+					"delineado": 1.0,
+					"rabillo": 0.8,
+					"cejas": 0.5
+				}
+			}
+		},
+		{
+			"id": "a60_gafas_grandes",
+			"nombre": "Gafas redondas grandes",
+			"categoria": "gafas",
+			"era": "anos60",
+			"color": "#F7F7F5",
+			"tejido": "plastico",
+			"estilos": [
+				"futurista",
+				"mod"
+			],
+			"temporadas": [
+				"primavera",
+				"verano"
+			],
+			"precio": {
+				"moneda": "monedas",
+				"valor": 250
+			},
+			"tipologias": [
+				"a60_era_espacial"
+			],
+			"influencias": [],
+			"ficha": {
+				"descripcion": "Gafas de montura blanca y lentes grandes.",
+				"tipo_pieza": "interpretacion_de_epoca",
+				"atribucion": {
+					"estado": "sin_atribucion",
+					"nota": "Diseño original de este juego; no reproduce una pieza documentada."
+				},
+				"materiales_modelo": "Montura blanca, cristal ahumado.",
+				"silueta": "Redondas y grandes.",
+				"uso": "Interpretación: complemento de la década."
+			},
+			"modelo": {
+				"generador": "gafas",
+				"params": {
+					"tipo": "grandes"
+				}
+			},
+			"color_secundario": "#3A3A3A"
+		}
+	]
+}

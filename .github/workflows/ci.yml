@@ -70,7 +70,7 @@ jobs:
             xvfb-run -a -s "-screen 0 1920x1080x24" godot --path game --quit-after 100000 -s res://tools/capturas_rendimiento.gd -- --salida=$PWD/artefactos/rendimiento --modo=$modo --cuadros=120
           done
           python3 tools/resumen_rendimiento.py artefactos/rendimiento >> "$GITHUB_STEP_SUMMARY"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: capturas-y-rendimiento
           path: artefactos/
@@ -117,7 +117,7 @@ jobs:
           ls -la builds/*
       - name: Prueba de humo del ejecutable de Linux
         run: xvfb-run -a -s "-screen 0 1280x720x24" ./builds/linux/AtelierDeLasEras.x86_64 --quit-after 300
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: atelier-de-las-eras-escritorio
           path: builds/
@@ -185,7 +185,7 @@ jobs:
           cat verificacion.txt
           { echo "### NRO para Switch (homebrew)"; echo '```'; cat verificacion.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           [ "$ok" = 1 ]
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: atelier-de-las-eras-switch-nro
           path: builds/switch/AtelierDeLasEras/

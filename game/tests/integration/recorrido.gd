@@ -67,6 +67,14 @@ func _initialize() -> void:
 	check(game.data_errors.is_empty(), "datos sin errores")
 	app = load("res://scenes/main.tscn").instantiate()
 	root.add_child(app)
+	await frames(2)
+	var gles3 := RenderingServer.get_current_rendering_method() == "gl_compatibility"
+	check(app.preparing == gles3 and (app.loading != null) == gles3,
+		"«Preparando gráficos…» aparece solo con GLES3, el renderizador del NRO")
+	if app.preparing:
+		await shot("00_preparando_graficos")
+		while app.preparing:
+			await process_frame
 	await frames(10)
 	check(app.top().name == "Pantalla_menu", "arranca en el menú principal")
 	await shot("01_menu")

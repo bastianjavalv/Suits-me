@@ -5,14 +5,12 @@
 
 #include <EGL/egl.h>
 
-/// A single fixed 1280x720 window backed by Mesa/nouveau EGL (OpenGL ES 3). Inherits the headless
+/// A single window backed by Mesa/nouveau EGL (OpenGL ES 3), 1920x1080 docked and 1280x720 handheld. Inherits the headless
 /// no-ops for every desktop-only call (window modes, cursors, clipboard, dialogs...), and overrides
 /// only what a console actually does: report the screen, present frames and turn touches into events.
 class DisplayServerSwitch : public DisplayServerHeadless {
 	GDSOFTCLASS(DisplayServerSwitch, DisplayServerHeadless);
 
-	static constexpr int SCREEN_W = 1280;
-	static constexpr int SCREEN_H = 720;
 
 	EGLDisplay egl_display = EGL_NO_DISPLAY;
 	EGLSurface egl_surface = EGL_NO_SURFACE;
@@ -37,6 +35,18 @@ class DisplayServerSwitch : public DisplayServerHeadless {
 
 	HashMap<uint32_t, Vector2> touches; // finger id -> last position.
 
+	// Atelier de las Eras: the window follows the operation mode (1920x1080 docked, 1280x720
+	// handheld). On a dock/undock the EGL surface is recreated at the new size; the GL context, and
+	// with it every texture and shader, survives.
+	Size2i window_size;
+	bool is_docked = false;
+	EGLConfig egl_config = nullptr;
+	Callable rect_changed_callback;
+
+	static Size2i _size_for_mode(bool p_docked);
+	Error _create_surface(const Size2i &p_size);
+	void _resize_surface(const Size2i &p_size);
+
 	Error _init_egl();
 	void _destroy_egl();
 
@@ -52,8 +62,8 @@ public:
 	int get_screen_count() const override { return 1; }
 	int get_primary_screen() const override { return 0; }
 	Point2i screen_get_position(int p_screen = DisplayServerEnums::SCREEN_OF_MAIN_WINDOW) const override { return Point2i(); }
-	Size2i screen_get_size(int p_screen = DisplayServerEnums::SCREEN_OF_MAIN_WINDOW) const override { return Size2i(SCREEN_W, SCREEN_H); }
-	Rect2i screen_get_usable_rect(int p_screen = DisplayServerEnums::SCREEN_OF_MAIN_WINDOW) const override { return Rect2i(0, 0, SCREEN_W, SCREEN_H); }
+	Size2i screen_get_size(int p_screen = DisplayServerEnums::SCREEN_OF_MAIN_WINDOW) const override { return window_size; }
+	Rect2i screen_get_usable_rect(int p_screen = DisplayServerEnums::SCREEN_OF_MAIN_WINDOW) const override { return Rect2i(Point2i(), window_size); }
 	int screen_get_dpi(int p_screen = DisplayServerEnums::SCREEN_OF_MAIN_WINDOW) const override { return 237; }
 	float screen_get_refresh_rate(int p_screen = DisplayServerEnums::SCREEN_OF_MAIN_WINDOW) const override { return 60.0f; }
 
@@ -68,8 +78,9 @@ public:
 	bool can_any_window_draw() const override { return true; }
 
 	int window_get_current_screen(DisplayServerEnums::WindowID p_window = DisplayServerEnums::MAIN_WINDOW_ID) const override { return 0; }
-	Size2i window_get_size(DisplayServerEnums::WindowID p_window = DisplayServerEnums::MAIN_WINDOW_ID) const override { return Size2i(SCREEN_W, SCREEN_H); }
-	Size2i window_get_size_with_decorations(DisplayServerEnums::WindowID p_window = DisplayServerEnums::MAIN_WINDOW_ID) const override { return Size2i(SCREEN_W, SCREEN_H); }
+	Size2i window_get_size(DisplayServerEnums::WindowID p_window = DisplayServerEnums::MAIN_WINDOW_ID) const override { return window_size; }
+	Size2i window_get_size_with_decorations(DisplayServerEnums::WindowID p_window = DisplayServerEnums::MAIN_WINDOW_ID) const override { return window_size; }
+	void window_set_rect_changed_callback(const Callable &p_callable, DisplayServerEnums::WindowID p_window = DisplayServerEnums::MAIN_WINDOW_ID) override { rect_changed_callback = p_callable; }
 
 	void window_set_vsync_mode(DisplayServerEnums::VSyncMode p_vsync_mode, DisplayServerEnums::WindowID p_window = DisplayServerEnums::MAIN_WINDOW_ID) override;
 	DisplayServerEnums::VSyncMode window_get_vsync_mode(DisplayServerEnums::WindowID p_window = DisplayServerEnums::MAIN_WINDOW_ID) const override { return vsync_mode; }

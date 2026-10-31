@@ -6,7 +6,7 @@
 |---|---|---|---|
 | Herramientas (Python) | 22 pruebas | Auditoría de APK con APK sintéticos, verificador del repositorio, verificador sin conexión, validador de datos | `python -m pytest tools/tests -q` |
 | Juego (Godot, unitarias) | 58 pruebas | Catálogo, conjuntos, filtros, economía, armario, looks, guardado y recuperación, evaluación, enciclopedia, controles, gestos, resolución dinámica, perfiles, mallas de las 86 prendas, contenido real | `godot --headless --path game -s res://tests/run_tests.gd` |
-| Recorrido de integración | 28 comprobaciones | Menú → épocas → vestidor → Historia de la prenda → desafío → resultado → foto → enciclopedia → looks → galería → opciones → pausa, en sobremesa y en portátil | `xvfb-run godot --path game -s res://tests/integration/recorrido.gd` |
+| Recorrido de integración | 29 comprobaciones | Pantalla de carga (solo GLES3) → menú → épocas → vestidor → Historia de la prenda → desafío → resultado → foto → enciclopedia → looks → galería → opciones → pausa, en sobremesa, en portátil y con GLES3 | `xvfb-run godot --path game -s res://tests/integration/recorrido.gd` |
 | Compilación | 2 ejecutables | Exportación Linux y Windows; prueba de humo del ejecutable de Linux | Ver tutorial, sección 7 |
 | Repositorio | 4 verificadores | Sin material propietario ni credenciales, sin red, datos válidos, documentación al día | `.github/workflows/ci.yml` |
 

@@ -73,9 +73,15 @@ Error DisplayServerSwitch::_init_egl() {
 		eglChooseConfig(egl_display, attribs_default, &config, 1, &num_configs);
 	}
 	ERR_FAIL_COND_V_MSG(num_configs == 0, ERR_UNAVAILABLE, vformat("No EGL config found: 0x%x", eglGetError()));
+	egl_config = config;
 
-	egl_surface = eglCreateWindowSurface(egl_display, config, (EGLNativeWindowType)nx::default_window(), nullptr);
-	ERR_FAIL_COND_V_MSG(egl_surface == EGL_NO_SURFACE, ERR_UNAVAILABLE, vformat("eglCreateWindowSurface failed: 0x%x", eglGetError()));
+	is_docked = nx::docked();
+	Error err = _create_surface(_size_for_mode(is_docked));
+	if (err != OK && is_docked) {
+		print_line("Switch: 1920x1080 surface failed, falling back to 1280x720.");
+		err = _create_surface(_size_for_mode(false));
+	}
+	ERR_FAIL_COND_V(err != OK, err);
 
 	const EGLint context_attribs[] = { EGL_CONTEXT_CLIENT_VERSION, 3, EGL_NONE };
 	egl_context = eglCreateContext(egl_display, config, EGL_NO_CONTEXT, context_attribs);
@@ -83,6 +89,40 @@ Error DisplayServerSwitch::_init_egl() {
 
 	ERR_FAIL_COND_V_MSG(!eglMakeCurrent(egl_display, egl_surface, egl_surface, egl_context), ERR_UNAVAILABLE, vformat("eglMakeCurrent failed: 0x%x", eglGetError()));
 	return OK;
+}
+
+Size2i DisplayServerSwitch::_size_for_mode(bool p_docked) {
+	return p_docked ? Size2i(nx::DOCKED_WIDTH, nx::DOCKED_HEIGHT) : Size2i(nx::HANDHELD_WIDTH, nx::HANDHELD_HEIGHT);
+}
+
+// Sizes the native window and creates the EGL surface on it. The window can only change size while no
+// surface holds buffers on it, so any previous surface must already be destroyed.
+Error DisplayServerSwitch::_create_surface(const Size2i &p_size) {
+	void *win = nx::default_window(p_size.width, p_size.height);
+	egl_surface = eglCreateWindowSurface(egl_display, egl_config, (EGLNativeWindowType)win, nullptr);
+	ERR_FAIL_COND_V_MSG(egl_surface == EGL_NO_SURFACE, ERR_UNAVAILABLE, vformat("eglCreateWindowSurface(%dx%d) failed: 0x%x", p_size.width, p_size.height, eglGetError()));
+	window_size = p_size;
+	print_line(vformat("Switch: window %dx%d (%s).", p_size.width, p_size.height, is_docked ? "docked" : "handheld"));
+	return OK;
+}
+
+// Dock/undock: unbind the context (it keeps every GL object), replace the surface with one of the new size
+// and tell the root Window, which resizes its viewport like after any desktop window resize.
+void DisplayServerSwitch::_resize_surface(const Size2i &p_size) {
+	const Size2i previous = window_size;
+	eglMakeCurrent(egl_display, EGL_NO_SURFACE, EGL_NO_SURFACE, EGL_NO_CONTEXT);
+	eglDestroySurface(egl_display, egl_surface);
+	egl_surface = EGL_NO_SURFACE;
+
+	if (_create_surface(p_size) != OK) {
+		ERR_FAIL_COND_MSG(_create_surface(previous) != OK, "Switch: could not recreate the EGL surface.");
+	}
+	ERR_FAIL_COND_MSG(!eglMakeCurrent(egl_display, egl_surface, egl_surface, egl_context), vformat("eglMakeCurrent failed: 0x%x", eglGetError()));
+	window_set_vsync_mode(vsync_mode); // The swap interval belongs to the surface.
+
+	if (window_size != previous && rect_changed_callback.is_valid()) {
+		rect_changed_callback.call(Rect2i(Point2i(), window_size));
+	}
 }
 
 void DisplayServerSwitch::_destroy_egl() {
@@ -164,6 +204,12 @@ void DisplayServerSwitch::_inject_keyboard_text(const String &p_text) {
 }
 
 void DisplayServerSwitch::process_events() {
+	const bool now_docked = nx::docked();
+	if (now_docked != is_docked) {
+		is_docked = now_docked;
+		_resize_surface(_size_for_mode(is_docked));
+	}
+
 	if (keyboard_requested && --keyboard_wait_frames <= 0) {
 		keyboard_requested = false;
 		char out[2048];
@@ -184,9 +230,11 @@ void DisplayServerSwitch::process_events() {
 	int count = nx::touch_poll(points, 10);
 	Input *input = Input::get_singleton();
 
+	// The touch panel always reports 1280x720 coordinates; map them to the window.
+	const Vector2 touch_scale(window_size.width / (float)nx::HANDHELD_WIDTH, window_size.height / (float)nx::HANDHELD_HEIGHT);
 	HashMap<uint32_t, Vector2> now;
 	for (int i = 0; i < count; i++) {
-		Vector2 pos(points[i].x, points[i].y);
+		Vector2 pos = Vector2(points[i].x, points[i].y) * touch_scale;
 		now[points[i].id] = pos;
 
 		if (!touches.has(points[i].id)) {
@@ -232,7 +280,7 @@ DisplayServerSwitch::DisplayServerSwitch(const String &p_rendering_driver, Displ
 
 	nx::gl_selftest(); // Logs texture/swizzle sanity results to the SD log.
 
-	nx::present_test(egl_display, egl_surface, SCREEN_W, SCREEN_H);
+	nx::present_test(egl_display, egl_surface, window_size.width, window_size.height);
 
 #if defined(GLES3_ENABLED)
 	if (rendering_driver == "opengl3") {

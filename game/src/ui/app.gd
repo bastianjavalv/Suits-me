@@ -38,6 +38,11 @@ var profile: Dictionary = {}
 var _perf_t := 0.0
 var _mouse_drag := false
 var photo_mode := false
+## Precompilación de sombreadores en curso (solo con GLES3; ver _prepare_graphics).
+var preparing := false
+var loading: LoadingOverlay
+
+signal preparation_finished
 
 
 func _ready() -> void:
@@ -59,9 +64,75 @@ func _ready() -> void:
 	set_stage("estudio_neutro")
 	view.show_outfit(game.outfit.to_dict())
 	game.outfit.changed.connect(func() -> void: view.show_outfit(game.outfit.to_dict()))
+	if needs_shader_warmup():
+		_prepare_graphics()
+	else:
+		_finish_startup()
+
+
+func _finish_startup() -> void:
+	var game := get_node("/root/Game")
 	push("menu")
 	for n in game.take_notices():
 		toast(n, 6.0)
+
+
+## Con GLES3 (el renderizador del NRO de Switch) cada sombreador se compila la primera vez que se
+## dibuja y Mesa no lo guarda en caché: sin precompilarlos, el arranque queda en negro y el juego se
+## congela al abrir cada época.
+static func needs_shader_warmup() -> bool:
+	return RenderingServer.get_current_rendering_method() == "gl_compatibility" and DisplayServer.get_name() != "headless"
+
+
+## Pasos de la precompilación: cada escenario con el conjunto de muestra de una época, hasta recorrer
+## todos los escenarios y todas las épocas. Solo se dibujan; la partida no cambia.
+func warmup_steps() -> Array[Dictionary]:
+	var game := get_node("/root/Game")
+	var stage_ids: Array = game.stages.keys()
+	var era_ids: Array = game.eras.map(func(e): return e["id"])
+	var steps: Array[Dictionary] = []
+	for i in maxi(stage_ids.size(), era_ids.size()):
+		var era: String = era_ids[i % era_ids.size()] if not era_ids.is_empty() else ""
+		var outfit := {}
+		for id in game.catalog.by_era.get(era, []):
+			var cat: String = game.catalog.get_item(id)["categoria"]
+			if not outfit.has(cat):
+				outfit[cat] = id
+		steps.append({"escenario": stage_ids[i % stage_ids.size()] if not stage_ids.is_empty() else "",
+			"era": era, "conjunto": outfit})
+	return steps
+
+
+func _prepare_graphics() -> void:
+	var game := get_node("/root/Game")
+	preparing = true
+	loading = LoadingOverlay.new()
+	ui.add_child(loading)
+	# El primer cuadro solo lleva la pantalla de carga, así aparece enseguida.
+	world.visible = false
+	await get_tree().process_frame
+	world.visible = true
+	var steps := warmup_steps()
+	for i in steps.size():
+		var step: Dictionary = steps[i]
+		set_stage(step["escenario"])
+		view.show_outfit(step["conjunto"])
+		var stage_name: String = game.stages.get(step["escenario"], {}).get("nombre", "")
+		loading.set_progress(float(i) / steps.size(), "%s · %s" % [stage_name, game.era_names.get(step["era"], "")])
+		await get_tree().process_frame
+		await get_tree().process_frame
+	loading.set_progress(1.0)
+	set_stage("estudio_neutro")
+	view.show_outfit(game.outfit.to_dict())
+	await get_tree().process_frame
+	# Los cuadros lentos de la compilación no deben bajar la resolución dinámica.
+	dyn = DynamicResolution.new()
+	apply_quality()
+	loading.queue_free()
+	loading = null
+	preparing = false
+	_finish_startup()
+	preparation_finished.emit()
 
 
 # ---------------------------------------------------------------------------

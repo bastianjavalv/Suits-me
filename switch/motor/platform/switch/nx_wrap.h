@@ -19,9 +19,20 @@ const char *app_dir();
 bool file_exists(const char *p_path);
 bool firmware_version(char *r_buf, size_t p_len);
 
-// The EGL native window, fixed at 1280x720 so docked mode is scaled by the compositor
-// instead of changing the framebuffer size under the engine.
-void *default_window();
+// Atelier de las Eras: the framebuffer follows the operation mode, 1920x1080 docked and 1280x720
+// handheld, instead of a fixed 1280x720 (see switch/LEEME.md).
+constexpr int DOCKED_WIDTH = 1920;
+constexpr int DOCKED_HEIGHT = 1080;
+constexpr int HANDHELD_WIDTH = 1280;
+constexpr int HANDHELD_HEIGHT = 720;
+
+// True while the console is in the dock (TV mode). libnx refreshes it from the applet messages
+// processed by applet_loop().
+bool docked();
+
+// The EGL native window, sized to p_width x p_height. Only valid while no EGL surface holds buffers
+// on it: destroy the surface first, then call this, then create a new surface.
+void *default_window(int p_width, int p_height);
 
 // ---- Input ----
 enum PadButton : uint32_t {

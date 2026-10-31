@@ -161,9 +161,16 @@ bool firmware_version(char *r_buf, size_t p_len) {
 	return true;
 }
 
-void *default_window() {
+bool docked() {
+	return appletGetOperationMode() == AppletOperationMode_Console;
+}
+
+void *default_window(int p_width, int p_height) {
 	NWindow *win = nwindowGetDefault();
-	nwindowSetDimensions(win, 1280, 720);
+	Result rc = nwindowSetDimensions(win, (u32)p_width, (u32)p_height);
+	if (R_FAILED(rc)) {
+		printf("Switch: nwindowSetDimensions(%d, %d) failed: 0x%x\n", p_width, p_height, rc);
+	}
 	return win;
 }
 

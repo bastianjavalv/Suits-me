@@ -17,8 +17,9 @@ INSTALACIÓN
    juego instalado. No lo abras desde el Álbum: ahí el homebrew tiene muy poca memoria.
 3. Elige "Atelier de las Eras" y pulsa A.
 
-En cada arranque la pantalla queda en negro unos segundos mientras se compilan los sombreadores:
-es normal en este port.
+En cada arranque aparece "Preparando gráficos..." con una barra de progreso mientras se compilan
+los sombreadores. Tarda unos segundos y es normal en este port. Después el juego no se congela al
+cambiar de época.
 
 CONTROLES
   Stick izquierdo / cruceta   navegar           A   confirmar
@@ -35,7 +36,8 @@ ARCHIVOS EN LA TARJETA SD
 Si algo falla, guarda log.txt y adjúntalo al informar del problema.
 
 LIMITACIONES CONOCIDAS
-- Imagen a 1280x720 en los dos modos (en la base, la consola la escala al televisor).
+- Imagen a 1920x1080 en la base y a 1280x720 en modo portátil. Al poner o quitar la consola de la
+  base el juego cambia de resolución sin reiniciarse (sin probar todavía en una consola real).
 - Usa el renderizador GLES3 (Compatibility) en lugar del Mobile del PC; el aspecto es casi igual.
 - Rendimiento sin medir en consola: los 60 FPS son un objetivo, no una garantía.
 - La partida se guarda en la tarjeta SD, no en el almacenamiento de partidas del sistema.

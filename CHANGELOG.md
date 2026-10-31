@@ -1,5 +1,19 @@
 # Registro de cambios
 
+## 0.3.0 — 2026-10-31
+
+### Añadido
+- NRO: 1920×1080 en la base y 1280×720 en modo portátil, con cambio en caliente al poner o quitar
+  la consola de la base. Es un cambio propio sobre el port (`switch/motor`): la superficie EGL se
+  recrea con el nuevo tamaño y se conserva el contexto GL. El táctil se escala al tamaño de la ventana.
+- Pantalla «Preparando gráficos…» con barra de progreso. Con GLES3 recorre los 10 escenarios con un
+  conjunto de cada época para compilar los sombreadores antes de jugar, sin tocar la partida.
+- Recorrido de integración: comprobación de la pantalla de carga (29 comprobaciones) y captura
+  `00_preparando_graficos`.
+
+### Cambiado
+- La pantalla de arranque usa el fondo oscuro de la interfaz.
+
 ## 0.2.0 — 2026-10-31
 
 NRO homebrew para Nintendo Switch con firmware personalizado.

@@ -67,6 +67,7 @@ python -m pytest tools/tests -q
 godot --headless --path game -s res://tests/run_tests.gd
 ```
 
-28 pruebas de herramientas, 59 pruebas del juego y un recorrido de integración de 28
-comprobaciones en sobremesa, en portátil y con GLES3 (el renderizador del NRO), todos en verde; la
-CI los repite en cada cambio y verifica la estructura del NRO.
+28 pruebas de herramientas, 59 pruebas del juego y un recorrido de integración de 29
+comprobaciones en sobremesa, en portátil y con GLES3 (el renderizador del NRO, con su pantalla
+«Preparando gráficos…»), todos en verde; la CI los repite en cada cambio y verifica la estructura
+del NRO.

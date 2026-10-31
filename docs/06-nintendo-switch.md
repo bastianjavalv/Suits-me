@@ -103,8 +103,9 @@ instalación en la sección 10.1 del [tutorial](TUTORIAL.md).
 |---|---|---|
 | Herramientas | SDK de Nintendo y port autorizado | devkitA64, libnx, Mesa y `switch/motor` (MIT) |
 | Renderizador | El del port autorizado | Compatibility (GLES3 sobre Mesa nouveau) |
-| Resolución | Sobremesa 1920×1080, portátil 1280×720 | 1280×720 fija; en la base la consola escala la imagen |
-| Perfil gráfico | Según el modo | Portátil (detectado por la resolución) |
+| Resolución | Sobremesa 1920×1080, portátil 1280×720 | Igual: 1920×1080 en la base y 1280×720 en portátil, con cambio en caliente (cambio propio sobre el port) |
+| Perfil gráfico | Según el modo | Según el modo (detectado por la resolución) |
+| Sombreadores | Según el port autorizado | Se compilan en cada arranque detrás de «Preparando gráficos…» |
 | Botones | Por posición, convertidos a letra | Por letra (disposición `switch`) |
 | Guardado | Datos de guardado del sistema | Tarjeta SD: `sdmc:/switch/AtelierDeLasEras/` |
 | Salir | Menú HOME | Opción «Salir» del menú principal |
@@ -113,9 +114,9 @@ instalación en la sección 10.1 del [tutorial](TUTORIAL.md).
 
 | Comprobación | Estado |
 |---|---|
-| El juego funciona con GLES3 y el servidor de texto básico (recorrido de 28 comprobaciones) | Hecho (PC con Mesa llvmpipe; CI en cada cambio) |
-| El motor compila con devkitA64 y el NRO tiene una estructura válida (`tools/verificar_nro.py`) | Hecho (CI) |
-| Arranque, controles, táctil, sonido y rendimiento en una consola real | **Pendiente**: requiere probarlo en tu consola |
+| El juego funciona con GLES3 y el servidor de texto básico, con la pantalla de carga (recorrido de 29 comprobaciones) | Hecho (PC con Mesa llvmpipe; CI en cada cambio) |
+| El motor compila con devkitA64, con los cambios de resolución, y el NRO tiene una estructura válida (`tools/verificar_nro.py`) | Hecho (CI) |
+| Arranque, 1080p en la base, cambio de modo, controles, táctil, sonido y rendimiento en una consola real | **Pendiente**: requiere probarlo en tu consola |
 
 El autor del port lo verificó en una consola real con otro proyecto: arranque, audio, mando del
 jugador 1 y teclado del sistema. No verificó el táctil, el modo sobremesa ni escenas 3D exigentes.

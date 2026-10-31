@@ -235,8 +235,12 @@ Lo prudente es usarlo en emuMMC y sin conectarse a los servicios en línea de Ni
 3. Arranca Atmosphère y abre el hbmenu **en modo título**: mantén pulsado **R** mientras abres
    cualquier juego instalado. Desde el Álbum el homebrew tiene muy poca memoria y el juego puede
    cerrarse.
-4. Elige **Atelier de las Eras** y pulsa **A**. En cada arranque la pantalla queda en negro unos
-   segundos mientras se compilan los sombreadores; es normal en este port.
+4. Elige **Atelier de las Eras** y pulsa **A**. En cada arranque aparece **«Preparando gráficos…»**
+   con una barra de progreso mientras se compilan los sombreadores; tarda unos segundos y luego el
+   juego no se congela al cambiar de época. En la base el juego se ve a 1920×1080 y en modo
+   portátil a 1280×720, y cambia solo al poner o quitar la consola de la base.
+
+![Preparando gráficos](capturas/ui_00_preparando_graficos.jpg)
 
 Los controles son los de la especificación: A confirmar, B cancelar, X opciones de vestuario,
 Y categoría, L/R secciones, ZL/ZR zoom, stick derecho girar, + pausa, − inventario. Para volver

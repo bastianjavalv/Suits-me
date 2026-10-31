@@ -92,7 +92,7 @@ jobs:
           sudo mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" /usr/local/bin/godot
       - name: Plantillas de exportación en caché
         id: cache-plantillas
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.local/share/godot/export_templates
           key: godot-plantillas-${{ env.GODOT_VERSION }}
@@ -135,7 +135,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Motor de Switch en caché
         id: cache-motor
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: switch/trabajo/motor
           key: motor-switch-${{ hashFiles('switch/motor/**', 'switch/compilar_motor.sh') }}-devkita64-1fc388c3
@@ -150,7 +150,7 @@ jobs:
       # Se guarda en cuanto compila, aunque falle un paso posterior.
       - name: Guardar el motor en caché
         if: steps.cache-motor.outputs.cache-hit != 'true'
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: switch/trabajo/motor
           key: ${{ steps.cache-motor.outputs.cache-primary-key }}

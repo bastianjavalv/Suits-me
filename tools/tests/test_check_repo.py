@@ -32,11 +32,15 @@ def test_detecta_extensiones_y_firmas(tmp_path):
     (tmp_path / "libunity.bin").write_bytes(fx.elf_stub())
     (tmp_path / "codigo.bin").write_bytes(fx.construir_dex(["La/B;"]))
     (tmp_path / "global-metadata.dat").write_bytes(b"\xaf\x1b\xb1\xfa")
+    (tmp_path / "AtelierDeLasEras.nro").write_bytes(b"x")
+    (tmp_path / "prod.keys").write_bytes(b"x")
     problemas = "\n".join(_revisar(tmp_path))
     assert "juego.apk" in problemas
     assert "libunity.bin" in problemas and "ELF" in problemas
     assert "codigo.bin" in problemas and "DEX" in problemas
     assert "global-metadata.dat" in problemas
+    assert "AtelierDeLasEras.nro" in problemas
+    assert "prod.keys" in problemas
 
 
 def test_detecta_credenciales(tmp_path):

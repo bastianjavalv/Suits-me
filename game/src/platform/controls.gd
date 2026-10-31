@@ -10,6 +10,8 @@ var controller_profile := "generico"
 var layout := "nintendo"
 ## Con un Joy-Con individual no hay stick derecho: el stick izquierdo alterna entre navegar y rotar.
 var stick_rotates := false
+## El mando informa los botones por su letra (port homebrew de Switch).
+var pad_by_label := false
 var _setting_layout := "auto"
 var _overrides: Dictionary = {}
 
@@ -29,7 +31,8 @@ func configure(setting_layout: String, overrides: Dictionary) -> void:
 func apply_bindings() -> void:
 	var platform := get_node_or_null("/root/Platform")
 	var on_console: bool = platform != null and platform.is_console()
-	layout = InputBindings.layout_for(controller_profile, _setting_layout, on_console)
+	var by_label: bool = pad_by_label or (platform != null and platform.is_switch_homebrew())
+	layout = InputBindings.layout_for(controller_profile, _setting_layout, on_console, by_label)
 	InputBindings.apply(layout, _overrides)
 
 
@@ -41,8 +44,10 @@ func _on_joy_connection_changed(_device: int, _connected: bool) -> void:
 func _refresh_controller() -> void:
 	var pads := Input.get_connected_joypads()
 	var profile := "generico"
+	pad_by_label = false
 	if not pads.is_empty():
 		profile = InputBindings.classify(Input.get_joy_name(pads[0]))
+		pad_by_label = InputBindings.is_label_pad(Input.get_joy_guid(pads[0]))
 	if profile != controller_profile:
 		controller_profile = profile
 		if not InputBindings.is_single_joycon(profile):

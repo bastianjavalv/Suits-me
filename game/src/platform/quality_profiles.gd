@@ -37,7 +37,9 @@ static func apply(viewport: Viewport, p: Dictionary) -> void:
 		return
 	var msaa := int(p["msaa"])
 	viewport.msaa_3d = Viewport.MSAA_4X if msaa >= 4 else (Viewport.MSAA_2X if msaa >= 2 else Viewport.MSAA_DISABLED)
-	viewport.screen_space_aa = Viewport.SCREEN_SPACE_AA_FXAA if p["fxaa"] else Viewport.SCREEN_SPACE_AA_DISABLED
+	# El renderizador Compatibility (GLES3, el del port homebrew de Switch) no tiene FXAA.
+	if RenderingServer.get_current_rendering_method() != "gl_compatibility":
+		viewport.screen_space_aa = Viewport.SCREEN_SPACE_AA_FXAA if p["fxaa"] else Viewport.SCREEN_SPACE_AA_DISABLED
 	viewport.scaling_3d_scale = float(p["escala_3d"])
 	viewport.mesh_lod_threshold = float(p["lod_umbral"])
 	RenderingServer.directional_shadow_atlas_set_size(int(p["sombra_tamano"]), true)

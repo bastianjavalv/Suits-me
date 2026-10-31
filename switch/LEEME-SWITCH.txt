@@ -1,0 +1,42 @@
+ATELIER DE LAS ERAS - NRO para Nintendo Switch (homebrew)
+==========================================================
+
+Juego original de moda e historia del vestido. Funciona sin conexión.
+
+AVISO
+- Este NRO es homebrew NO OFICIAL: Nintendo no lo distribuye ni lo autoriza.
+- Necesita una consola con firmware personalizado (Atmosphère) y el Homebrew Menu (hbmenu).
+- Usar CFW es responsabilidad del propietario de la consola. Lo prudente es usarlo en emuMMC y
+  sin conectarse a los servicios en línea de Nintendo.
+
+INSTALACIÓN
+1. Con la tarjeta microSD en el PC, copia la carpeta AtelierDeLasEras dentro de la carpeta
+   "switch" de la raíz de la tarjeta:
+       sdmc:/switch/AtelierDeLasEras/AtelierDeLasEras.nro
+2. Arranca Atmosphère y abre el hbmenu EN MODO TÍTULO: mantén pulsado R mientras abres cualquier
+   juego instalado. No lo abras desde el Álbum: ahí el homebrew tiene muy poca memoria.
+3. Elige "Atelier de las Eras" y pulsa A.
+
+En cada arranque la pantalla queda en negro unos segundos mientras se compilan los sombreadores:
+es normal en este port.
+
+CONTROLES
+  Stick izquierdo / cruceta   navegar           A   confirmar
+  Stick derecho               girar             B   cancelar
+  ZL / ZR                     zoom              X   opciones de vestuario
+  L / R                       secciones         Y   cambiar categoría
+  +                           pausa             -   inventario
+  Pantalla táctil             tocar y arrastrar (implementado, sin verificar en consola)
+Para volver al hbmenu, usa "Salir" en el menú principal.
+
+ARCHIVOS EN LA TARJETA SD
+  sdmc:/switch/AtelierDeLasEras/data/AtelierDeLasEras/   partida, copias de seguridad y galería
+  sdmc:/switch/AtelierDeLasEras/log.txt                    registro del último arranque
+Si algo falla, guarda log.txt y adjúntalo al informar del problema.
+
+LIMITACIONES CONOCIDAS
+- Imagen a 1280x720 en los dos modos (en la base, la consola la escala al televisor).
+- Usa el renderizador GLES3 (Compatibility) en lugar del Mobile del PC; el aspecto es casi igual.
+- Rendimiento sin medir en consola: los 60 FPS son un objetivo, no una garantía.
+- La partida se guarda en la tarjeta SD, no en el almacenamiento de partidas del sistema.
+- Sin vibración ni sensores de movimiento.

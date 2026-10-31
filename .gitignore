@@ -29,6 +29,13 @@ global-metadata.dat
 *.nsp
 *.xci
 *.nca
+*.nso
+*.keys
+
+# --- Compilaciones de Switch (el NRO se publica como artefacto de CI) ---
+*.nro
+*.elf
+/switch/trabajo/
 
 # --- Credenciales y certificados ---
 *.keystore

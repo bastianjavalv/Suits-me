@@ -188,3 +188,34 @@ func test_modo_por_tamano_y_perfiles() -> void:
 	assert_true(handheld["segmentos_radiales"] <= docked["segmentos_radiales"])
 	assert_eq(QualityProfiles.resolve_mode("auto", "portatil"), "portatil")
 	assert_eq(QualityProfiles.resolve_mode("sobremesa", "portatil"), "sobremesa")
+
+
+func test_port_homebrew_informa_los_botones_por_letra() -> void:
+	assert_true(InputBindings.is_label_pad("switch-pad"))
+	assert_false(InputBindings.is_label_pad("030000007e0500000920000011810000"), "un mando por SDL en PC")
+	assert_eq(InputBindings.layout_for("pro", "xbox", true, true), "switch", "en el port la disposición es fija")
+	assert_eq(InputBindings.face_button("A", "switch"), JOY_BUTTON_A)
+	assert_eq(InputBindings.face_button("B", "switch"), JOY_BUTTON_B)
+	assert_eq(InputBindings.face_button("X", "switch"), JOY_BUTTON_X)
+	assert_eq(InputBindings.face_button("Y", "switch"), JOY_BUTTON_Y)
+	assert_eq(InputBindings.glyph("seccion_siguiente", "mando", "switch"), "R")
+	assert_eq(InputBindings.glyph("inventario", "mando", "switch"), "−")
+	InputBindings.apply("switch")
+	var a := InputEventJoypadButton.new()
+	a.button_index = JOY_BUTTON_A
+	a.pressed = true
+	assert_true(a.is_action("ui_accept"), "la A de Nintendo llega como JOY_BUTTON_A y confirma")
+	assert_false(a.is_action("ui_cancel"))
+	var b := InputEventJoypadButton.new()
+	b.button_index = JOY_BUTTON_B
+	b.pressed = true
+	assert_true(b.is_action("ui_cancel"), "la B cancela")
+	var zl := InputEventJoypadMotion.new()
+	zl.axis = JOY_AXIS_TRIGGER_LEFT
+	zl.axis_value = 1.0
+	assert_true(zl.is_action("zoom_alejar"), "ZL llega como gatillo a 1,0")
+	InputBindings.apply("nintendo")
+	var platform: Node = load("res://src/platform/platform_bridge.gd").new()
+	assert_false(platform.is_switch_homebrew(), "en PC no es el port homebrew")
+	assert_true(platform.can_quit())
+	platform.free()

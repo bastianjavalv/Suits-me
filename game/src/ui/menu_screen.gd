@@ -26,7 +26,7 @@ func build(_args: Dictionary) -> void:
 	box.add_child(UiKit.button("Enciclopedia", func() -> void: app.push("enciclopedia")))
 	box.add_child(UiKit.button("Opciones", func() -> void: app.push("opciones")))
 	var platform := app.get_node_or_null("/root/Platform")
-	if platform == null or not platform.is_console():
+	if platform == null or platform.can_quit():
 		box.add_child(UiKit.button("Salir", _quit))
 	box.add_child(UiKit.spacer())
 	box.add_child(UiKit.label("Sin conexión · Sin anuncios · Monedas y gemas ilimitadas", UiTheme.SIZE_SMALL, UiTheme.MUTED))

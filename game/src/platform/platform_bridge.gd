@@ -9,6 +9,10 @@ extends Node
 ## del port autorizado de Godot para Switch, que no forma parte de este repositorio (ver
 ## docs/06-nintendo-switch.md). Si ese port expone un singleton con el nombre configurado en
 ## CONSOLE_SINGLETON, se usa; si no, se aplican las mismas reglas que en PC.
+##
+## El port homebrew (switch/motor, NRO para consolas con CFW) se reconoce por el nombre del sistema
+## operativo. Dibuja siempre a 1280×720 (en la base la consola escala la imagen), así que usa el
+## perfil portátil, y guarda directamente en la tarjeta SD, sin confirmación.
 
 signal operation_mode_changed(mode: String)
 
@@ -16,6 +20,8 @@ const MODES: Array[String] = ["sobremesa", "portatil"]
 const MODE_NAMES := {"sobremesa": "Modo sobremesa (TV)", "portatil": "Modo portátil"}
 ## Nombre del singleton del port de consola. Debe confirmarse con el proveedor del port.
 const CONSOLE_SINGLETON := "SwitchPlatform"
+## Valor de OS.get_name() en el port homebrew de switch/motor.
+const HOMEBREW_OS_NAME := "Switch"
 
 var operation_mode := "sobremesa"
 var forced_mode := ""
@@ -43,7 +49,16 @@ func _process(delta: float) -> void:
 
 
 func is_console() -> bool:
-	return Engine.has_singleton(CONSOLE_SINGLETON)
+	return Engine.has_singleton(CONSOLE_SINGLETON) or is_switch_homebrew()
+
+
+func is_switch_homebrew() -> bool:
+	return OS.get_name() == HOMEBREW_OS_NAME
+
+
+## En PC y en homebrew el juego ofrece «Salir»; en un port oficial se sale desde el menú HOME.
+func can_quit() -> bool:
+	return not Engine.has_singleton(CONSOLE_SINGLETON)
 
 
 func is_headless() -> bool:
@@ -84,4 +99,6 @@ func commit_save_data() -> void:
 
 
 func platform_name() -> String:
+	if is_switch_homebrew():
+		return "Nintendo Switch (homebrew)"
 	return "Nintendo Switch" if is_console() else OS.get_name()

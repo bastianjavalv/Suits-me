@@ -11,8 +11,14 @@ extends RefCounted
 ##   Cancelar               B / abajo                      B / derecha
 ##   Opciones de vestuario  X / arriba                     X / izquierda
 ##   Cambiar categoría      Y / izquierda                  Y / arriba
+##
+## El port homebrew de Godot para Switch (switch/motor) es la excepción: informa los botones por su
+## LETRA (A de Nintendo = JOY_BUTTON_A). Para él existe la disposición interna "switch": letras sin
+## conversión e indicaciones de Nintendo.
 
 const DEADZONE := 0.25
+## GUID con el que el port homebrew de Switch registra el mando del jugador 1.
+const LABEL_PAD_GUID := "switch-pad"
 const TRIGGER_THRESHOLD := 0.3
 
 ## Acciones propias del juego, con su descripción para el menú de controles.
@@ -46,6 +52,7 @@ static func face_button(letter: String, layout: String) -> JoyButton:
 			"X": return JOY_BUTTON_Y   # arriba
 			"Y": return JOY_BUTTON_X   # izquierda
 	else:
+		# "xbox" y "switch": el índice del botón coincide con su letra.
 		match letter:
 			"A": return JOY_BUTTON_A
 			"B": return JOY_BUTTON_B
@@ -178,7 +185,11 @@ static func classify(joy_name: String) -> String:
 	return "generico"
 
 
-static func layout_for(profile: String, setting: String, on_console: bool) -> String:
+## `by_label`: el sistema informa los botones por su letra (port homebrew de Switch). La disposición
+## física es fija, así que el ajuste manual no se aplica.
+static func layout_for(profile: String, setting: String, on_console: bool, by_label := false) -> String:
+	if by_label:
+		return "switch"
 	if setting == "nintendo" or setting == "xbox":
 		return setting
 	if on_console or profile in ["pro", "joycon_par", "joycon_izq", "joycon_der"]:
@@ -188,6 +199,10 @@ static func layout_for(profile: String, setting: String, on_console: bool) -> St
 
 static func is_single_joycon(profile: String) -> bool:
 	return profile == "joycon_izq" or profile == "joycon_der"
+
+
+static func is_label_pad(joy_guid: String) -> bool:
+	return joy_guid == LABEL_PAD_GUID
 
 
 ## Texto del botón que se muestra en las indicaciones de pantalla.
@@ -200,7 +215,7 @@ static func glyph(action: String, mode: String, layout: String) -> String:
 		}.get(action, "")
 	if mode == "tactil":
 		return ""
-	if layout == "nintendo":
+	if layout == "nintendo" or layout == "switch":
 		return {
 			"ui_accept": "A", "ui_cancel": "B", "opciones_prenda": "X", "cambiar_categoria": "Y",
 			"seccion_anterior": "L", "seccion_siguiente": "R", "zoom_acercar": "ZR", "zoom_alejar": "ZL",

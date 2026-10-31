@@ -22,5 +22,8 @@ verificación reproducible. Lo demás figura como *Parcial*, *Pendiente* o *Requ
 | 6 | 60 FPS en Switch | Sin medir | Requiere kit de desarrollo; medición de referencia en [07](07-pruebas-y-calidad.md) |
 | 7 | Pruebas, correcciones, mediciones, validación gráfica | Hecho | [07](07-pruebas-y-calidad.md), `docs/capturas/` |
 | 8 | Compilación verificable de escritorio (Linux y Windows) | Hecho (Linux probado; Windows generado) | CI «Compilación de escritorio» |
-| 8 | Compilación para Nintendo Switch | Requisito externo | Nintendo Developer Portal y port de consola ([06](06-nintendo-switch.md)) |
+| 8 | Compilación oficial para Nintendo Switch (eShop o cartucho) | Requisito externo | Nintendo Developer Portal y port de consola ([06](06-nintendo-switch.md)) |
+| 8 | NRO homebrew para Switch con CFW | Hecho (compilado y verificado en CI) | Job «NRO para Switch», `tools/verificar_nro.py`, [switch/LEEME.md](../switch/LEEME.md) |
+| 8 | El juego con el renderizador y el texto del NRO (GLES3, Fallback) | Hecho (en PC) | Recorrido de integración con GLES3 en la CI |
+| 8 | NRO probado en una consola real | Pendiente | Requiere tu consola: [TUTORIAL, 10.1](TUTORIAL.md#101-switch-con-cfw-nro-homebrew) |
 | 8 | Documentación y tutorial en español | Hecho | [TUTORIAL](TUTORIAL.md) |

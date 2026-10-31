@@ -1,5 +1,25 @@
 # Registro de cambios
 
+## 0.2.0 — 2026-10-31
+
+NRO homebrew para Nintendo Switch con firmware personalizado.
+
+### Añadido
+- `switch/`: port comunitario de Godot 4.7.2 para homebrew (DemoxDev/godot-switch-template, MIT),
+  revisado y copiado sin cambios; scripts para compilar el motor y empaquetar el NRO.
+- Job de CI «NRO para Switch (homebrew con CFW)»: compila el motor con devkitA64 (imagen fijada por
+  digest), empaqueta `AtelierDeLasEras.nro` con icono y metadatos y lo publica como artefacto.
+- `tools/verificar_nro.py`: comprueba cabecera, icono, NACP y romfs del NRO (6 pruebas).
+- `game/tools/icono_nro.gd`: icono JPEG de 256×256 a partir de `icon.svg`.
+- Recorrido de integración con GLES3 y el servidor de texto básico en la CI.
+
+### Cambiado
+- Controles: disposición `switch` para mandos que informan los botones por su letra (el port
+  homebrew); prueba nueva.
+- Plataforma: detección del port homebrew; «Salir» disponible en PC y en homebrew.
+- Perfiles gráficos: el FXAA solo se aplica en los renderizadores que lo admiten.
+- El verificador del repositorio bloquea NRO, NSO y archivos de claves de consola.
+
 ## 0.1.0 — 2026-10-30
 
 Primera versión jugable de *Atelier de las Eras*.

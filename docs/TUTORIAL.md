@@ -6,6 +6,9 @@ los de macOS y Linux, en la **Terminal**.
 > **La forma más rápida de jugar:** abre la pestaña **Actions** del repositorio en GitHub, entra en
 > la última ejecución verde de «CI» y descarga el artefacto **atelier-de-las-eras-escritorio**.
 > Dentro están `windows/AtelierDeLasEras.exe` y `linux/AtelierDeLasEras.x86_64`.
+>
+> **En una Switch con CFW:** descarga de la misma ejecución el artefacto
+> **atelier-de-las-eras-switch-nro** y sigue la [sección 10.1](#101-switch-con-cfw-nro-homebrew).
 
 ![Menú principal](capturas/ui_01_menu.jpg)
 
@@ -32,6 +35,7 @@ Suits-me/
 │   ├── shaders/           Materiales de tejidos, maniquí y suelos
 │   ├── assets/fonts/      Tipografías con licencia OFL
 │   └── tests/             Pruebas unitarias y de integración
+├── switch/                NRO homebrew para Switch: port de Godot (motor/) y scripts de compilación
 ├── tools/                 Herramientas en Python (auditoría de APK, validadores, documentación)
 ├── docs/                  Documentación (este tutorial, informes, capturas)
 │   └── eras/              Capítulos generados desde los datos
@@ -163,6 +167,47 @@ godot --path game -s res://tests/integration/recorrido.gd -- --capturas=capturas
 
 ## 9. Generación de la versión Switch
 
+Hay dos caminos. El NRO homebrew funciona en consolas con firmware personalizado (CFW) y se compila
+con herramientas públicas. La versión oficial, para la eShop o para cartucho, exige la autorización
+de Nintendo.
+
+### 9.1 NRO homebrew (consolas con CFW)
+
+**Sin compilar nada:** la CI genera `AtelierDeLasEras.nro` en cada cambio (job «NRO para Switch»,
+artefacto **atelier-de-las-eras-switch-nro**). Es lo recomendado.
+
+**Compilarlo tú mismo** (Linux o WSL con Docker; la primera compilación del motor tarda entre 30 y
+60 minutos):
+
+```bash
+docker run --rm -v "$PWD:/repo" -w /repo -e DEVKITPRO=/opt/devkitpro devkitpro/devkita64@sha256:1fc388c3a0d34bd2045a6dadcb1020e069d5f876a187fd705de14b4440c00282 sh -c "apt-get update -qq && apt-get install -y -qq scons && switch/compilar_motor.sh switch/trabajo"
+```
+
+```bash
+mkdir -p builds/switch
+```
+
+```bash
+godot --headless --path game --export-pack "Linux" ../builds/switch/game.pck
+```
+
+```bash
+godot --headless --path game -s res://tools/icono_nro.gd -- --salida=$PWD/builds/switch/icono.jpg
+```
+
+```bash
+docker run --rm -v "$PWD:/repo" -w /repo -e DEVKITPRO=/opt/devkitpro devkitpro/devkita64@sha256:1fc388c3a0d34bd2045a6dadcb1020e069d5f876a187fd705de14b4440c00282 switch/empaquetar_nro.sh --motor switch/trabajo/godot/bin/godot.switch.template_release.arm64 --pck builds/switch/game.pck --icono builds/switch/icono.jpg --salida builds/switch/AtelierDeLasEras/AtelierDeLasEras.nro
+```
+
+```bash
+python3 tools/verificar_nro.py builds/switch/AtelierDeLasEras/AtelierDeLasEras.nro --pck builds/switch/game.pck
+```
+
+Los detalles del port (origen, licencia, revisión y limitaciones) están en
+[switch/LEEME.md](../switch/LEEME.md).
+
+### 9.2 Versión oficial (eShop o cartucho)
+
 Requiere herramientas de Nintendo que **no** están en el repositorio:
 
 1. Solicita el alta en el **Nintendo Developer Portal** y firma sus acuerdos.
@@ -175,7 +220,38 @@ Requiere herramientas de Nintendo que **no** están en el repositorio:
 5. Exporta con el preajuste de Switch. Las credenciales y certificados se guardan en el entorno
    seguro del proveedor, nunca en el repositorio.
 
-## 10. Instalación y pruebas en hardware autorizado
+## 10. Instalación y pruebas en la consola
+
+### 10.1 Switch con CFW (NRO homebrew)
+
+Necesitas una Switch con Atmosphère y el Homebrew Menu (hbmenu). El NRO es homebrew no oficial: ni
+Nintendo lo distribuye ni lo autoriza. Usar CFW es responsabilidad del propietario de la consola.
+Lo prudente es usarlo en emuMMC y sin conectarse a los servicios en línea de Nintendo.
+
+1. Descomprime el artefacto **atelier-de-las-eras-switch-nro**: contiene la carpeta
+   `AtelierDeLasEras` con el NRO y `LEEME-SWITCH.txt`.
+2. Con la tarjeta microSD en el PC, copia esa carpeta dentro de `switch` en la raíz de la tarjeta:
+   `sdmc:/switch/AtelierDeLasEras/AtelierDeLasEras.nro`.
+3. Arranca Atmosphère y abre el hbmenu **en modo título**: mantén pulsado **R** mientras abres
+   cualquier juego instalado. Desde el Álbum el homebrew tiene muy poca memoria y el juego puede
+   cerrarse.
+4. Elige **Atelier de las Eras** y pulsa **A**. En cada arranque la pantalla queda en negro unos
+   segundos mientras se compilan los sombreadores; es normal en este port.
+
+Los controles son los de la especificación: A confirmar, B cancelar, X opciones de vestuario,
+Y categoría, L/R secciones, ZL/ZR zoom, stick derecho girar, + pausa, − inventario. Para volver
+al hbmenu, usa **Salir** en el menú principal.
+
+| Qué | Dónde, en la tarjeta SD |
+|---|---|
+| Partida, copias de seguridad y galería | `sdmc:/switch/AtelierDeLasEras/data/AtelierDeLasEras/` |
+| Registro del último arranque (adjúntalo al informar de un fallo) | `sdmc:/switch/AtelierDeLasEras/log.txt` |
+| Argumentos opcionales del motor, uno por línea | `sdmc:/switch/AtelierDeLasEras/args.txt` |
+
+Para ver el registro en directo desde el PC, lanza el juego con `nxlink -s AtelierDeLasEras.nro`
+(incluido en devkitPro).
+
+### 10.2 Kit de desarrollo autorizado
 
 1. Instala el paquete en el kit de desarrollo con las herramientas de Nintendo.
 2. Recorre la lista de [07-pruebas-y-calidad.md](07-pruebas-y-calidad.md): sobremesa, portátil,

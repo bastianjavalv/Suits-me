@@ -25,6 +25,8 @@ ilimitadas**, sin anuncios ni compras.
 - Guardado atómico con SHA-256, copias de seguridad y recuperación automática.
 - Controles de Joy-Con y Pro Controller por letra de botón, táctil, ratón y teclado; perfiles
   sobremesa (1920×1080) y portátil (1280×720) con resolución dinámica.
+- **NRO homebrew para Switch con CFW** (Atmosphère + Homebrew Menu), compilado en la CI con
+  herramientas públicas y un port comunitario de Godot 4.7.2 ([switch/LEEME.md](switch/LEEME.md)).
 
 | | |
 |---|---|
@@ -35,6 +37,8 @@ ilimitadas**, sin anuncios ni compras.
 
 - **Jugar:** descarga el artefacto *atelier-de-las-eras-escritorio* de la última ejecución de CI
   (pestaña Actions) o abre `game/project.godot` con Godot 4.7.2 y pulsa F5.
+- **Switch con CFW:** descarga el artefacto *atelier-de-las-eras-switch-nro* y copia la carpeta
+  `AtelierDeLasEras` en `sdmc:/switch/` ([instrucciones](docs/TUTORIAL.md#101-switch-con-cfw-nro-homebrew)).
 - **Tutorial completo:** [docs/TUTORIAL.md](docs/TUTORIAL.md).
 - **Estado verificado de cada requisito:** [docs/00-estado.md](docs/00-estado.md).
 
@@ -63,5 +67,6 @@ python -m pytest tools/tests -q
 godot --headless --path game -s res://tests/run_tests.gd
 ```
 
-22 pruebas de herramientas, 58 pruebas del juego y un recorrido de integración de 28
-comprobaciones en sobremesa y portátil, todos en verde; la CI los repite en cada cambio.
+28 pruebas de herramientas, 59 pruebas del juego y un recorrido de integración de 28
+comprobaciones en sobremesa, en portátil y con GLES3 (el renderizador del NRO), todos en verde; la
+CI los repite en cada cambio y verifica la estructura del NRO.

@@ -41,8 +41,12 @@ EXT_PROHIBIDAS = {
     ".nsp": "paquete de consola",
     ".xci": "imagen de cartucho",
     ".nca": "contenido de consola",
+    ".nro": "ejecutable homebrew compilado (lo genera la CI)",
+    ".nso": "ejecutable de consola",
+    ".keys": "claves de consola",
 }
-NOMBRES_PROHIBIDOS = {"global-metadata.dat": "metadatos IL2CPP", ".env": "variables de entorno"}
+NOMBRES_PROHIBIDOS = {"global-metadata.dat": "metadatos IL2CPP", ".env": "variables de entorno",
+                      "prod.keys": "claves de consola", "title.keys": "claves de consola"}
 
 PATRONES_SECRETOS: List[Tuple[str, re.Pattern]] = [
     ("clave privada PEM", re.compile(r"-----BEGIN (?:RSA |EC |DSA |OPENSSH |ENCRYPTED )?PRIVATE KEY-----")),

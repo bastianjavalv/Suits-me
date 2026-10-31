@@ -11,6 +11,7 @@ Compilar, probar y publicar en Nintendo Switch exige, como mínimo:
 4. Superar la **certificación de Nintendo** y obtener las clasificaciones por edades de cada región.
 
 Nada de esto se ha simulado: el repositorio no contiene herramientas privadas ni afirma tenerlas.
+Para consolas con firmware personalizado existe además un NRO homebrew no oficial (sección 7).
 
 ## 2. Qué está preparado en el código
 
@@ -47,6 +48,10 @@ la **A** está a la derecha, por eso el juego asigna las acciones por la letra i
 
 Todo es reasignable en Opciones → Reasignar controles. Con un mando de Xbox en PC la disposición
 automática usa la convención de Xbox (A abajo).
+
+En el NRO homebrew (sección 7) el motor informa los botones por su **letra**, no por su posición:
+la A de Nintendo llega como `JOY_BUTTON_A`. El juego lo detecta (GUID `switch-pad`) y aplica la
+disposición interna `switch`, con las mismas acciones de la tabla.
 
 ## 4. Perfiles sobremesa y portátil
 
@@ -85,3 +90,33 @@ medirlo en un kit de desarrollo con `tools/capturas_rendimiento.gd`, que produce
 3. Revisar el contraste y el tamaño mínimo del texto en la pantalla de la consola.
 4. Probar Joy-Con individual, pareja de Joy-Con, Pro Controller y táctil en la consola real.
 5. Requisitos de certificación (suspensión, cambio de usuario, mensajes de guardado).
+
+## 7. NRO homebrew para consolas con CFW
+
+Además de la ruta oficial, el repositorio genera `AtelierDeLasEras.nro`, que se abre desde el
+Homebrew Menu en consolas con Atmosphère. Es homebrew no oficial: se compila con herramientas
+públicas (devkitA64, libnx y Mesa) y con un port comunitario de Godot 4.7.2. No usa el SDK de
+Nintendo ni sirve para la eShop. Los detalles están en [switch/LEEME.md](../switch/LEEME.md) y la
+instalación en la sección 10.1 del [tutorial](TUTORIAL.md).
+
+| Aspecto | Ruta oficial (secciones 1–6) | NRO homebrew |
+|---|---|---|
+| Herramientas | SDK de Nintendo y port autorizado | devkitA64, libnx, Mesa y `switch/motor` (MIT) |
+| Renderizador | El del port autorizado | Compatibility (GLES3 sobre Mesa nouveau) |
+| Resolución | Sobremesa 1920×1080, portátil 1280×720 | 1280×720 fija; en la base la consola escala la imagen |
+| Perfil gráfico | Según el modo | Portátil (detectado por la resolución) |
+| Botones | Por posición, convertidos a letra | Por letra (disposición `switch`) |
+| Guardado | Datos de guardado del sistema | Tarjeta SD: `sdmc:/switch/AtelierDeLasEras/` |
+| Salir | Menú HOME | Opción «Salir» del menú principal |
+
+### Estado verificado
+
+| Comprobación | Estado |
+|---|---|
+| El juego funciona con GLES3 y el servidor de texto básico (recorrido de 28 comprobaciones) | Hecho (PC con Mesa llvmpipe; CI en cada cambio) |
+| El motor compila con devkitA64 y el NRO tiene una estructura válida (`tools/verificar_nro.py`) | Hecho (CI) |
+| Arranque, controles, táctil, sonido y rendimiento en una consola real | **Pendiente**: requiere probarlo en tu consola |
+
+El autor del port lo verificó en una consola real con otro proyecto: arranque, audio, mando del
+jugador 1 y teclado del sistema. No verificó el táctil, el modo sobremesa ni escenas 3D exigentes.
+Por eso el rendimiento del juego en consola sigue **sin medir**.
